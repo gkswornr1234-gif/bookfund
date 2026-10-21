@@ -23,17 +23,36 @@ def today() -> str:
     return datetime.now(KST).strftime("%Y-%m-%d")
 
 
+class SiteDown(Exception):
+    """같은 사이트에서 연속으로 실패하면 그 서점은 이번 회차를 건너뜀."""
+
+
+_fails: dict[str, int] = {}
+MAX_FAILS = 4
+
+
 def fetch(url: str, encoding: str | None = None, debug_name: str | None = None) -> str | None:
-    """GET 후 텍스트 반환. 실패 시 None. 서버 부담을 줄이려고 요청 사이 0.8~1.6초 쉼."""
+    """GET 후 텍스트 반환. 실패 시 None. 서버 부담을 줄이려고 요청 사이 0.8~1.6초 쉼.
+    같은 호스트에서 MAX_FAILS번 연속 실패하면 SiteDown을 던져 해당 서점 수집을 중단."""
+    host = url.split("/")[2]
+    if _fails.get(host, 0) >= MAX_FAILS:
+        raise SiteDown(f"{host} 응답 없음 ({MAX_FAILS}회 연속 실패)")
     time.sleep(random.uniform(0.8, 1.6))
+    t0 = time.time()
     try:
-        r = _session.get(url, timeout=20)
+        r = _session.get(url, timeout=(5, 12))
+        ok = r.status_code == 200
     except requests.RequestException as e:
-        print(f"  ! 요청 실패 {url}: {e}")
+        r, ok = None, False
+        print(f"  ! 요청 실패 {url}: {type(e).__name__}", flush=True)
+    if r is not None and not ok:
+        print(f"  ! HTTP {r.status_code} {url}", flush=True)
+    # 404처럼 '없는 페이지'는 정상 응답으로 보고, 무응답·차단(403/429/5xx)만 실패로 셈
+    healthy = r is not None and r.status_code not in (403, 429) and r.status_code < 500
+    _fails[host] = 0 if healthy else _fails.get(host, 0) + 1
+    if not ok:
         return None
-    if r.status_code != 200:
-        print(f"  ! HTTP {r.status_code} {url}")
-        return None
+    print(f"  {time.time() - t0:4.1f}s {url}", flush=True)
     if encoding:
         r.encoding = encoding
     elif not r.encoding or r.encoding.lower() in ("iso-8859-1", "ks_c_5601-1987"):
