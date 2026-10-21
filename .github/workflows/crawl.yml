@@ -24,7 +24,7 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -37,14 +37,16 @@ jobs:
 
       - name: 수집
         env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DEBUG_DIR: ${{ inputs.debug && 'debug' || '' }}
           ONLY: ${{ inputs.only }}
+          PYTHONUNBUFFERED: "1"
         run: |
           if [ -n "$ONLY" ]; then python run.py --only "$ONLY"; else python run.py; fi
 
       - name: HTML 저장 (디버그)
-        if: ${{ inputs.debug }}
+        if: ${{ always() && inputs.debug }}
         uses: actions/upload-artifact@v4
         with:
           name: debug-html
@@ -52,6 +54,7 @@ jobs:
           retention-days: 7
 
       - name: 데이터 커밋
+        if: always()   # 수집이 중간에 실패해도 그때까지 모은 데이터는 저장
         run: |
           git config user.name "bookfund-bot"
           git config user.email "bookfund-bot@users.noreply.github.com"
