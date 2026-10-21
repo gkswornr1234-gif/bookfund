@@ -41,6 +41,7 @@ def parse_detail(html: str, it: dict) -> dict | None:
     soup = soup_of(html)
     title = meta(soup, "og:title") or (soup.title.get_text(strip=True) if soup.title else "")
     title = re.sub(r"\s*[-|]\s*(바로펀딩|교보문고).*$", "", title or "").strip()
+    title = re.sub(r"^\s*(바로펀딩|교보문고)\s*[|:\-]\s*", "", title).strip()
     lines = lines_of(soup.body or soup)
     txt = "\n".join(lines)
     if not title or title == "바로펀딩":
@@ -59,7 +60,13 @@ def parse_detail(html: str, it: dict) -> dict | None:
             break
     it["publisher"] = label_value(txt, ("출판사", "펴낸곳", "브랜드", "제조사"))
     it["category_raw"] = label_value(txt, ("분야", "카테고리"))
-    s, e = find_date_range(txt)
+    # '펀딩 기간' 라벨 뒤의 기간을 우선 사용, 없으면 페이지 첫 기간 표기
+    i = re.search(r"펀딩\s*기간", txt)
+    s, e = find_date_range(txt[i.start():i.start() + 200]) if i else (None, None)
+    if not e:
+        s, e = find_date_range(txt)
+    if s and e and s > e:
+        s = None  # 시작일이 마감일보다 늦으면 잘못 읽은 것
     it["start_date"], it["end_date"] = s, e
     if m := re.search(r"목표\s*금액\s*[:：]?\s*([\d,]+)\s*원", txt):
         it["goal"] = to_int(m.group(1))
@@ -71,7 +78,7 @@ def parse_detail(html: str, it: dict) -> dict | None:
 
 
 def crawl(known: dict) -> list[dict]:
-    main = fetch(MAIN_URL, debug_name="kyobo_main.html")
+    main = fetch(MAIN_URL, debug_name="kyobo_main.html", retries=2)
     seeds = ids_on_main(main) if main else set()
     known_ids = {int(k) for k in known}
     top = max(seeds | known_ids, default=0)

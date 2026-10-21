@@ -37,7 +37,7 @@ def set_budget(seconds: int) -> None:
     _deadline[0] = time.time() + seconds
 
 
-def fetch(url: str, encoding: str | None = None, debug_name: str | None = None) -> str | None:
+def fetch(url: str, encoding: str | None = None, debug_name: str | None = None, retries: int = 0) -> str | None:
     """GET 후 텍스트 반환. 실패 시 None. 서버 부담을 줄이려고 요청 사이 0.8~1.6초 쉼.
     같은 호스트에서 MAX_FAILS번 연속 실패하면 SiteDown을 던져 해당 서점 수집을 중단."""
     host = url.split("/")[2]
@@ -47,12 +47,17 @@ def fetch(url: str, encoding: str | None = None, debug_name: str | None = None) 
         raise SiteDown(f"{host} 응답 없음 ({MAX_FAILS}회 연속 실패)")
     time.sleep(random.uniform(0.8, 1.6))
     t0 = time.time()
-    try:
-        r = _session.get(url, timeout=(5, 12))
-        ok = r.status_code == 200
-    except requests.RequestException as e:
-        r, ok = None, False
-        print(f"  ! 요청 실패 {url}: {type(e).__name__}", flush=True)
+    r, ok = None, False
+    for attempt in range(retries + 1):
+        try:
+            # 목록처럼 꼭 받아야 하는 페이지(retries>0)는 더 오래 기다림
+            r = _session.get(url, timeout=(8, 30) if retries else (5, 12))
+            ok = r.status_code == 200
+            break
+        except requests.RequestException as e:
+            print(f"  ! 요청 실패 {url}: {type(e).__name__}" + (f" (재시도 {attempt + 1}/{retries})" if attempt < retries else ""), flush=True)
+            if attempt < retries:
+                time.sleep(5)
     if r is not None and not ok:
         print(f"  ! HTTP {r.status_code} {url}", flush=True)
     # 404처럼 '없는 페이지'는 정상 응답으로 보고, 무응답·차단(403/429/5xx)만 실패로 셈
@@ -85,6 +90,11 @@ def lines_of(node) -> list[str]:
 
 def text_of(node) -> str:
     return "\n".join(lines_of(node))
+
+
+def flat_of(node) -> str:
+    """태그 경계를 공백으로만 이은 한 줄 텍스트. '<em>48</em>%' 같은 분할에 강함."""
+    return " ".join(lines_of(node))
 
 
 def meta(soup: BeautifulSoup, key: str) -> str | None:
@@ -142,9 +152,10 @@ def benefit_lines(lines: list[str], limit: int = 6) -> list[str]:
 def label_value(text: str, labels: tuple[str, ...]) -> str | None:
     """'출판사 : 마름모' / '출판사\\n마름모' 형태에서 값 추출."""
     for lb in labels:
-        m = re.search(rf"{lb}\s*[:：]?\s*\n?\s*([^\n|]{{1,40}})", text)
+        # 라벨은 줄 전체이거나 바로 뒤에 ':'가 와야 함 ('브랜드관'의 '관' 같은 오인 방지)
+        m = re.search(rf"(?:^|\n)\s*{lb}\s*(?:[:：]\s*([^\n|]{{1,40}})|\n\s*([^\n|]{{1,40}}))", text)
         if m:
-            v = m.group(1).strip(" :：")
+            v = (m.group(1) or m.group(2)).strip(" :：")
             if v and v not in labels and not re.match(r"(리뷰|소개|서평|추천|정보|안내)", v) and len(v) <= 25:
                 return v
     return None

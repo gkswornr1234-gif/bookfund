@@ -1,7 +1,7 @@
 """알라딘 북펀드 — 목록은 서버 렌더링, 상세에 펴낸곳·주제 분류·상품구성이 있음."""
 import re
 
-from .common import SiteDown, fetch, soup_of, lines_of, text_of, meta, to_int, norm_date, new_item
+from .common import SiteDown, fetch, soup_of, lines_of, text_of, flat_of, meta, to_int, norm_date, new_item
 
 BASE = "https://www.aladin.co.kr"
 LIST_URL = f"{BASE}/m/BookFund/Main.aspx"
@@ -35,16 +35,16 @@ def parse_list(html: str) -> list[dict]:
         if img and img.get("alt"):
             it["title"] = re.sub(r"\s*(독자\s*)?북펀드$", "", img["alt"]).strip() or None
             it["image"] = img.get("src")
-        txt = text_of(li)
-        lines = txt.split("\n")
+        lines = text_of(li).split("\n")
+        txt = flat_of(li)
         it["status"] = _status(lines)
-        if m2 := re.search(r"([\d,]+)원\s*([\d,]+)권\s*펀딩", txt):
+        if m2 := re.search(r"([\d,]+)\s*원\s*([\d,]+)\s*권\s*펀딩", txt):
             it["amount"], it["count"] = to_int(m2.group(1)), to_int(m2.group(2))
         if m2 := re.search(r"펀딩마감\s*(\d{4}-\d{2}-\d{2})", txt):
             it["end_date"] = m2.group(1)
         if m2 := re.search(r"출간예정\s*(\d{4}-\d{2}-\d{2})", txt):
             it["release_date"] = m2.group(1)
-        if m2 := re.search(r"목표금액\s*([\d,]+)원", txt):
+        if m2 := re.search(r"목표\s*금액\s*([\d,]+)\s*원", txt):
             it["goal"] = to_int(m2.group(1))
         items.append(it)
     return items
@@ -63,8 +63,8 @@ def parse_detail(html: str, it: dict) -> dict:
     it["price"] = to_int(meta(soup, "og:price")) or it["price"]
     it["isbn"] = meta(soup, "books:isbn")
 
-    if m := re.search(r"펴낸곳\s*:\s*(.+)", txt):
-        it["publisher"] = m.group(1).strip()
+    if m := re.search(r"펴낸곳\s*:?\s*\n?\s*([^\n]+)", txt):
+        it["publisher"] = m.group(1).strip(" :")
     # '주제 분류:' 다음 줄들 중 첫 번째 분류 경로
     if (i := txt.find("주제 분류")) >= 0:
         for s in txt[i:].split("\n")[1:6]:
@@ -72,7 +72,8 @@ def parse_detail(html: str, it: dict) -> dict:
                 it["category_raw"] = s.strip()
                 break
 
-    if m := re.search(r"([\d,]+)원,\s*([\d,]+)권\s*펀딩\s*/\s*목표\s*금액\s*([\d,]+)원", txt):
+    flat = " ".join(lines)
+    if m := re.search(r"([\d,]+)\s*원\s*,?\s*([\d,]+)\s*권\s*펀딩\s*/?\s*목표\s*금액\s*([\d,]+)\s*원", flat):
         it["amount"], it["count"], it["goal"] = (to_int(x) for x in m.groups())
     if m := re.search(r"(펀딩\s*중|펀딩종료|오픈예정)\s*\(마감\s*([\d-]+),\s*출간예정\s*([\d-]+)\)", txt):
         it["status"] = it["status"] or {"펀딩종료": "종료", "오픈예정": "오픈예정"}.get(m.group(1), "진행중")
@@ -99,7 +100,7 @@ def parse_detail(html: str, it: dict) -> dict:
 
 def crawl(known: dict) -> list[dict]:
     """known: 이미 저장된 {id: item}. 진행 중이거나 새로 발견한 건만 상세를 다시 읽음."""
-    html = fetch(LIST_URL, debug_name="aladin_list.html")
+    html = fetch(LIST_URL, debug_name="aladin_list.html", retries=2)
     if not html:
         return []
     out = []

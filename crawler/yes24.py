@@ -1,7 +1,7 @@
 """YES24 예스펀딩(그래제본소) — 목록에 달성률·금액·남은 일수, 상세/상품 페이지에 출판사·분야."""
 import re
 
-from .common import (SiteDown, fetch, soup_of, lines_of, text_of, to_int, days_later, find_date_range,
+from .common import (flat_of, SiteDown, fetch, soup_of, lines_of, text_of, to_int, days_later, find_date_range,
                      label_value, benefit_lines, new_item)
 
 BASE = "https://www.yes24.com"
@@ -29,8 +29,8 @@ def parse_list(html: str) -> list[dict]:
             continue
         seen.add(no)
         it = new_item("yes24", no, DETAIL_URL.format(no))
-        txt = text_of(box)
-        if t := re.search(r"'(.+)'\s*펀딩 바로가기", txt):
+        txt = flat_of(box)
+        if t := re.search(r"'([^']+)'\s*펀딩 바로가기", txt):
             it["title"] = t.group(1).strip()
         if t := re.search(r"(\d+)\s*%\s*달성\s*([\d,]+)\s*원", txt):
             it["rate"], it["amount"] = int(t.group(1)), to_int(t.group(2))
@@ -87,7 +87,7 @@ def parse_detail(html: str, it: dict) -> dict:
 
 
 def crawl(known: dict) -> list[dict]:
-    html = fetch(LIST_URL, encoding=ENC, debug_name="yes24_list.html")
+    html = fetch(LIST_URL, encoding=ENC, debug_name="yes24_list.html", retries=2)
     if not html:
         return []
     out = []
