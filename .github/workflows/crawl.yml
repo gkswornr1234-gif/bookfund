@@ -2,7 +2,7 @@ name: 북펀딩 수집
 
 on:
   schedule:
-    - cron: "0 0,9 * * *"   # 매일 09:00, 18:00 (KST). 예약 실행이 밀릴 수 있어 외부 트리거와 병행 권장
+        - cron: "30 22 * * *"   # 매일 07:30 (KST). 예약 실행이 밀릴 수 있어 외부 트리거와 병행 권장
   workflow_dispatch:
     inputs:
       debug:
