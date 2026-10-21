@@ -29,12 +29,20 @@ class SiteDown(Exception):
 
 _fails: dict[str, int] = {}
 MAX_FAILS = 4
+_deadline = [0.0]
+
+
+def set_budget(seconds: int) -> None:
+    """서점 하나에 쓸 수 있는 최대 시간. 넘기면 SiteDown으로 중단하고 그때까지 결과만 저장."""
+    _deadline[0] = time.time() + seconds
 
 
 def fetch(url: str, encoding: str | None = None, debug_name: str | None = None) -> str | None:
     """GET 후 텍스트 반환. 실패 시 None. 서버 부담을 줄이려고 요청 사이 0.8~1.6초 쉼.
     같은 호스트에서 MAX_FAILS번 연속 실패하면 SiteDown을 던져 해당 서점 수집을 중단."""
     host = url.split("/")[2]
+    if _deadline[0] and time.time() > _deadline[0]:
+        raise SiteDown("시간 예산 초과 — 이번 회차는 여기까지 저장")
     if _fails.get(host, 0) >= MAX_FAILS:
         raise SiteDown(f"{host} 응답 없음 ({MAX_FAILS}회 연속 실패)")
     time.sleep(random.uniform(0.8, 1.6))
@@ -137,7 +145,7 @@ def label_value(text: str, labels: tuple[str, ...]) -> str | None:
         m = re.search(rf"{lb}\s*[:：]?\s*\n?\s*([^\n|]{{1,40}})", text)
         if m:
             v = m.group(1).strip(" :：")
-            if v and v not in labels:
+            if v and v not in labels and not re.match(r"(리뷰|소개|서평|추천|정보|안내)", v) and len(v) <= 25:
                 return v
     return None
 

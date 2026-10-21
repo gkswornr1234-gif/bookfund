@@ -2,7 +2,7 @@
 앞뒤 번호를 탐색해 새 프로젝트를 찾음 (/funding/detail/{번호})."""
 import re
 
-from .common import (fetch, soup_of, lines_of, meta, to_int, find_date_range, label_value,
+from .common import (SiteDown, fetch, soup_of, lines_of, meta, to_int, find_date_range, label_value,
                      benefit_lines, new_item)
 
 BASE = "https://event.kyobobook.co.kr"
@@ -10,6 +10,7 @@ MAIN_URL = f"{BASE}/funding"
 DETAIL_URL = f"{BASE}/funding/detail/{{}}"
 BOOTSTRAP = 40      # 첫 실행 때 최신 번호에서 거꾸로 훑을 개수
 MAX_MISSES = 5      # 최신 번호 이후 연속으로 비어 있으면 탐색 중단
+MAX_AHEAD = 20      # 최신 번호 이후 최대 탐색 개수 (무한 탐색 방지)
 
 # 페이지에 JSON으로 데이터가 박혀 있는 경우를 대비한 키 후보
 JSON_KEYS = {
@@ -46,8 +47,8 @@ def parse_detail(html: str, it: dict) -> dict | None:
         title = None
     if (m := re.search(r"(\d+)%\s*달성", txt)):
         it["rate"] = int(m.group(1))
-    if not title and it["rate"] is None:
-        return None  # 없는 번호
+    if it["rate"] is None:
+        return None  # 달성률이 없으면 펀딩 페이지가 아님 (없는 번호, 또는 내용이 JS로만 그려지는 페이지)
     it["title"] = title
     it["image"] = meta(soup, "og:image")
     if m := re.search(r"달성\s*\n?\s*([\d,]+)\s*원", txt):
@@ -77,29 +78,27 @@ def crawl(known: dict) -> list[dict]:
     if not top:
         print("[교보] 시드 번호를 찾지 못함")
         return []
+    print(f"  메인에서 찾은 번호: {sorted(seeds)}", flush=True)
 
     targets = set(seeds)
     targets |= {int(k) for k, v in known.items() if v.get("status") != "종료"}
     floor = max(known_ids) if known_ids else top - BOOTSTRAP
     targets |= set(range(floor + 1, top + 1))
+    targets |= set(range(top + 1, top + 1 + MAX_AHEAD))
 
-    out, done = [], set()
-    for n in sorted(targets):
-        d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
-        done.add(n)
-        if d and (it := parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n)))):
-            out.append(it)
-
-    # 최신 번호 이후로 새 프로젝트가 더 있는지 탐색
-    n, misses = top, 0
-    while misses < MAX_MISSES:
-        n += 1
-        d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
-        it = parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n))) if d else None
-        if it:
-            out.append(it)
-            misses = 0
-        else:
-            misses += 1
+    out, misses_ahead = [], 0
+    try:
+        for n in sorted(targets):
+            if n > top and misses_ahead >= MAX_MISSES:
+                break
+            d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
+            it = parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n))) if d else None
+            if it:
+                out.append(it)
+                misses_ahead = 0
+            elif n > top:
+                misses_ahead += 1
+    except SiteDown as e:
+        print(f"  ! {e}", flush=True)
     print(f"[교보] {len(out)}건")
     return out

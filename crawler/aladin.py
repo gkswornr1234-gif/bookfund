@@ -1,7 +1,7 @@
 """알라딘 북펀드 — 목록은 서버 렌더링, 상세에 펴낸곳·주제 분류·상품구성이 있음."""
 import re
 
-from .common import fetch, soup_of, lines_of, text_of, meta, to_int, norm_date, new_item
+from .common import SiteDown, fetch, soup_of, lines_of, text_of, meta, to_int, norm_date, new_item
 
 BASE = "https://www.aladin.co.kr"
 LIST_URL = f"{BASE}/m/BookFund/Main.aspx"
@@ -104,14 +104,23 @@ def crawl(known: dict) -> list[dict]:
         return []
     out = []
     for it in parse_list(html):
-        prev = known.get(it["id"])
-        need_detail = prev is None or it["status"] in ("진행중", "마감임박", "오픈예정")
-        if need_detail:
-            d = fetch(DETAIL_URL.format(it["id"]), debug_name=f"aladin_{it['id']}.html")
-            if d:
-                parse_detail(d, it)
-        elif it["goal"] and it["amount"]:
-            it["rate"] = round(it["amount"] / it["goal"] * 100)
+        try:
+            _one(it, known)
+        except SiteDown as e:
+            print(f"  ! {e}", flush=True)
+            break
         out.append(it)
     print(f"[알라딘] {len(out)}건")
     return out
+
+
+def _one(it: dict, known: dict) -> None:
+    """한 건 처리: 새로 발견했거나 진행 중이면 상세 페이지를 읽음."""
+    prev = known.get(it["id"])
+    need_detail = prev is None or it["status"] in ("진행중", "마감임박", "오픈예정")
+    if need_detail:
+        d = fetch(DETAIL_URL.format(it["id"]), debug_name=f"aladin_{it['id']}.html")
+        if d:
+            parse_detail(d, it)
+    elif it["goal"] and it["amount"]:
+        it["rate"] = round(it["amount"] / it["goal"] * 100)

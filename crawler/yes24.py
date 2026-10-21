@@ -1,7 +1,7 @@
 """YES24 예스펀딩(그래제본소) — 목록에 달성률·금액·남은 일수, 상세/상품 페이지에 출판사·분야."""
 import re
 
-from .common import (fetch, soup_of, lines_of, text_of, to_int, days_later, find_date_range,
+from .common import (SiteDown, fetch, soup_of, lines_of, text_of, to_int, days_later, find_date_range,
                      label_value, benefit_lines, new_item)
 
 BASE = "https://www.yes24.com"
@@ -32,7 +32,7 @@ def parse_list(html: str) -> list[dict]:
         txt = text_of(box)
         if t := re.search(r"'(.+)'\s*펀딩 바로가기", txt):
             it["title"] = t.group(1).strip()
-        if t := re.search(r"(\d+)%\s*달성\s*([\d,]+)원", txt):
+        if t := re.search(r"(\d+)\s*%\s*달성\s*([\d,]+)\s*원", txt):
             it["rate"], it["amount"] = int(t.group(1)), to_int(t.group(2))
         if t := re.search(r"(\d+)일 남음", txt):
             it["end_date"] = days_later(int(t.group(1)))
@@ -66,7 +66,7 @@ def parse_detail(html: str, it: dict) -> dict:
     soup = soup_of(html)
     lines = lines_of(soup.body or soup)
     txt = "\n".join(lines)
-    it["publisher"] = label_value(txt, ("출판사", "펴낸곳", "출판"))
+    it["publisher"] = label_value(txt, ("출판사", "펴낸곳"))
     it["category_raw"] = label_value(txt, ("분야", "카테고리"))
     s, e = find_date_range(txt)
     it["start_date"], it["end_date"] = s or it["start_date"], e or it["end_date"]
@@ -92,13 +92,22 @@ def crawl(known: dict) -> list[dict]:
         return []
     out = []
     for it in parse_list(html):
-        prev = known.get(it["id"])
-        if prev is None or it["status"] != "종료":
-            d = fetch(it["url"], encoding=ENC, debug_name=f"yes24_{it['id']}.html")
-            if d:
-                parse_detail(d, it)
-        if it["amount"] and it["price"] and not it["count"]:
-            it["count_est"] = round(it["amount"] / it["price"])
+        try:
+            _one(it, known)
+        except SiteDown as e:
+            print(f"  ! {e}", flush=True)
+            break
         out.append(it)
     print(f"[YES24] {len(out)}건")
     return out
+
+
+def _one(it: dict, known: dict) -> None:
+    """한 건 처리: 새로 발견했거나 진행 중이면 상세 페이지를 읽음."""
+    prev = known.get(it["id"])
+    if prev is None or it["status"] != "종료":
+        d = fetch(it["url"], encoding=ENC, debug_name=f"yes24_{it['id']}.html")
+        if d:
+            parse_detail(d, it)
+    if it["amount"] and it["price"] and not it["count"]:
+        it["count_est"] = round(it["amount"] / it["price"])
