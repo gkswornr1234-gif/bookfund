@@ -13,7 +13,7 @@ from datetime import datetime
 import requests
 
 from crawler import aladin, yes24, kyobo
-from crawler.common import KST, today
+from crawler.common import KST, today, set_budget
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "docs", "data", "fundings.json")
@@ -21,6 +21,7 @@ CATS = os.path.join(ROOT, "config", "categories.json")
 STORES = {"aladin": ("알라딘", aladin), "yes24": ("YES24", yes24), "kyobo": ("교보", kyobo)}
 KEEP_HISTORY = 120
 ACTIVE = ("진행중", "마감임박", "오픈예정")
+STORE_BUDGET = 8 * 60  # 서점 하나에 최대 8분
 MAX_ALERT = 20  # 한 번에 알림에 싣는 최대 건수
 
 
@@ -149,6 +150,7 @@ def main():
         if args.only and key != args.only:
             continue
         print(f"== {name} 수집 시작", flush=True)
+        set_budget(STORE_BUDGET)
         known = {v["id"]: v for k, v in items.items() if v["store"] == key}
         try:
             got = mod.crawl(known)
