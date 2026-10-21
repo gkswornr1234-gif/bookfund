@@ -83,3 +83,21 @@ def test_kyobo():
     assert (it["rate"], it["amount"], it["status"], it["publisher"]) == (554, 5540000, "진행중", "비타북스")
     assert (it["start_date"], it["end_date"]) == ("2026-10-10", "2026-10-31")
     assert kyobo.parse_detail("<html><title>바로펀딩 - 교보문고</title></html>", kyobo.new_item("kyobo", 1, "u")) is None
+
+
+def test_yes24_split_tags():
+    html = """<li><p>책</p><span class="per"><em>48</em>%달성</span><span><em>483,840</em>원</span>
+    <p>12일 남음</p><a href="/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=1"><span>'책' 펀딩 바로가기</span></a></li>"""
+    it = yes24.parse_list(html)[0]
+    assert (it["rate"], it["amount"]) == (48, 483840)
+
+
+def test_label_value_skips_headings():
+    it = yes24.new_item("yes24", "1", "u")
+    yes24.parse_detail("<html><body><h3>출판사 리뷰</h3><p>좋은 책입니다</p></body></html>", it)
+    assert it["publisher"] is None
+
+
+def test_kyobo_generic_page_is_miss():
+    html = '<html><head><meta property="og:title" content="교보문고"></head><body>바로펀딩 안내</body></html>'
+    assert kyobo.parse_detail(html, kyobo.new_item("kyobo", 9999, "u")) is None
