@@ -101,3 +101,20 @@ def test_label_value_skips_headings():
 def test_kyobo_generic_page_is_miss():
     html = '<html><head><meta property="og:title" content="교보문고"></head><body>바로펀딩 안내</body></html>'
     assert kyobo.parse_detail(html, kyobo.new_item("kyobo", 9999, "u")) is None
+
+
+def test_aladin_split_tags():
+    html = """<ul><li><a href="view.aspx?pid=1"><img alt="책 북펀드"></a><span>펀딩 중</span>
+    <p><em>6,433,020</em>원 <em>361</em>권 펀딩</p><p>목표금액 <em>1,000,000</em>원</p></li></ul>"""
+    it = aladin.parse_list(html)[0]
+    assert (it["amount"], it["count"], it["goal"]) == (6433020, 361, 1000000)
+
+
+def test_kyobo_title_brand_and_period():
+    html = """<html><head><meta property="og:title" content="바로펀딩 | 무한 스크롤"></head><body>
+    <a>브랜드관</a><p>113% 달성</p><p>567,000 원</p><p>발송 2026.11.15 ~</p>
+    <dl><dt>펀딩 기간</dt><dd>2026.10.15 ~ 2026.11.14</dd><dt>출판사</dt><dd>비타북스</dd></dl></body></html>"""
+    it = kyobo.parse_detail(html, kyobo.new_item("kyobo", 1, "u"))
+    assert it["title"] == "무한 스크롤"
+    assert it["publisher"] == "비타북스"
+    assert (it["start_date"], it["end_date"]) == ("2026-10-15", "2026-11-14")
