@@ -2,11 +2,15 @@ name: 북펀딩 수집
 
 on:
   schedule:
-        - cron: "30 22 * * *"   # 매일 07:30 (KST). 예약 실행이 밀릴 수 있어 외부 트리거와 병행 권장
+    - cron: "30 22 * * *"   # 매일 07:30 (KST). GitHub 예약은 UTC 기준이라 9시간 뺀 값
   workflow_dispatch:
     inputs:
       debug:
         description: "받은 HTML을 아티팩트로 저장 (셀렉터 점검용)"
+        type: boolean
+        default: false
+      backfill:
+        description: "올해 종료된 펀딩까지 채우기 (알라딘·교보, 오래 걸림)"
         type: boolean
         default: false
       only:
@@ -24,7 +28,7 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
 
@@ -41,9 +45,10 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DEBUG_DIR: ${{ inputs.debug && 'debug' || '' }}
           ONLY: ${{ inputs.only }}
+          BACKFILL: ${{ inputs.backfill && '--backfill' || '' }}
           PYTHONUNBUFFERED: "1"
         run: |
-          if [ -n "$ONLY" ]; then python run.py --only "$ONLY"; else python run.py; fi
+          if [ -n "$ONLY" ]; then python run.py --only "$ONLY" $BACKFILL; else python run.py $BACKFILL; fi
 
       - name: HTML 저장 (디버그)
         if: ${{ always() && inputs.debug }}
