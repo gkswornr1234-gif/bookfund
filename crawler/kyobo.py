@@ -4,7 +4,8 @@ import json
 import re
 from datetime import date, datetime
 
-from .common import SiteDown, KST, fetch, soup_of, lines_of, meta, to_int, new_item
+from .common import (SiteDown, KST, fetch, soup_of, lines_of, meta, to_int, new_item, closest_date,
+                     period_from_md, ref_date)
 
 BASE = "https://event.kyobobook.co.kr"
 MAIN_URL = f"{BASE}/funding"
@@ -12,6 +13,7 @@ DETAIL_URL = f"{BASE}/funding/detail/{{}}"
 BOOTSTRAP = 40      # 첫 실행 때 최신 번호에서 거꾸로 훑을 개수
 MAX_MISSES = 5      # 최신 번호 이후 연속으로 비어 있으면 탐색 중단
 MAX_AHEAD = 20      # 최신 번호 이후 최대 탐색 개수 (무한 탐색 방지)
+STOP = 8            # 과거 채우기: 기준일 이전·없는 번호가 연속 이만큼 나오면 멈춤
 
 def ids_on_main(html: str) -> set[int]:
     return {int(x) for x in re.findall(r"/funding/detail/(\d+)", html)}
@@ -43,17 +45,6 @@ def _md(text: str | None) -> list[tuple[int, int]]:
     return [(int(m), int(d)) for m, d in re.findall(r"(\d{1,2})\s*월\s*(\d{1,2})\s*일", text or "")]
 
 
-def _closest(m: int, d: int, ref: date) -> date:
-    """연도 없는 'M월 D일'을 기준일에 가장 가까운 연도로."""
-    cands = []
-    for y in (ref.year - 1, ref.year, ref.year + 1):
-        try:
-            cands.append(date(y, m, d))
-        except ValueError:
-            pass
-    return min(cands, key=lambda x: abs((x - ref).days))
-
-
 def parse_detail(html: str, it: dict) -> dict | None:
     soup = soup_of(html)
     badge = soup.select_one(".prod_price_wrap .badge_list_box .text")
@@ -82,17 +73,12 @@ def parse_detail(html: str, it: dict) -> dict | None:
         k, v = li.select_one(".tit_info"), li.select_one(".txt_info")
         if k and v:
             info[k.get_text(strip=True)] = v.get_text(" ", strip=True)
-    today_ = datetime.now(KST).date()
-    period = _md(info.get("기간"))
-    if period:
-        end = _closest(*period[-1], today_)
-        it["end_date"] = end.isoformat()
-        if len(period) > 1:
-            st = _closest(*period[0], end)
-            it["start_date"] = (st if st <= end else st.replace(year=st.year - 1)).isoformat()
+    ended = it["status"] == "종료"
+    st, en = period_from_md(_md(info.get("기간")), ended)
+    it["start_date"], it["end_date"] = st, en
     if ship := _md(info.get("발송")):
-        ref = date.fromisoformat(it["end_date"]) if it["end_date"] else today_
-        it["release_date"] = _closest(*ship[0], ref).isoformat()
+        ref = date.fromisoformat(en) if en else datetime.now(KST).date()
+        it["release_date"] = closest_date(*ship[0], ref, "future").isoformat()
 
     cat = soup.select_one(".intro_category_list .category_list_item")
     if cat:
@@ -149,4 +135,28 @@ def crawl(known: dict) -> list[dict]:
     except SiteDown as e:
         print(f"  ! {e}", flush=True)
     print(f"[교보] {len(out)}건")
+    return out
+
+
+def backfill(known: dict, since: str) -> list[dict]:
+    """가장 오래된 수집 번호부터 거꾸로 내려가며 since 이후 펀딩을 채움.
+    since 이전 펀딩이나 없는 번호가 연속 STOP번 나오면 멈춤. 중간에 끊겨도 다음 실행에서 이어서 진행."""
+    if not known:
+        return []
+    n, misses, out = min(int(k) for k in known), 0, []
+    try:
+        while misses < STOP and n > 1:
+            n -= 1
+            if str(n) in known:
+                continue
+            d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
+            it = parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n))) if d else None
+            if it and (ref_date(it) or "9999") >= since:
+                out.append(it)
+                misses = 0
+            else:
+                misses += 1
+    except SiteDown as e:
+        print(f"  ! {e}", flush=True)
+    print(f"[교보 과거] {len(out)}건 (마지막 번호 {n})")
     return out

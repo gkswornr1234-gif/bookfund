@@ -77,6 +77,9 @@
   .seg{display:inline-flex;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:3px}
   .seg button{font-size:12.5px;font-weight:500;color:var(--ink-2);border:none;background:none;padding:6px 13px;border-radius:6px;cursor:pointer;transition:.12s;display:inline-flex;align-items:center;gap:5px}
   .seg button.active{background:var(--bg);color:var(--blue);font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .period-ctl{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;margin-left:14px}
+  .period-ctl .lbl,.seen-lbl{font-size:12.5px;font-weight:700;color:var(--ink-3)}
+  .month-input{font-size:12.5px;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
   .sort-select{font-size:12.5px;font-weight:500;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer}
 
   /* ---------- Table ---------- */
@@ -223,8 +226,24 @@
 
   <div class="sub-bar">
     <span class="count">총 <b class="num" id="cnt">0</b>건</span>
+    <div class="period-ctl">
+      <span class="lbl">펀딩 기간</span>
+      <select class="sort-select" id="period" aria-label="펀딩 기간">
+        <option value="3m">최근 3개월</option>
+        <option value="this">이번 달</option>
+        <option value="last">지난달</option>
+        <option value="year">올해</option>
+        <option value="all">전체 기간</option>
+        <option value="custom">직접 선택</option>
+      </select>
+      <span id="period-custom" hidden>
+        <input type="month" id="p-from" class="month-input num" aria-label="시작 월"> ~
+        <input type="month" id="p-to" class="month-input num" aria-label="끝 월">
+      </span>
+    </div>
     <div class="sub-right">
       <div class="seg" id="store-seg"></div>
+      <span class="seen-lbl">새로 발견</span>
       <div class="seg" id="seen-seg">
         <button data-d="0" class="active">전체</button>
         <button data-d="3">3일</button>
@@ -252,7 +271,7 @@
 
   <footer>
     <b>데이터 기준</b><br>
-    교보문고 바로펀딩, 예스24 그래제본소, 알라딘 북펀드를 매일 09시·18시에 수집합니다.
+    교보문고 바로펀딩, 예스24 그래제본소, 알라딘 북펀드를 매일 아침 7시 30분에 수집하며, 2026년 1월 1일 이후 마감된 펀딩부터 모읍니다.
     서점들이 등록일을 공개하지 않아 <b>처음 발견한 날</b>을 등록일로 봅니다.
     수량은 알라딘만 실제 권수이고, 교보문고·예스24는 펀딩액을 펀딩가로 나눈 추정치(‘약’ 표시)입니다.
     분야는 서점 분류를 교보문고 분야 기준으로 맞춘 값입니다.
@@ -303,13 +322,37 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const won = n => n == null ? '–' : n.toLocaleString('ko-KR') + '원';
 const man = n => n == null ? '–' : n >= 1e4 ? (Math.round(n / 1e3) / 10).toLocaleString('ko-KR') + '만원' : n.toLocaleString('ko-KR') + '원';
-const dot = d => d ? d.slice(5).replace('-', '.') : '';
+// 올해 날짜는 'MM.DD', 다른 해는 'YY.MM.DD'
+const dot = d => !d ? '' : d.slice(0, 4) === todayKST().slice(0, 4) ? d.slice(5).replace('-', '.') : d.slice(2).replace(/-/g, '.');
 const todayKST = () => new Date().toLocaleDateString('sv-SE', {timeZone:'Asia/Seoul'});
 const dayDiff = (a, b) => Math.round((new Date(a) - new Date(b)) / 864e5);
 const ago = d => d ? dayDiff(todayKST(), d) : 1e9;
 const dLeft = it => it.end_date ? dayDiff(it.end_date, todayKST()) : null;
 
-const state = {view:'live', cat:'', store:'', seen:0, q:'', sort:'seen'};
+const state = {view:'live', cat:'', store:'', seen:0, q:'', sort:'seen', period:'3m', from:'', to:''};
+
+/* 펀딩 기간 필터: 선택 범위와 펀딩 기간이 하루라도 겹치면 포함 */
+const ym = d => d.toLocaleDateString('sv-SE', {timeZone:'Asia/Seoul'}).slice(0, 7);
+const monthEnd = m => { const [y, mo] = m.split('-').map(Number); return new Date(Date.UTC(y, mo, 0)).toISOString().slice(0, 10); };
+function periodRange(){
+  const now = new Date(), cur = ym(now);
+  const shift = n => { const d = new Date(now); d.setDate(1); d.setMonth(d.getMonth() + n); return ym(d); };
+  switch (state.period){
+    case '3m':     return [shift(-2) + '-01', '9999-12-31'];
+    case 'this':   return [cur + '-01', monthEnd(cur)];
+    case 'last':   { const m = shift(-1); return [m + '-01', monthEnd(m)]; }
+    case 'year':   return [cur.slice(0, 4) + '-01-01', cur.slice(0, 4) + '-12-31'];
+    case 'custom': return [(state.from || '0000-01') + '-01', state.to ? monthEnd(state.to) : '9999-12-31'];
+    default:       return null;
+  }
+}
+function inPeriod(it){
+  const r = periodRange();
+  if (!r) return true;
+  const s = it.start_date || it.first_seen || '0000-01-01';
+  const e = it.end_date || it.achieved_date || it.release_date || todayKST();
+  return s <= r[1] && e >= r[0];
+}
 let ALL = [], cur = null, period = 7;
 
 /* ---------- 계산 ---------- */
@@ -346,6 +389,7 @@ function base(){
   return ALL.filter(it =>
     (!state.store || it.store === state.store) &&
     (!state.seen || ago(it.first_seen) < state.seen) &&
+    inPeriod(it) &&
     (!q || `${it.title} ${it.publisher}`.toLowerCase().includes(q)));
 }
 function visible(){
@@ -539,6 +583,17 @@ function bind(){
     render();
   });
   $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderRows(); });
+  $('#period').addEventListener('change', e => {
+    state.period = e.target.value;
+    $('#period-custom').hidden = state.period !== 'custom';
+    if (state.period === 'custom' && !state.from){
+      state.from = state.to = ym(new Date());
+      $('#p-from').value = state.from; $('#p-to').value = state.to;
+    }
+    render();
+  });
+  $('#p-from').addEventListener('change', e => { state.from = e.target.value; render(); });
+  $('#p-to').addEventListener('change', e => { state.to = e.target.value; render(); });
   $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
   $('#xlsx').addEventListener('click', exportXlsx);
   $('#rows').addEventListener('click', e => { const tr = e.target.closest('tr'); if (tr) openModal(tr.dataset.k); });

@@ -1,7 +1,7 @@
 """알라딘 북펀드 — 목록은 서버 렌더링, 상세에 펴낸곳·주제 분류·상품구성이 있음."""
 import re
 
-from .common import SiteDown, fetch, soup_of, lines_of, text_of, flat_of, meta, to_int, norm_date, new_item
+from .common import SiteDown, ref_date, fetch, soup_of, lines_of, text_of, flat_of, meta, to_int, norm_date, new_item
 
 BASE = "https://www.aladin.co.kr"
 LIST_URL = f"{BASE}/m/BookFund/Main.aspx"
@@ -82,6 +82,14 @@ def parse_detail(html: str, it: dict) -> dict:
         it["status"] = it["status"] or {"펀딩종료": "종료", "오픈예정": "오픈예정"}.get(m.group(1), "진행중")
         it["end_date"], it["release_date"] = norm_date(m.group(2)), norm_date(m.group(3))
 
+    # 종료된 펀딩 상세엔 마감일이 없고 '출간되었습니다', 'YYYY-MM-DD에 목표 금액을 달성', '출간일: YYYY년 M월 D일'이 남음
+    if "출간되었습니다" in txt or "펀딩종료" in txt:
+        it["status"] = "종료"
+    if m := re.search(r"(\d{4}-\d{2}-\d{2})에 목표 금액을 달성", txt):
+        it["achieved_date"] = m.group(1)
+    if not it["release_date"] and (m := re.search(r"출간(?:\s*예정)?일\s*:\s*(\d{4}년\s*\d{1,2}월\s*\d{1,2}일)", txt)):
+        it["release_date"] = norm_date(m.group(1))
+
     # 상품구성: 마지막 '상품구성' 제목 ~ '펀딩 달성 단계별' 사이
     benefits = []
     idx = [k for k, s in enumerate(lines) if s.strip("# ").startswith("상품구성")]
@@ -131,3 +139,31 @@ def _one(it: dict, known: dict) -> None:
             parse_detail(d, it)
     elif it["goal"] and it["amount"]:
         it["rate"] = round(it["amount"] / it["goal"] * 100)
+
+
+STOP = 8  # 과거 채우기: 기준일 이전·없는 번호가 연속 이만큼 나오면 멈춤
+
+
+def backfill(known: dict, since: str) -> list[dict]:
+    """가장 오래된 진행·최근 번호부터 거꾸로 내려가며 since 이후 펀딩을 채움 (pid는 순번).
+    중간에 끊겨도 다음 실행에서 이어서 진행."""
+    recent = [int(k) for k, v in known.items() if (ref_date(v) or "9999") >= since]
+    if not recent:
+        return []
+    n, misses, out = min(recent), 0, []
+    try:
+        while misses < STOP and n > 1:
+            n -= 1
+            if str(n) in known:
+                continue
+            d = fetch(DETAIL_URL.format(n), debug_name=f"aladin_{n}.html")
+            it = parse_detail(d, new_item("aladin", str(n), DETAIL_URL.format(n))) if d else None
+            if it and it["title"] and it["amount"] is not None and (ref_date(it) or "0000") >= since:
+                out.append(it)
+                misses = 0
+            else:
+                misses += 1
+    except SiteDown as e:
+        print(f"  ! {e}", flush=True)
+    print(f"[알라딘 과거] {len(out)}건 (마지막 번호 {n})")
+    return out

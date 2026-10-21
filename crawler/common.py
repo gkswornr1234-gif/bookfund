@@ -183,8 +183,9 @@ def new_item(store: str, item_id: str, url: str) -> dict:
     }
 
 
-def closest_date(m: int, d: int, ref: date | None = None) -> date:
-    """연도 없는 월/일을 기준일(기본 오늘)에 가장 가까운 연도로 보정."""
+def closest_date(m: int, d: int, ref: date | None = None, direction: str | None = None) -> date:
+    """연도 없는 월/일에 연도를 붙임. direction='past'면 기준일 이전 중 가장 가까운 날,
+    'future'면 기준일 이후 중 가장 가까운 날, None이면 앞뒤 상관없이 가장 가까운 날."""
     ref = ref or datetime.now(KST).date()
     cands = []
     for y in (ref.year - 1, ref.year, ref.year + 1):
@@ -192,17 +193,24 @@ def closest_date(m: int, d: int, ref: date | None = None) -> date:
             cands.append(date(y, m, d))
         except ValueError:
             pass
+    if direction == "past":
+        cands = [c for c in cands if c <= ref] or cands
+    elif direction == "future":
+        cands = [c for c in cands if c >= ref] or cands
     return min(cands, key=lambda x: abs((x - ref).days))
 
 
-def period_from_md(pairs: list[tuple[int, int]]) -> tuple[str | None, str | None]:
-    """[(월, 일), (월, 일)] → ('YYYY-MM-DD', 'YYYY-MM-DD'). 마감일 기준으로 시작일 연도 보정."""
+def period_from_md(pairs: list[tuple[int, int]], ended: bool = False) -> tuple[str | None, str | None]:
+    """[(월, 일), (월, 일)] → 시작일·마감일. 종료된 펀딩은 마감일이 오늘 이전, 진행 중이면 오늘 이후."""
     if not pairs:
         return None, None
-    end = closest_date(*pairs[-1])
+    end = closest_date(*pairs[-1], direction="past" if ended else "future")
     if len(pairs) == 1:
         return None, end.isoformat()
-    st = closest_date(*pairs[0], end)
-    if st > end:
-        st = st.replace(year=st.year - 1)
+    st = closest_date(*pairs[0], end, "past")
     return st.isoformat(), end.isoformat()
+
+
+def ref_date(it: dict) -> str | None:
+    """'언제 펀딩이었나'를 판단하는 기준일: 마감일 → 목표 달성일 → 출간일 순."""
+    return it.get("end_date") or it.get("achieved_date") or it.get("release_date")

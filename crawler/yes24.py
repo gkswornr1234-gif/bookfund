@@ -59,7 +59,7 @@ def parse_detail(html: str, it: dict) -> dict:
     it["count"] = to_int(re.sub(r"부.*", "", state.get("펀딩수", ""))) or None
     it["goal"] = to_int(state.get("목표액")) or None
     pairs = [(int(m), int(d)) for m, d in re.findall(r"(\d{1,2})/(\d{1,2})", state.get("기간", ""))]
-    s, e = period_from_md(pairs)
+    s, e = period_from_md(pairs, ended=it["status"] == "종료")
     it["start_date"], it["end_date"] = s or it["start_date"], e or it["end_date"]
     if it["goal"] and it["amount"] is not None:
         it["rate"] = round(it["amount"] / it["goal"] * 100)

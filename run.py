@@ -13,7 +13,7 @@ from datetime import datetime
 import requests
 
 from crawler import aladin, yes24, kyobo
-from crawler.common import KST, today, set_budget
+from crawler.common import KST, today, set_budget, ref_date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "docs", "data", "fundings.json")
@@ -22,6 +22,9 @@ STORES = {"aladin": ("알라딘", aladin), "yes24": ("YES24", yes24), "kyobo": (
 KEEP_HISTORY = 120
 ACTIVE = ("진행중", "마감임박", "오픈예정")
 STORE_BUDGET = 8 * 60  # 서점 하나에 최대 8분
+BACKFILL_BUDGET = 20 * 60  # 과거 채우기는 서점당 최대 20분 (끊기면 다음 실행에서 이어서)
+# 이 날짜 이전에 끝난 펀딩은 수집하지 않음. 해가 바뀌어도 고정값이라 쌓인 데이터는 지워지지 않음
+SINCE = os.environ.get("SINCE") or "2026-01-01"
 MAX_ALERT = 20  # 한 번에 알림에 싣는 최대 건수
 
 
@@ -138,6 +141,7 @@ def save(db: dict) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=list(STORES))
+    ap.add_argument("--backfill", action="store_true", help="알라딘·교보의 SINCE 이후 종료 펀딩을 번호를 거슬러 올라가며 채움")
     args = ap.parse_args()
 
     cfg = load(CATS, {"rules": [], "fallback": {"category": "미분류"}})
@@ -161,13 +165,27 @@ def main():
             runs[key] = {"at": datetime.now(KST).isoformat(timespec="minutes"), "ok": False,
                          "count": 0, "error": f"{type(e).__name__}: {e}"}
             continue
+        if args.backfill and hasattr(mod, "backfill"):
+            print(f"== {name} 과거 채우기 (since {SINCE})", flush=True)
+            set_budget(BACKFILL_BUDGET)
+            known.update({it["id"]: it for it in got})
+            try:
+                got += mod.backfill(known, SINCE)
+            except Exception:
+                traceback.print_exc()
         for it in got:
+            if (ref_date(it) or "9999") < SINCE:
+                continue  # 기준일 이전에 끝난 펀딩 (알라딘 메인의 옛날 진열 건 등)
             k = f"{key}:{it['id']}"
             is_new = k not in items
             items[k] = merge(items.get(k), it, cfg)
-            if is_new:
+            if is_new and items[k].get("status") != "종료":  # 이미 끝난 펀딩은 알림 안 함
                 new_items.append(items[k])
         save(db)  # 서점 하나 끝날 때마다 저장 (중간에 멈춰도 앞 서점 결과는 남음)
+
+    # 기준일 이전 펀딩이 이미 저장돼 있으면 정리
+    for k in [k for k, v in items.items() if (ref_date(v) or "9999") < SINCE]:
+        del items[k]
 
     # 목록에서 사라졌고 마감일이 지난 건은 종료 처리
     d = today()
