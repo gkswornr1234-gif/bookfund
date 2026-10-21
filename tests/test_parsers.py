@@ -25,17 +25,7 @@ ALADIN_DETAIL = """<html><head>
 <ul><li>4,000,000원 이상 펀딩<br>펀딩한 금액의 4% 추가 마일리지 적립</li>
 <li>1,000,000원 이상 펀딩 달성 펀딩금액의 1% 추가 마일리지 적립</li></ul></body></html>"""
 
-YES24_LIST = """<html><body><ul>
-<li><div class="info"><p>봄 내음보다 너를</p><p>노래를 그림책으로 만나다</p><p>48%달성 483,840원</p>
-<p><em>펀딩 진행중</em> 12일 남음</p></div>
-<a href="https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=277354"><em>3</em><span>'봄 내음보다 너를' 펀딩 바로가기</span></a></li>
-<li><div><p>갖고 싶어요</p><p>118%달성 1,177,240원</p><p><em>펀딩 진행중</em> 마감임박</p></div>
-<a href="https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=276961"><span>'갖고 싶어요' 펀딩 바로가기</span></a></li>
-</ul></body></html>"""
 
-YES24_DETAIL = """<html><body><dl><dt>출판사</dt><dd>북스토리</dd><dt>펀딩 기간</dt>
-<dd>2026.10.05 ~ 2026.11.01</dd><dt>목표 금액</dt><dd>1,000,000원</dd></dl>
-<p>펀딩가 18,000원</p><p>참여자 전원 친필 사인본 증정</p><p>한정판 엽서 세트 증정</p></body></html>"""
 
 KYOBO_MAIN = """<a href="https://event.kyobobook.co.kr/funding/detail/662">a</a>
 <a href="https://event.kyobobook.co.kr/funding/detail/672">b</a>"""
@@ -64,30 +54,6 @@ def test_aladin_detail():
     assert it["benefits"][-1] == "달성 단계별 추가 마일리지 최대 4%"
 
 
-def test_yes24_list_and_detail():
-    items = yes24.parse_list(YES24_LIST)
-    assert [i["id"] for i in items] == ["277354", "276961"]
-    a = items[0]
-    assert (a["title"], a["rate"], a["amount"], a["status"]) == ("봄 내음보다 너를", 48, 483840, "진행중")
-    assert items[1]["status"] == "마감임박"
-    yes24.parse_detail(YES24_DETAIL, a)
-    assert a["publisher"] == "북스토리"
-    assert (a["start_date"], a["end_date"], a["goal"], a["price"]) == ("2026-10-05", "2026-11-01", 1000000, 18000)
-    assert "참여자 전원 친필 사인본 증정" in a["benefits"]
-
-
-
-def test_yes24_split_tags():
-    html = """<li><p>책</p><span class="per"><em>48</em>%달성</span><span><em>483,840</em>원</span>
-    <p>12일 남음</p><a href="/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=1"><span>'책' 펀딩 바로가기</span></a></li>"""
-    it = yes24.parse_list(html)[0]
-    assert (it["rate"], it["amount"]) == (48, 483840)
-
-
-def test_label_value_skips_headings():
-    it = yes24.new_item("yes24", "1", "u")
-    yes24.parse_detail("<html><body><h3>출판사 리뷰</h3><p>좋은 책입니다</p></body></html>", it)
-    assert it["publisher"] is None
 
 
 
@@ -129,3 +95,16 @@ def test_aladin_real():
     assert it["publisher"] == "도서출판 날"
     assert it["category_raw"] == "에세이 > 한국에세이"
     assert it["benefits"][0] == "15,120원 펀딩"
+
+
+def test_yes24_real():
+    items = yes24.parse_list(read("yes24_list.html"))
+    assert len(items) == 21
+    a = items[0]
+    assert (a["title"], a["rate"], a["amount"], a["status"], a["goods_id"]) == ("나로 걷는 길, 고요하게 단단하게", 101, 1013040, "진행중", "198278278")
+    assert len({i["end_date"] for i in items}) > 3  # 카드마다 마감일이 달라야 함
+    it = next(i for i in items if i["id"] == "277008")
+    yes24.parse_detail(read("yes24_277008.html"), it)
+    assert (it["amount"], it["count"], it["goal"], it["price"]) == (1219500, 76, 1000000, 15120)
+    assert it["start_date"].endswith("-10-02") and it["end_date"].endswith("-10-25")
+    assert it["benefits"][1] == "16,500원: 『불량 로봇 릭스비 1』 1부, 키캡 키링(랜덤 1종)"

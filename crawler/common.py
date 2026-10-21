@@ -3,7 +3,7 @@ import os
 import re
 import time
 import random
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import requests
 from bs4 import BeautifulSoup
@@ -181,3 +181,28 @@ def new_item(store: str, item_id: str, url: str) -> dict:
         "benefits": [],
         "image": None,
     }
+
+
+def closest_date(m: int, d: int, ref: date | None = None) -> date:
+    """연도 없는 월/일을 기준일(기본 오늘)에 가장 가까운 연도로 보정."""
+    ref = ref or datetime.now(KST).date()
+    cands = []
+    for y in (ref.year - 1, ref.year, ref.year + 1):
+        try:
+            cands.append(date(y, m, d))
+        except ValueError:
+            pass
+    return min(cands, key=lambda x: abs((x - ref).days))
+
+
+def period_from_md(pairs: list[tuple[int, int]]) -> tuple[str | None, str | None]:
+    """[(월, 일), (월, 일)] → ('YYYY-MM-DD', 'YYYY-MM-DD'). 마감일 기준으로 시작일 연도 보정."""
+    if not pairs:
+        return None, None
+    end = closest_date(*pairs[-1])
+    if len(pairs) == 1:
+        return None, end.isoformat()
+    st = closest_date(*pairs[0], end)
+    if st > end:
+        st = st.replace(year=st.year - 1)
+    return st.isoformat(), end.isoformat()
