@@ -63,13 +63,16 @@ def parse_detail(html: str, it: dict) -> dict:
     it["price"] = to_int(meta(soup, "og:price")) or it["price"]
     it["isbn"] = meta(soup, "books:isbn")
 
-    if m := re.search(r"펴낸곳\s*:?\s*\n?\s*([^\n]+)", txt):
-        it["publisher"] = m.group(1).strip(" :")
-    # '주제 분류:' 다음 줄들 중 첫 번째 분류 경로
-    if (i := txt.find("주제 분류")) >= 0:
-        for s in txt[i:].split("\n")[1:6]:
-            if ">" in s:
-                it["category_raw"] = s.strip()
+    # 출판사: '펴낸곳: X' / '- 펴낸 곳: X' / '출판사: X' 등 출판사가 직접 쓴 표기가 제각각
+    if m := re.search(r"(?:펴낸\s*곳|출판사)\s*[:：]\s*([^\n]+)", txt):
+        it["publisher"] = m.group(1).replace("\xa0", " ").strip(" -:")[:30] or None
+    # 분류: '주제 분류:' 다음 줄, '- 분류: 유아>그림책'처럼 같은 줄, 둘 다 처리
+    for k, s_ in enumerate(lines):
+        if m := re.search(r"분류\s*[:：]\s*(.*)$", s_):
+            cands = [m.group(1)] + lines[k + 1:k + 4]
+            path = next((c for c in cands if ">" in c), None) or (m.group(1).strip(" -") or None)
+            if path:
+                it["category_raw"] = re.sub(r"\s*>\s*", " > ", path.strip(" -"))
                 break
 
     flat = " ".join(lines)
@@ -87,6 +90,9 @@ def parse_detail(html: str, it: dict) -> dict:
             if s.startswith("펀딩 달성 단계별") or s.startswith("※"):
                 break
             if "상세 보러가기" in s or re.fullmatch(r"[\d.\s]+", s):
+                continue
+            if benefits and re.fullmatch(r"[\d,]+", benefits[-1]) and s.startswith("원"):
+                benefits[-1] += s  # '17,820' + '원 펀딩' → '17,820원 펀딩'
                 continue
             benefits.append(s)
     pcts = [int(x) for x in re.findall(r"펀딩한 금액의\s*(\d+)%\s*추가 마일리지", txt)]

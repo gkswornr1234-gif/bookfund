@@ -1,24 +1,182 @@
 {
-  "_설명": "서점별 분류 경로(category_raw)에 keywords 중 하나가 들어 있으면 그 분야로 묶음. 위에서부터 먼저 맞는 것 적용. mention에 슬랙 멤버 ID(<@U0123>)나 그룹 멘션(<!subteam^S0123>)을 넣으면 신규 알림 때 함께 호출됨.",
+  "_설명": "서점별 분류 경로(category_raw)에 keywords 중 하나가 들어 있으면 그 분야로 묶음. 위에서부터 먼저 맞는 것 적용. owner에 담당 MD 이름을 넣으면 신규 알림에 '담당 OOO'으로 함께 표시됨.",
   "rules": [
-    { "category": "유아", "keywords": ["유아", "그림책"], "mention": "" },
-    { "category": "어린이", "keywords": ["어린이", "초등", "동화"], "mention": "" },
-    { "category": "청소년", "keywords": ["청소년"], "mention": "" },
-    { "category": "만화", "keywords": ["만화", "라이트노벨", "코믹"], "mention": "" },
-    { "category": "참고서·수험서", "keywords": ["참고서", "수험서", "자격증", "공무원", "대학교재"], "mention": "" },
-    { "category": "소설", "keywords": ["소설", "장르소설", "희곡"], "mention": "" },
-    { "category": "시·에세이", "keywords": ["에세이", "시 ", "/시", "시/"], "mention": "" },
-    { "category": "경제·경영", "keywords": ["경제", "경영", "재테크", "투자"], "mention": "" },
-    { "category": "자기계발", "keywords": ["자기계발"], "mention": "" },
-    { "category": "인문", "keywords": ["인문", "철학", "심리"], "mention": "" },
-    { "category": "역사·문화", "keywords": ["역사", "문화"], "mention": "" },
-    { "category": "사회·정치", "keywords": ["사회", "정치", "노동"], "mention": "" },
-    { "category": "과학", "keywords": ["과학", "자연과학"], "mention": "" },
-    { "category": "예술", "keywords": ["예술", "대중문화", "미술", "디자인"], "mention": "" },
-    { "category": "종교", "keywords": ["종교", "역학"], "mention": "" },
-    { "category": "가정·건강·취미", "keywords": ["가정", "육아", "요리", "살림", "건강", "취미", "여행"], "mention": "" },
-    { "category": "외국어", "keywords": ["외국어", "영어", "사전"], "mention": "" },
-    { "category": "IT", "keywords": ["컴퓨터", "IT", "모바일"], "mention": "" }
+    {
+      "category": "굿즈·문구",
+      "keywords": [
+        "핫트랙스",
+        "교보Only",
+        "굿즈",
+        "독서용품"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "유아",
+      "keywords": [
+        "유아",
+        "그림책"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "어린이",
+      "keywords": [
+        "어린이",
+        "초등",
+        "동화"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "청소년",
+      "keywords": [
+        "청소년"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "만화",
+      "keywords": [
+        "만화",
+        "라이트노벨",
+        "코믹"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "참고서·수험서",
+      "keywords": [
+        "참고서",
+        "수험서",
+        "자격증",
+        "공무원",
+        "대학교재"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "소설",
+      "keywords": [
+        "소설",
+        "장르소설",
+        "희곡"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "시·에세이",
+      "keywords": [
+        "에세이",
+        "시 ",
+        "/시",
+        "시/"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "경제·경영",
+      "keywords": [
+        "경제",
+        "경영",
+        "재테크",
+        "투자"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "자기계발",
+      "keywords": [
+        "자기계발"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "인문",
+      "keywords": [
+        "인문",
+        "철학",
+        "심리"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "예술",
+      "keywords": [
+        "예술",
+        "대중문화",
+        "미술",
+        "디자인"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "역사·문화",
+      "keywords": [
+        "역사",
+        "문화"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "사회·정치",
+      "keywords": [
+        "사회",
+        "정치",
+        "노동"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "과학",
+      "keywords": [
+        "과학",
+        "자연과학"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "종교",
+      "keywords": [
+        "종교",
+        "역학"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "가정·건강·취미",
+      "keywords": [
+        "가정",
+        "육아",
+        "요리",
+        "살림",
+        "건강",
+        "취미",
+        "여행"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "외국어",
+      "keywords": [
+        "외국어",
+        "영어",
+        "사전"
+      ],
+      "owner": ""
+    },
+    {
+      "category": "IT",
+      "keywords": [
+        "컴퓨터",
+        "IT",
+        "모바일"
+      ],
+      "owner": ""
+    }
   ],
-  "fallback": { "category": "미분류", "mention": "" }
+  "fallback": {
+    "category": "미분류",
+    "owner": ""
+  }
 }

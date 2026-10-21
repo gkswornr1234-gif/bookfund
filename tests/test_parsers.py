@@ -76,14 +76,6 @@ def test_yes24_list_and_detail():
     assert "참여자 전원 친필 사인본 증정" in a["benefits"]
 
 
-def test_kyobo():
-    assert kyobo.ids_on_main(KYOBO_MAIN) == {662, 672}
-    it = kyobo.parse_detail(KYOBO_DETAIL, kyobo.new_item("kyobo", 672, "u"))
-    assert it["title"] == "반복되는 허리 통증의 진짜 원인"
-    assert (it["rate"], it["amount"], it["status"], it["publisher"]) == (554, 5540000, "진행중", "비타북스")
-    assert (it["start_date"], it["end_date"]) == ("2026-10-10", "2026-10-31")
-    assert kyobo.parse_detail("<html><title>바로펀딩 - 교보문고</title></html>", kyobo.new_item("kyobo", 1, "u")) is None
-
 
 def test_yes24_split_tags():
     html = """<li><p>책</p><span class="per"><em>48</em>%달성</span><span><em>483,840</em>원</span>
@@ -98,10 +90,6 @@ def test_label_value_skips_headings():
     assert it["publisher"] is None
 
 
-def test_kyobo_generic_page_is_miss():
-    html = '<html><head><meta property="og:title" content="교보문고"></head><body>바로펀딩 안내</body></html>'
-    assert kyobo.parse_detail(html, kyobo.new_item("kyobo", 9999, "u")) is None
-
 
 def test_aladin_split_tags():
     html = """<ul><li><a href="view.aspx?pid=1"><img alt="책 북펀드"></a><span>펀딩 중</span>
@@ -110,11 +98,34 @@ def test_aladin_split_tags():
     assert (it["amount"], it["count"], it["goal"]) == (6433020, 361, 1000000)
 
 
-def test_kyobo_title_brand_and_period():
-    html = """<html><head><meta property="og:title" content="바로펀딩 | 무한 스크롤"></head><body>
-    <a>브랜드관</a><p>113% 달성</p><p>567,000 원</p><p>발송 2026.11.15 ~</p>
-    <dl><dt>펀딩 기간</dt><dd>2026.10.15 ~ 2026.11.14</dd><dt>출판사</dt><dd>비타북스</dd></dl></body></html>"""
-    it = kyobo.parse_detail(html, kyobo.new_item("kyobo", 1, "u"))
-    assert it["title"] == "무한 스크롤"
-    assert it["publisher"] == "비타북스"
-    assert (it["start_date"], it["end_date"]) == ("2026-10-15", "2026-11-14")
+
+# ---- 2026-10 실제 페이지 저장본으로 검증 (tests/fixtures)
+import os
+FX = os.path.join(os.path.dirname(__file__), "fixtures")
+read = lambda n: open(os.path.join(FX, n), encoding="utf-8").read()
+
+
+def test_kyobo_real_detail():
+    it = kyobo.parse_detail(read("kyobo_672.html"), kyobo.new_item("kyobo", 672, "u"))
+    assert it["title"] == "디스크는 죄가 없다"
+    assert it["headline"] == "반복되는 허리 통증의 진짜 원인"
+    assert it["publisher"] == "알에이치코리아"
+    assert it["category_raw"] == "국내도서 > 건강 > 질병치료/예방 > 디스크/척추"
+    assert it["status"] == "마감임박"
+    assert (it["rate"], it["amount"], it["goal"], it["price"]) == (766, 11502000, 1500000, 18000)
+    assert it["start_date"].endswith("-10-07") and it["end_date"].endswith("-10-22")
+    assert any("운동 포스터" in b for b in it["benefits"])
+
+
+def test_kyobo_missing_number():
+    assert kyobo.parse_detail(read("kyobo_684.html"), kyobo.new_item("kyobo", 684, "u")) is None
+
+
+def test_aladin_real():
+    items = aladin.parse_list(read("aladin_list.html"))
+    assert len(items) >= 50 and all(i["amount"] is not None for i in items[:10])
+    it = next(i for i in items if i["id"] == "3037")
+    aladin.parse_detail(read("aladin_3037.html"), it)
+    assert it["publisher"] == "도서출판 날"
+    assert it["category_raw"] == "에세이 > 한국에세이"
+    assert it["benefits"][0] == "15,120원 펀딩"

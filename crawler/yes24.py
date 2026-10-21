@@ -1,7 +1,7 @@
 """YES24 예스펀딩(그래제본소) — 목록에 달성률·금액·남은 일수, 상세/상품 페이지에 출판사·분야."""
 import re
 
-from .common import (flat_of, SiteDown, fetch, soup_of, lines_of, text_of, to_int, days_later, find_date_range,
+from .common import (flat_of, SiteDown, fetch, soup_of, lines_of, to_int, days_later, find_date_range,
                      label_value, benefit_lines, new_item)
 
 BASE = "https://www.yes24.com"

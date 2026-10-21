@@ -447,6 +447,7 @@ function openModal(k){
     ['남은 기간', VIEWS.live(it.status) && left != null ? (left <= 0 ? '오늘 마감' : `D-${left}`) : (it.status || '–')],
   ].map(([a, b]) => `<div><dt>${a}</dt><dd class="num">${b}</dd></div>`).join('');
   const info = [
+    ['프로젝트명', it.headline && it.headline !== it.title ? it.headline : null],
     ['펀딩 기간', `${it.start_date || '시작일 미공개'} ~ ${it.end_date || '미확인'}`],
     ['처음 발견', it.first_seen],
     ['출간 예정', it.release_date],
