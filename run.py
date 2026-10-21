@@ -1,0 +1,133 @@
+"""서점별 수집 → 기존 데이터와 병합 → 신규 감지 → 슬랙 알림.
+
+python run.py                 # 전체 실행
+python run.py --only aladin   # 한 서점만
+DEBUG_DIR=debug python run.py # 받은 HTML을 debug/에 저장 (셀렉터 점검용)
+"""
+import argparse
+import json
+import os
+import traceback
+from datetime import datetime
+
+import requests
+
+from crawler import aladin, yes24, kyobo
+from crawler.common import KST, today
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(ROOT, "docs", "data", "fundings.json")
+CATS = os.path.join(ROOT, "config", "categories.json")
+STORES = {"aladin": ("알라딘", aladin), "yes24": ("YES24", yes24), "kyobo": ("교보", kyobo)}
+KEEP_HISTORY = 120
+ACTIVE = ("진행중", "마감임박", "오픈예정")
+
+
+def load(path, default):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return default
+
+
+def map_category(raw: str | None, cfg: dict) -> tuple[str, str]:
+    if raw:
+        for r in cfg["rules"]:
+            if any(k in raw for k in r["keywords"]):
+                return r["category"], r.get("mention", "")
+    fb = cfg["fallback"]
+    return fb["category"], fb.get("mention", "")
+
+
+def merge(old: dict | None, new: dict, cfg: dict) -> dict:
+    d = today()
+    if old:
+        merged = dict(old)
+        for k, v in new.items():
+            if v not in (None, [], ""):
+                merged[k] = v
+    else:
+        merged = dict(new, first_seen=d, history=[])
+    merged["last_seen"] = d
+    merged["category"], _ = map_category(merged.get("category_raw"), cfg)
+    if not merged.get("count") and merged.get("amount") and merged.get("price"):
+        merged["count_est"] = round(merged["amount"] / merged["price"])
+
+    snap = {"d": d, "amount": merged.get("amount"), "count": merged.get("count") or merged.get("count_est"),
+            "rate": merged.get("rate")}
+    hist = merged.setdefault("history", [])
+    if hist and hist[-1]["d"] == d:
+        hist[-1] = snap
+    else:
+        hist.append(snap)
+    merged["history"] = hist[-KEEP_HISTORY:]
+    return merged
+
+
+def notify(new_items: list[dict], cfg: dict) -> None:
+    url = os.environ.get("SLACK_WEBHOOK_URL")
+    if not url or not new_items:
+        return
+    lines = [f"*북펀딩 신규 {len(new_items)}건*"]
+    for it in sorted(new_items, key=lambda x: (x["category"], x["store"])):
+        _, mention = map_category(it.get("category_raw"), cfg)
+        parts = [f"[{STORES[it['store']][0]}] <{it['url']}|{it.get('title') or it['id']}>",
+                 it.get("publisher") or "출판사 미확인", it["category"]]
+        if it.get("end_date"):
+            parts.append(f"~{it['end_date'][5:].replace('-', '/')}")
+        lines.append(" / ".join(parts) + (f" {mention}" if mention else ""))
+    try:
+        requests.post(url, json={"text": "\n".join(lines)}, timeout=15)
+    except requests.RequestException as e:
+        print(f"슬랙 전송 실패: {e}")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", choices=list(STORES))
+    args = ap.parse_args()
+
+    cfg = load(CATS, {"rules": [], "fallback": {"category": "미분류"}})
+    db = load(DATA, {"updated_at": None, "runs": {}, "items": {}})
+    items, runs = db["items"], db.setdefault("runs", {})
+    bootstrap = not items  # 첫 실행엔 알림 생략 (기존 펀딩이 전부 신규로 잡히므로)
+    new_items = []
+
+    for key, (name, mod) in STORES.items():
+        if args.only and key != args.only:
+            continue
+        known = {v["id"]: v for k, v in items.items() if v["store"] == key}
+        try:
+            got = mod.crawl(known)
+            runs[key] = {"at": datetime.now(KST).isoformat(timespec="minutes"), "ok": bool(got),
+                         "count": len(got), "error": None if got else "수집 0건 — 페이지 구조 변경 또는 차단 확인 필요"}
+        except Exception as e:  # 한 서점이 실패해도 나머지는 진행
+            traceback.print_exc()
+            runs[key] = {"at": datetime.now(KST).isoformat(timespec="minutes"), "ok": False,
+                         "count": 0, "error": f"{type(e).__name__}: {e}"}
+            continue
+        for it in got:
+            k = f"{key}:{it['id']}"
+            is_new = k not in items
+            items[k] = merge(items.get(k), it, cfg)
+            if is_new:
+                new_items.append(items[k])
+
+    # 목록에서 사라졌고 마감일이 지난 건은 종료 처리
+    d = today()
+    for v in items.values():
+        if v.get("status") in ACTIVE and v.get("end_date") and v["end_date"] < d:
+            v["status"] = "종료"
+
+    db["updated_at"] = datetime.now(KST).isoformat(timespec="minutes")
+    os.makedirs(os.path.dirname(DATA), exist_ok=True)
+    with open(DATA, "w", encoding="utf-8") as f:
+        json.dump(db, f, ensure_ascii=False, indent=1)
+    print(f"신규 {len(new_items)}건, 전체 {len(items)}건")
+    if not bootstrap:
+        notify(new_items, cfg)
+
+
+if __name__ == "__main__":
+    main()

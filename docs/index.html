@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서점 북펀딩 모니터링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Kyobo Design System tokens (bookbest와 동일) */
+    --blue:#5055B1; --green:#4DAC27; --red:#EC1F2D;
+    --green-bg:rgba(77,172,39,.08); --blue-bg:rgba(80,85,177,.08);
+    --ink:#1A1A1A; --ink-2:#666666; --ink-3:#999999;
+    --line:#EBEBEB; --line-2:#F0F0F0; --bg:#FFFFFF; --bg-soft:#F7F8FA;
+    --kyobo:#4DAC27; --yes24:#0080FF; --aladin:#F21C8C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);letter-spacing:-0.01em;line-height:1.5;padding:0 0 80px}
+  .num{font-family:'Roboto','Noto Sans KR',sans-serif;font-feature-settings:"tnum";letter-spacing:0}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  button,input,select{font-family:inherit}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+  /* ---------- Header ---------- */
+  header{padding:40px 0 0}
+  .crumb{font-size:13px;color:var(--ink-3);font-weight:500;margin-bottom:14px}
+  .crumb b{color:var(--ink-2);font-weight:500}
+  .title-row{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+  h1{font-size:32px;line-height:44px;font-weight:700;letter-spacing:-0.02em}
+  h1 .accent{color:var(--blue)}
+  .search-wrap{position:relative;flex:0 1 340px;min-width:180px}
+  .search-input{width:100%;font-size:14px;padding:11px 42px 11px 18px;border:1.5px solid var(--line);border-radius:22px;background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+  .search-input::placeholder{color:var(--ink-3)}
+  .search-input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(31,157,60,.10)}
+  .search-ico{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.5;pointer-events:none}
+  .dateline{text-align:right;flex-shrink:0;margin-left:auto}
+  .dateline .today{font-weight:700;font-size:22px}
+  .dateline .vs{font-size:13px;color:var(--ink-2);margin-top:3px;display:flex;gap:12px;justify-content:flex-end}
+  .run{display:inline-flex;align-items:center;gap:5px;cursor:default}
+  .run.fail{color:var(--red);font-weight:500}
+
+  /* ---------- Controls ---------- */
+  .controls{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 0 6px}
+  .controls-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-left:auto}
+  .tabs{display:flex;gap:4px}
+  .tabs button{font-size:15px;font-weight:500;letter-spacing:-0.01em;border:none;background:none;color:var(--ink-2);padding:9px 4px;margin-right:18px;cursor:pointer;position:relative;transition:.15s}
+  .tabs button .num{font-size:13px;color:var(--ink-3);font-weight:500;margin-left:3px}
+  .tabs button.active{color:var(--blue);font-weight:700}
+  .tabs button.active .num{color:var(--blue)}
+  .tabs button.active::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--blue)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);align-items:center}
+  .legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .excel-btn{border:1px solid var(--green);color:var(--green);background:#fff;font-size:13px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s;display:inline-flex;align-items:center;gap:6px}
+  .excel-btn:hover{background:var(--green);color:#fff}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:0 0 8px}
+  .chip{font-family:'Roboto','Noto Sans KR',sans-serif;font-weight:700;font-size:11px;padding:1px 6px;border-radius:3px;letter-spacing:0;line-height:1.5;white-space:nowrap}
+  .chip.surge{background:var(--green);color:#fff}
+  .chip.new{background:var(--blue);color:#fff}
+  .chip.end{background:#fff;color:var(--red);border:1px solid var(--red);padding:0 5px}
+
+  /* ---------- Category bar ---------- */
+  .cat-bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;padding-bottom:2px}
+  .cat-bar button{font-size:13.5px;font-weight:500;letter-spacing:-0.01em;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);padding:7px 15px;border-radius:99px;cursor:pointer;transition:.15s;white-space:nowrap}
+  .cat-bar button .num{font-size:12px;color:var(--ink-3);margin-left:4px}
+  .cat-bar button:hover{border-color:var(--ink-3);color:var(--ink)}
+  .cat-bar button.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:700}
+  .cat-bar button.active .num{color:rgba(255,255,255,.75)}
+
+  /* ---------- Sub bar ---------- */
+  .sub-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+  .sub-bar .count{font-size:14px;color:var(--ink-2)}
+  .sub-bar .count b{color:var(--ink);font-weight:700}
+  .sub-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto}
+  .seg{display:inline-flex;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:3px}
+  .seg button{font-size:12.5px;font-weight:500;color:var(--ink-2);border:none;background:none;padding:6px 13px;border-radius:6px;cursor:pointer;transition:.12s;display:inline-flex;align-items:center;gap:5px}
+  .seg button.active{background:var(--bg);color:var(--blue);font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .sort-select{font-size:12.5px;font-weight:500;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer}
+
+  /* ---------- Table ---------- */
+  .mtable{width:100%;margin-top:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;border-collapse:collapse;table-layout:fixed}
+  .mtable thead th{font-size:12px;font-weight:500;color:var(--ink-2);text-align:center;padding:15px 8px;border-bottom:2px solid var(--ink);background:var(--bg-soft)}
+  .mtable thead th.l{text-align:left;padding-left:20px}
+  .mtable col.c-store{width:96px} .mtable col.c-period{width:150px} .mtable col.c-amt{width:120px}
+  .mtable col.c-qty{width:90px} .mtable col.c-rate{width:84px} .mtable col.c-trend{width:130px}
+  .mtable tbody td{padding:14px 8px;border-bottom:1px solid var(--line-2);text-align:center;vertical-align:middle}
+  .mtable tbody tr:last-child td{border-bottom:none}
+  .mtable tbody tr{cursor:pointer;transition:background .12s}
+  .mtable tbody tr:hover{background:var(--bg-soft)}
+  .mtable tbody tr.surge{background:var(--green-bg)}
+  .mtable tbody tr.surge td:first-child{box-shadow:inset 3px 0 0 var(--green)}
+  .mtable tbody tr.closed .bk-title,.mtable tbody tr.closed .n-amt{color:var(--ink-3)}
+  .store{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;white-space:nowrap}
+  .m-book{text-align:left!important;padding:14px 12px 14px 20px!important}
+  .bk-title{font-size:15px;font-weight:500;line-height:1.35;display:flex;align-items:center;gap:6px;min-width:0}
+  .bk-title span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bk-meta{font-size:12px;color:var(--ink-3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bk-meta i{font-style:normal;color:var(--line);margin:0 6px}
+  .period{font-size:13px;color:var(--ink);white-space:nowrap}
+  .period .sm{display:block;font-size:11px;color:var(--ink-3);margin-top:2px}
+  .period.urgent{color:var(--red);font-weight:700}
+  .n-amt{font-weight:700;font-size:14px}
+  .n-qty{font-size:14px}
+  .n-qty.est{color:var(--ink-2)}
+  .n-rate{font-weight:700;font-size:15px;color:var(--ink)}
+  .n-rate.hit{color:var(--blue)}
+  .trend{display:inline-flex;flex-direction:column;align-items:center;gap:3px}
+  .trend svg{display:block}
+  .trend .sm{font-size:11px;font-weight:500;color:var(--green)}
+  .trend .sm.zero{color:var(--ink-3)}
+  .m-na{color:#CFCFCF;font-size:14px}
+  .empty{padding:56px 16px;text-align:center;color:var(--ink-3);font-size:14px;line-height:1.7;border:1px dashed var(--line);border-radius:8px;margin-top:12px}
+  .empty b{display:block;color:var(--ink-2);font-size:15px;margin-bottom:2px}
+
+  footer{margin-top:34px;font-size:12.5px;color:var(--ink-2);line-height:1.8;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+  footer b{color:var(--ink);font-weight:700}
+
+  /* ---------- 상세 팝업 ---------- */
+  .bk-modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(20,22,40,.45);align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(2px)}
+  .bk-modal.on{display:flex}
+  .bk-card{background:var(--bg);border-radius:14px;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.25);padding:26px 26px 22px;position:relative;animation:pop .18s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+  .bk-close{position:absolute;top:14px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink-3);cursor:pointer;padding:2px 6px}
+  .bk-close:hover{color:var(--ink)}
+  .bk-head{padding-right:30px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .bk-modal-title{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-0.02em}
+  .bk-modal-sub{font-size:13px;color:var(--ink-3);margin-top:5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .bk-modal-sub i{font-style:normal;color:var(--line)}
+  .bk-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:8px;margin-bottom:16px}
+  .bk-stats div{padding:12px 14px;border-left:1px solid var(--line-2)}
+  .bk-stats div:first-child{border-left:none}
+  .bk-stats dt{font-size:12px;color:var(--ink-3)}
+  .bk-stats dd{font-size:17px;font-weight:700;margin-top:2px}
+  .bk-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+  .bk-controls .lbl{font-size:13px;font-weight:700;color:var(--ink-2)}
+  .bk-chart-wrap{position:relative}
+  .bk-chart svg{width:100%;height:auto;display:block}
+  .bk-guide{position:absolute;top:0;width:1px;background:#CFCFCF;pointer-events:none;display:none}
+  .bk-tip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.13);padding:8px 11px;font-size:12px;line-height:1.55;white-space:nowrap;transform:translateX(-50%);display:none;z-index:5}
+  .bk-tip .tip-date{font-weight:700;margin-bottom:2px}
+  .bk-empty{padding:40px 16px;text-align:center;color:var(--ink-3);font-size:14px}
+  .bk-sec{margin-top:18px}
+  .bk-sec h3{font-size:13px;font-weight:700;color:var(--ink-2);margin-bottom:8px}
+  .bk-info{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:13.5px}
+  .bk-info dt{color:var(--ink-3)}
+  .bk-benefits{list-style:none;font-size:13.5px;line-height:1.65}
+  .bk-benefits li{position:relative;padding-left:14px;margin:3px 0}
+  .bk-benefits li::before{content:"•";color:var(--green);font-weight:700;position:absolute;left:1px}
+  .bk-links{display:flex;gap:8px;margin-top:20px}
+  .bk-link{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;text-decoration:none;color:var(--ink);padding:11px 10px;border-radius:9px;border:1.5px solid var(--line);background:#fff;transition:background .12s}
+  .bk-link:hover{background:var(--bg-soft)}
+
+  @media(max-width:860px){
+    h1{font-size:26px;line-height:36px}
+    .dateline{text-align:left;margin-left:0}
+    .dateline .vs{justify-content:flex-start}
+    .cat-bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-left:-24px;margin-right:-24px;padding:0 24px 6px}
+    .cat-bar button{flex:0 0 auto}
+    .sub-right{margin-left:0}
+    /* 표 → 카드형 */
+    .mtable{border:none;background:none}
+    .mtable colgroup,.mtable thead{display:none}
+    .mtable,.mtable tbody{display:block;width:100%}
+    .mtable tbody tr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 8px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:14px;margin-bottom:12px}
+    .mtable tbody tr:last-child td{border:none}
+    .mtable td{display:block;border:none!important;padding:0!important;text-align:left!important}
+    .mtable td.c-store{grid-column:1/4;grid-row:1}
+    .mtable td.m-book{grid-column:1/4;grid-row:2}
+    .mtable td.c-period{grid-column:1/4;grid-row:3}
+    .mtable td.c-amt,.mtable td.c-qty,.mtable td.c-rate{border-top:1px solid var(--line-2)!important;padding-top:8px!important}
+    .mtable td.c-amt{grid-column:1;grid-row:4} .mtable td.c-qty{grid-column:2;grid-row:4} .mtable td.c-rate{grid-column:3;grid-row:4}
+    .mtable td.c-trend{display:none}
+    .mtable td.c-amt::before{content:"펀딩액"} .mtable td.c-qty::before{content:"수량"} .mtable td.c-rate::before{content:"달성률"}
+    .mtable td.c-amt::before,.mtable td.c-qty::before,.mtable td.c-rate::before{display:block;font-size:11px;font-weight:700;color:var(--ink-3);margin-bottom:3px}
+    .mtable tbody tr.surge td:first-child{box-shadow:none}
+    .mtable tbody tr.surge{box-shadow:inset 3px 0 0 var(--green)}
+    .bk-stats{grid-template-columns:repeat(2,1fr)}
+    .bk-stats div:nth-child(3){border-left:none}
+    .bk-stats div:nth-child(n+3){border-top:1px solid var(--line-2)}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="crumb">경쟁사 모니터링 <b>›</b> 펀딩 <b>›</b> 3사 비교</div>
+    <div class="title-row">
+      <h1>서점 북펀딩 <span class="accent">한눈에</span> 모니터링</h1>
+      <div class="search-wrap">
+        <span class="search-ico">🔍</span>
+        <input id="q" class="search-input" type="search" placeholder="도서명·출판사 검색" autocomplete="off">
+      </div>
+      <div class="dateline">
+        <div class="today num" id="upd">–</div>
+        <div class="vs" id="runs">수집 기록 없음</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="tabs" id="tabs">
+      <button data-v="live" class="active">진행 중<span class="num" data-c="live"></span></button>
+      <button data-v="soon">오픈예정<span class="num" data-c="soon"></span></button>
+      <button data-v="done">종료<span class="num" data-c="done"></span></button>
+      <button data-v="all">전체<span class="num" data-c="all"></span></button>
+    </div>
+    <div class="controls-right">
+      <div class="legend">
+        <span><span class="chip new">NEW</span> 3일 내 발견</span>
+        <span><span class="chip surge">급증</span> 7일 새 목표액 절반 이상 증가</span>
+        <span><span class="chip end">D-3</span> 마감 임박</span>
+      </div>
+      <button class="excel-btn" id="xlsx" title="지금 보이는 목록을 엑셀로 내려받기">⬇ 엑셀 내려받기</button>
+    </div>
+  </div>
+
+  <div id="cat-bar" class="cat-bar"></div>
+
+  <div class="sub-bar">
+    <span class="count">총 <b class="num" id="cnt">0</b>건</span>
+    <div class="sub-right">
+      <div class="seg" id="store-seg"></div>
+      <div class="seg" id="seen-seg">
+        <button data-d="0" class="active">전체</button>
+        <button data-d="3">3일</button>
+        <button data-d="7">7일</button>
+        <button data-d="30">30일</button>
+      </div>
+      <select class="sort-select" id="sort" aria-label="정렬">
+        <option value="seen">새로 발견된 순</option>
+        <option value="end">마감 가까운 순</option>
+        <option value="amount">펀딩액 많은 순</option>
+        <option value="growth">7일 증가 많은 순</option>
+        <option value="rate">달성률 높은 순</option>
+      </select>
+    </div>
+  </div>
+
+  <table class="mtable" id="table">
+    <colgroup><col class="c-store"><col><col class="c-period"><col class="c-amt"><col class="c-qty"><col class="c-rate"><col class="c-trend"></colgroup>
+    <thead><tr>
+      <th>서점</th><th class="l">도서</th><th>기간</th><th>펀딩액</th><th>수량</th><th>달성률</th><th>최근 14일</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" hidden></div>
+
+  <footer>
+    <b>데이터 기준</b><br>
+    교보문고 바로펀딩, 예스24 그래제본소, 알라딘 북펀드를 매일 09시·18시에 수집합니다.
+    서점들이 등록일을 공개하지 않아 <b>처음 발견한 날</b>을 등록일로 봅니다.
+    수량은 알라딘만 실제 권수이고, 교보문고·예스24는 펀딩액을 펀딩가로 나눈 추정치(‘약’ 표시)입니다.
+    분야는 서점 분류를 교보문고 분야 기준으로 맞춘 값입니다.
+  </footer>
+</div>
+
+<div id="modal" class="bk-modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="bk-card">
+    <button class="bk-close" id="m-close" aria-label="닫기">×</button>
+    <div class="bk-head">
+      <div class="bk-modal-title" id="m-title"></div>
+      <div class="bk-modal-sub" id="m-sub"></div>
+    </div>
+    <dl class="bk-stats" id="m-stats"></dl>
+    <div class="bk-controls">
+      <span class="lbl">누적 펀딩액 추이</span>
+      <div class="seg" id="m-period">
+        <button data-p="7" class="active">7일</button>
+        <button data-p="30">30일</button>
+        <button data-p="0">전체</button>
+      </div>
+    </div>
+    <div class="bk-chart-wrap" id="m-chart-wrap">
+      <div class="bk-chart" id="m-chart"></div>
+      <div class="bk-guide" id="m-guide"></div>
+      <div class="bk-tip" id="m-tip"></div>
+    </div>
+    <div class="bk-sec"><h3>펀딩 정보</h3><dl class="bk-info" id="m-info"></dl></div>
+    <div class="bk-sec"><h3>혜택</h3><ul class="bk-benefits" id="m-benefits"></ul></div>
+    <div class="bk-links" id="m-links"></div>
+  </div>
+</div>
+
+<script>
+const STORES = [
+  {key:'kyobo', name:'교보문고'},
+  {key:'yes24', name:'예스24'},
+  {key:'aladin', name:'알라딘'},
+];
+const SNAME = Object.fromEntries(STORES.map(s => [s.key, s.name]));
+const VIEWS = {
+  live: s => s === '진행중' || s === '마감임박' || !s,
+  soon: s => s === '오픈예정',
+  done: s => s === '종료',
+  all:  () => true,
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const won = n => n == null ? '–' : n.toLocaleString('ko-KR') + '원';
+const man = n => n == null ? '–' : n >= 1e4 ? (Math.round(n / 1e3) / 10).toLocaleString('ko-KR') + '만원' : n.toLocaleString('ko-KR') + '원';
+const dot = d => d ? d.slice(5).replace('-', '.') : '';
+const todayKST = () => new Date().toLocaleDateString('sv-SE', {timeZone:'Asia/Seoul'});
+const dayDiff = (a, b) => Math.round((new Date(a) - new Date(b)) / 864e5);
+const ago = d => d ? dayDiff(todayKST(), d) : 1e9;
+const dLeft = it => it.end_date ? dayDiff(it.end_date, todayKST()) : null;
+
+const state = {view:'live', cat:'', store:'', seen:0, q:'', sort:'seen'};
+let ALL = [], cur = null, period = 7;
+
+/* ---------- 계산 ---------- */
+function qty(it){
+  if (it.count) return {n:it.count, est:false};
+  if (it.count_est) return {n:it.count_est, est:true};
+  return null;
+}
+function series(it, days){
+  const h = (it.history || []).filter(x => x.amount != null);
+  if (!days) return h;
+  const from = new Date(); from.setDate(from.getDate() - days);
+  const f = from.toLocaleDateString('sv-SE', {timeZone:'Asia/Seoul'});
+  return h.filter(x => x.d >= f);
+}
+function daily(it, n = 14){
+  const map = new Map((it.history || []).map(x => [x.d, x.amount]));
+  const out = []; let prev = null;
+  for (let i = n; i >= 0; i--){
+    const d = new Date(); d.setDate(d.getDate() - i);
+    const v = map.get(d.toLocaleDateString('sv-SE', {timeZone:'Asia/Seoul'}));
+    if (v == null) { out.push(null); continue; }
+    out.push(prev == null ? 0 : Math.max(0, v - prev)); prev = v;
+  }
+  return out;
+}
+const growth7 = it => daily(it, 7).reduce((a, b) => a + (b || 0), 0);
+const isNew = it => ago(it.first_seen) < 3;
+const isSurge = it => it.goal ? growth7(it) >= it.goal * 0.5 : false;
+
+/* ---------- 필터 ---------- */
+function base(){
+  const q = state.q.trim().toLowerCase();
+  return ALL.filter(it =>
+    (!state.store || it.store === state.store) &&
+    (!state.seen || ago(it.first_seen) < state.seen) &&
+    (!q || `${it.title} ${it.publisher}`.toLowerCase().includes(q)));
+}
+function visible(){
+  const rows = base().filter(it => VIEWS[state.view](it.status) && (!state.cat || (it.category || '미분류') === state.cat));
+  const S = {
+    seen:   (a, b) => (b.first_seen || '').localeCompare(a.first_seen || '') || (+b.id - +a.id),
+    end:    (a, b) => (a.end_date || '9999').localeCompare(b.end_date || '9999'),
+    amount: (a, b) => (b.amount || 0) - (a.amount || 0),
+    growth: (a, b) => growth7(b) - growth7(a),
+    rate:   (a, b) => (b.rate || 0) - (a.rate || 0),
+  };
+  return rows.sort(S[state.sort]);
+}
+
+/* ---------- 렌더 ---------- */
+function renderTabs(){
+  const b = base();
+  document.querySelectorAll('[data-c]').forEach(el => el.textContent = b.filter(it => VIEWS[el.dataset.c](it.status)).length);
+  document.querySelectorAll('#tabs button').forEach(el => el.classList.toggle('active', el.dataset.v === state.view));
+}
+function renderCats(){
+  const b = base().filter(it => VIEWS[state.view](it.status));
+  const c = {};
+  b.forEach(it => { const k = it.category || '미분류'; c[k] = (c[k] || 0) + 1; });
+  const cats = Object.keys(c).sort((x, y) => c[y] - c[x] || x.localeCompare(y, 'ko'));
+  if (state.cat && !c[state.cat]) state.cat = '';
+  $('#cat-bar').innerHTML = `<button data-cat="" class="${state.cat ? '' : 'active'}">전체<span class="num">${b.length}</span></button>`
+    + cats.map(k => `<button data-cat="${esc(k)}" class="${state.cat === k ? 'active' : ''}">${esc(k)}<span class="num">${c[k]}</span></button>`).join('');
+}
+function renderStoreSeg(){
+  $('#store-seg').innerHTML = `<button data-s="" class="${state.store ? '' : 'active'}">전체 서점</button>`
+    + STORES.map(s => `<button data-s="${s.key}" class="${state.store === s.key ? 'active' : ''}"><span class="dot" style="background:var(--${s.key})"></span>${s.name}</button>`).join('');
+}
+function bars(it){
+  const ds = daily(it), max = Math.max(1, ...ds.map(x => x || 0)), w = 5, gap = 2, h = 22;
+  const color = `var(--${it.store})`;
+  const r = ds.map((v, i) => v == null ? '' :
+    `<rect x="${i*(w+gap)}" y="${(h - Math.max(1.5, v/max*h)).toFixed(1)}" width="${w}" height="${Math.max(1.5, v/max*h).toFixed(1)}" rx="1" fill="${color}" opacity="${i === ds.length-1 ? 1 : .45}"/>`).join('');
+  const g = growth7(it);
+  return `<div class="trend"><svg width="${ds.length*(w+gap)-gap}" height="${h}" aria-label="최근 14일 일별 펀딩액 증가">${r}</svg>`
+    + `<span class="sm num ${g ? '' : 'zero'}">${g ? '7일 +' + man(g) : '변동 없음'}</span></div>`;
+}
+function periodCell(it){
+  const left = dLeft(it), open = VIEWS.live(it.status);
+  const urgent = open && left != null && left <= 3;
+  const range = it.start_date ? `${dot(it.start_date)} ~ ${dot(it.end_date) || '미확인'}` : `~ ${dot(it.end_date) || '미확인'}`;
+  const sub = open && left != null ? (left <= 0 ? '오늘 마감' : `D-${left}`) : `${dot(it.first_seen)} 발견`;
+  return `<div class="period num ${urgent ? 'urgent' : ''}">${range}<span class="sm">${sub}</span></div>`;
+}
+function renderRows(){
+  const rows = visible();
+  $('#cnt').textContent = rows.length;
+  $('#rows').innerHTML = rows.map(it => {
+    const q = qty(it), k = it.store + ':' + it.id;
+    const chips = (isNew(it) ? '<span class="chip new">NEW</span>' : '') + (isSurge(it) ? '<span class="chip surge">급증</span>' : '');
+    return `<tr data-k="${esc(k)}" tabindex="0" class="${isSurge(it) ? 'surge' : ''} ${it.status === '종료' ? 'closed' : ''}">
+      <td class="c-store"><span class="store"><span class="dot" style="background:var(--${it.store})"></span>${SNAME[it.store]}</span></td>
+      <td class="m-book"><div class="bk-title">${chips}<span>${esc(it.title || '(제목 미확인)')}</span></div>
+        <div class="bk-meta">${esc(it.publisher || '출판사 미확인')}<i>|</i>${esc(it.category || '미분류')}</div></td>
+      <td class="c-period">${periodCell(it)}</td>
+      <td class="c-amt"><span class="n-amt num">${it.amount != null ? won(it.amount) : '<span class="m-na">–</span>'}</span></td>
+      <td class="c-qty">${q ? `<span class="n-qty num ${q.est ? 'est' : ''}" ${q.est ? 'title="펀딩액 ÷ 펀딩가로 추정"' : ''}>${q.est ? '약 ' : ''}${q.n.toLocaleString()}권</span>` : '<span class="m-na">–</span>'}</td>
+      <td class="c-rate"><span class="n-rate num ${it.rate >= 100 ? 'hit' : ''}">${it.rate != null ? it.rate + '%' : '<span class="m-na">–</span>'}</span></td>
+      <td class="c-trend">${bars(it)}</td>
+    </tr>`;
+  }).join('');
+  const empty = $('#empty');
+  $('#table').hidden = !rows.length;
+  empty.hidden = !!rows.length;
+  if (!rows.length) empty.innerHTML = ALL.length
+    ? '<b>조건에 맞는 펀딩이 없습니다</b>분야나 서점, 발견 기간을 넓혀 보세요.'
+    : '<b>아직 수집된 데이터가 없습니다</b>GitHub Actions에서 ‘북펀딩 수집’을 한 번 실행하면 채워집니다.';
+}
+function render(){ renderTabs(); renderCats(); renderStoreSeg(); renderRows(); }
+
+function renderRuns(db){
+  if (db.updated_at) $('#upd').textContent = db.updated_at.slice(0, 16).replace('T', ' ').replace(/-/g, '.');
+  const r = db.runs || {};
+  if (!Object.keys(r).length) return;
+  $('#runs').innerHTML = STORES.map(s => {
+    const x = r[s.key];
+    if (!x) return `<span class="run"><span class="dot" style="background:#CFCFCF"></span>${s.name}</span>`;
+    const tip = x.ok ? `${x.count}건 수집 (${x.at.slice(5, 16).replace('T', ' ')})` : (x.error || '수집 실패');
+    return `<span class="run ${x.ok ? '' : 'fail'}" title="${esc(tip)}"><span class="dot" style="background:${x.ok ? `var(--${s.key})` : 'var(--red)'}"></span>${s.name}${x.ok ? '' : ' 실패'}</span>`;
+  }).join('');
+}
+
+/* ---------- 상세 팝업 ---------- */
+function openModal(k){
+  cur = ALL.find(it => it.store + ':' + it.id === k);
+  if (!cur) return;
+  const it = cur, q = qty(it), left = dLeft(it);
+  $('#m-title').textContent = it.title || '(제목 미확인)';
+  $('#m-sub').innerHTML = `<span class="dot" style="background:var(--${it.store})"></span>${SNAME[it.store]}<i>|</i>${esc(it.publisher || '출판사 미확인')}<i>|</i>${esc(it.category || '미분류')}`;
+  $('#m-stats').innerHTML = [
+    ['펀딩액', won(it.amount)],
+    ['수량', q ? (q.est ? '약 ' : '') + q.n.toLocaleString() + '권' : '–'],
+    ['달성률', it.rate != null ? it.rate + '%' : '–'],
+    ['남은 기간', VIEWS.live(it.status) && left != null ? (left <= 0 ? '오늘 마감' : `D-${left}`) : (it.status || '–')],
+  ].map(([a, b]) => `<div><dt>${a}</dt><dd class="num">${b}</dd></div>`).join('');
+  const info = [
+    ['펀딩 기간', `${it.start_date || '시작일 미공개'} ~ ${it.end_date || '미확인'}`],
+    ['처음 발견', it.first_seen],
+    ['출간 예정', it.release_date],
+    ['펀딩가', it.price != null ? won(it.price) : null],
+    ['목표액', it.goal != null ? won(it.goal) : null],
+    ['서점 분류', it.category_raw],
+  ].filter(([, v]) => v);
+  $('#m-info').innerHTML = info.map(([a, b]) => `<dt>${a}</dt><dd>${esc(b)}</dd>`).join('');
+  const ben = it.benefits || [];
+  $('#m-benefits').innerHTML = ben.length ? ben.map(b => `<li>${esc(b)}</li>`).join('') : '<li>수집된 혜택 정보가 없습니다</li>';
+  $('#m-links').innerHTML = `<a class="bk-link" href="${esc(it.url)}" target="_blank" rel="noopener"><span class="dot" style="background:var(--${it.store})"></span>${SNAME[it.store]}에서 보기</a>`;
+  setPeriod(7);
+  $('#modal').classList.add('on');
+  document.body.style.overflow = 'hidden';
+  $('#m-close').focus();
+}
+function closeModal(){
+  $('#modal').classList.remove('on');
+  document.body.style.overflow = '';
+  cur = null;
+}
+function setPeriod(p){
+  period = p;
+  document.querySelectorAll('#m-period button').forEach(b => b.classList.toggle('active', +b.dataset.p === p));
+  drawChart();
+}
+function drawChart(){
+  const pts = series(cur, period), box = $('#m-chart');
+  $('#m-guide').style.display = $('#m-tip').style.display = 'none';
+  if (pts.length < 2){ box.innerHTML = '<div class="bk-empty">기록이 이틀 이상 쌓이면 추이가 표시됩니다</div>'; box.onmousemove = null; return; }
+  const W = 620, H = 220, pad = {l:56, r:16, t:14, b:28};
+  const ys = pts.map(p => p.amount);
+  const raw = Math.max(...ys, cur.goal && cur.goal < Math.max(...ys) * 1.6 ? cur.goal : 0) * 1.05 || 1;
+  const mag = 10 ** Math.floor(Math.log10(raw / 4)), stepV = [1, 2, 2.5, 5, 10].map(m => m * mag).find(v => v * 4 >= raw);
+  const max = stepV * 4;
+  const X = i => pad.l + i * (W - pad.l - pad.r) / (pts.length - 1);
+  const Y = v => pad.t + (1 - v / max) * (H - pad.t - pad.b);
+  const color = {kyobo:'#4DAC27', yes24:'#0080FF', aladin:'#F21C8C'}[cur.store];
+  let g = '';
+  for (let i = 0; i <= 4; i++){
+    const v = max * i / 4;
+    g += `<line x1="${pad.l}" y1="${Y(v).toFixed(1)}" x2="${W-pad.r}" y2="${Y(v).toFixed(1)}" stroke="#EEEEEE"/>`
+      + `<text x="${pad.l-8}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" font-size="10" fill="#AAAAAA" font-family="Roboto,sans-serif">${man(Math.round(v))}</text>`;
+  }
+  const step = Math.ceil(pts.length / 7);
+  pts.forEach((p, i) => { if (i % step === 0 || i === pts.length - 1) g += `<text x="${X(i).toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="9.5" fill="#AAAAAA" font-family="Roboto,sans-serif">${dot(p.d)}</text>`; });
+  if (cur.goal && cur.goal <= max) g += `<line x1="${pad.l}" y1="${Y(cur.goal).toFixed(1)}" x2="${W-pad.r}" y2="${Y(cur.goal).toFixed(1)}" stroke="#5055B1" stroke-dasharray="4 4"/><text x="${W-pad.r}" y="${(Y(cur.goal)-5).toFixed(1)}" text-anchor="end" font-size="10.5" fill="#5055B1">목표액</text>`;
+  const line = pts.map((p, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)},${Y(p.amount).toFixed(1)}`).join('');
+  const area = `${line}L${X(pts.length-1).toFixed(1)},${Y(0)}L${X(0).toFixed(1)},${Y(0)}Z`;
+  const dotsSvg = pts.map((p, i) => `<circle cx="${X(i).toFixed(1)}" cy="${Y(p.amount).toFixed(1)}" r="${i === pts.length-1 ? 4 : 2.5}" fill="${i === pts.length-1 ? color : '#fff'}" stroke="${color}" stroke-width="2"/>`).join('');
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}">${g}<path d="${area}" fill="${color}" opacity=".08"/><path d="${line}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linejoin="round"/>${dotsSvg}</svg>`;
+  const svg = box.querySelector('svg'), guide = $('#m-guide'), tip = $('#m-tip');
+  box.onmousemove = e => {
+    const r = svg.getBoundingClientRect(), sx = (e.clientX - r.left) * W / r.width;
+    const i = Math.max(0, Math.min(pts.length - 1, Math.round((sx - pad.l) / ((W - pad.l - pad.r) / (pts.length - 1)))));
+    const px = X(i) * r.width / W, p = pts[i], prev = pts[i - 1];
+    guide.style.cssText = `display:block;left:${px}px;height:${r.height - pad.b * r.height / H}px`;
+    tip.style.cssText = `display:block;left:${Math.min(Math.max(px, 70), r.width - 70)}px;top:${Y(p.amount) * r.height / H + 12}px`;
+    tip.innerHTML = `<div class="tip-date num">${p.d.replace(/-/g, '.')}</div>누적 <b class="num">${won(p.amount)}</b>`
+      + (prev ? `<br>전일 대비 <b class="num" style="color:var(--green)">+${won(Math.max(0, p.amount - prev.amount))}</b>` : '')
+      + (p.count ? `<br><span class="num">${p.count.toLocaleString()}권</span> · <span class="num">${p.rate ?? '–'}%</span>` : '');
+  };
+  box.onmouseleave = () => { guide.style.display = tip.style.display = 'none'; };
+}
+
+/* ---------- 엑셀 ---------- */
+function exportXlsx(){
+  if (!window.XLSX) return alert('엑셀 라이브러리를 아직 불러오는 중입니다. 잠시 후 다시 눌러 주세요.');
+  const data = visible().map(it => ({
+    서점: SNAME[it.store], 도서명: it.title, 출판사: it.publisher, 분야: it.category, 서점분류: it.category_raw,
+    상태: it.status, 시작일: it.start_date, 마감일: it.end_date, 출간예정: it.release_date, 처음발견: it.first_seen,
+    펀딩가: it.price, 목표액: it.goal, 펀딩액: it.amount, 수량: (qty(it) || {}).n, 수량추정: it.count ? '' : (it.count_est ? 'Y' : ''),
+    달성률: it.rate, '7일증가': growth7(it), 혜택: (it.benefits || []).join(' / '), 링크: it.url,
+  }));
+  const ws = XLSX.utils.json_to_sheet(data), wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, '북펀딩');
+  XLSX.writeFile(wb, `북펀딩_${todayKST()}.xlsx`);
+}
+
+/* ---------- 이벤트 ---------- */
+function bind(){
+  $('#tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ state.view = b.dataset.v; state.cat = ''; render(); } });
+  $('#cat-bar').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ state.cat = b.dataset.cat; render(); } });
+  $('#store-seg').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ state.store = b.dataset.s; render(); } });
+  $('#seen-seg').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    state.seen = +b.dataset.d;
+    document.querySelectorAll('#seen-seg button').forEach(x => x.classList.toggle('active', x === b));
+    render();
+  });
+  $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderRows(); });
+  $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
+  $('#xlsx').addEventListener('click', exportXlsx);
+  $('#rows').addEventListener('click', e => { const tr = e.target.closest('tr'); if (tr) openModal(tr.dataset.k); });
+  $('#rows').addEventListener('keydown', e => { const tr = e.target.closest('tr'); if (tr && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); openModal(tr.dataset.k); } });
+  $('#m-period').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setPeriod(+b.dataset.p); });
+  $('#m-close').addEventListener('click', closeModal);
+  $('#modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && cur) closeModal(); });
+}
+
+async function init(){
+  bind();
+  try {
+    const res = await fetch('data/fundings.json?ts=' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    const db = await res.json();
+    ALL = Object.values(db.items || {});
+    renderRuns(db);
+  } catch (e) {
+    $('#upd').textContent = '데이터 없음';
+    $('#runs').textContent = 'data/fundings.json을 불러오지 못했습니다';
+  }
+  render();
+}
+init();
+</script>
+</body>
+</html>
