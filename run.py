@@ -36,11 +36,18 @@ def load(path, default):
         return default
 
 
+GENERIC = ("국내도서", "외국도서", "eBook", "전자책", "도서")
+
+
 def map_category(raw: str | None, cfg: dict) -> tuple[str, str]:
+    """분류 경로를 큰 분류부터 한 단계씩 보며 규칙에 맞는 첫 분야를 고름.
+    '국내도서 > 인문 > 독서/비평 > 독서 에세이' → 인문 (아래 단계의 '에세이'보다 큰 분류 우선)."""
     if raw:
-        for r in cfg["rules"]:
-            if any(k in raw for k in r["keywords"]):
-                return r["category"], r.get("owner", "")
+        segs = [x.strip() for x in raw.split(">") if x.strip() and x.strip() not in GENERIC] or [raw]
+        for seg in segs:
+            for r in cfg["rules"]:
+                if any(k in seg for k in r["keywords"]):
+                    return r["category"], r.get("owner", "")
     fb = cfg["fallback"]
     return fb["category"], fb.get("owner", "")
 
@@ -177,7 +184,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=list(STORES))
     ap.add_argument("--test-alert", action="store_true", help="수집 없이, 알림 대상 분야의 최근 펀딩 3건으로 알림만 시험 발송")
-    ap.add_argument("--backfill", action="store_true", help="알라딘·교보의 SINCE 이후 종료 펀딩을 번호를 거슬러 올라가며 채움")
+    ap.add_argument("--backfill", action="store_true", help="SINCE 이후 종료 펀딩까지 채움 (알라딘·교보는 번호, 예스24는 종료 포함 목록)")
     args = ap.parse_args()
 
     cfg = load(CATS, {"rules": [], "fallback": {"category": "미분류"}})
@@ -225,6 +232,10 @@ def main():
             if is_new and items[k].get("status") != "종료":  # 이미 끝난 펀딩은 알림 안 함
                 new_items.append(items[k])
         save(db)  # 서점 하나 끝날 때마다 저장 (중간에 멈춰도 앞 서점 결과는 남음)
+
+    # 분야 규칙이 바뀌어도 저장된 모든 건에 반영
+    for v in items.values():
+        v["category"], _ = map_category(v.get("category_raw"), cfg)
 
     # 기준일 이전 펀딩이 이미 저장돼 있으면 정리
     for k in [k for k, v in items.items() if (ref_date(v) or "9999") < SINCE]:

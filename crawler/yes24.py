@@ -4,12 +4,15 @@
 상품 페이지(/product/goods/{상품번호}): 출판사·분야 — 펀딩 페이지에는 없어서 따로 읽음"""
 import re
 
-from .common import (SiteDown, fetch, soup_of, lines_of, to_int, days_later, period_from_md, new_item)
+from .common import (SiteDown, fetch, soup_of, lines_of, to_int, days_later, period_from_md, new_item, ref_date)
 
 BASE = "https://www.yes24.com"
 LIST_URL = f"{BASE}/Mall/YesFunding/Main?gb=BOOK"  # gb=BOOK: 그래제본소(도서)만
 DETAIL_URL = f"{BASE}/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo={{}}"
 GOODS_URL = f"{BASE}/product/goods/{{}}"
+# 목록의 '더보기'가 부르는 주소. processYn=Y면 진행 중만, 비우면 종료 포함 전체 (최신순)
+ITEMS_URL = f"{BASE}/Mall/YesFunding/FundingItems?pageNo={{}}&pageSize=21&pageType=MAIN&sortTp=01&fundingGb=BOOK&processYn={{}}"
+MAX_PAGES = 60
 ENC = "cp949"
 
 
@@ -113,11 +116,23 @@ def parse_goods(html: str, it: dict) -> None:
 
 
 def crawl(known: dict) -> list[dict]:
+    """진행 중 펀딩 전체: 메인(1쪽) + '더보기' 주소로 2쪽부터 새 카드가 안 나올 때까지."""
     html = fetch(LIST_URL, encoding=ENC, debug_name="yes24_list.html", retries=2)
     if not html:
         return []
+    cards, seen = parse_list(html), set()
+    seen.update(c["id"] for c in cards)
+    page = 2
+    while page <= MAX_PAGES:
+        more = fetch(ITEMS_URL.format(page, "Y"), encoding=ENC, debug_name=f"yes24_items_Y_{page}.html")
+        new = [c for c in parse_list(more or "") if c["id"] not in seen]
+        if not new:
+            break
+        cards += new
+        seen.update(c["id"] for c in new)
+        page += 1
     out = []
-    for it in parse_list(html):
+    for it in cards:
         try:
             _one(it, known)
         except SiteDown as e:
@@ -125,6 +140,34 @@ def crawl(known: dict) -> list[dict]:
             break
         out.append(it)
     print(f"[YES24] {len(out)}건")
+    return out
+
+
+def backfill(known: dict, since: str) -> list[dict]:
+    """종료 포함 전체 목록(최신순)을 쪽 단위로 넘기며 since 이후 펀딩을 채움.
+    한 쪽이 통째로 since 이전이면 멈춤. 중간에 끊겨도 이미 받은 건 다음 실행에서 건너뜀."""
+    out = []
+    try:
+        for page in range(1, MAX_PAGES + 1):
+            html = fetch(ITEMS_URL.format(page, ""), encoding=ENC, debug_name=f"yes24_items_all_{page}.html", retries=1)
+            cards = parse_list(html or "")
+            if not cards:
+                break
+            recent = 0
+            for it in cards:
+                if it["id"] in known:
+                    recent += 1  # 이미 있는 건은 기준일 이후로 간주
+                    continue
+                _one(it, {})
+                if (ref_date(it) or "9999") >= since:
+                    out.append(it)
+                    recent += 1
+            print(f"  {page}쪽: 기준일 이후 {recent}/{len(cards)}건", flush=True)
+            if recent == 0:
+                break
+    except SiteDown as e:
+        print(f"  ! {e}", flush=True)
+    print(f"[YES24 과거] {len(out)}건")
     return out
 
 
