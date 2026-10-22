@@ -52,6 +52,22 @@ def map_category(raw: str | None, cfg: dict) -> tuple[str, str]:
     return fb["category"], fb.get("owner", "")
 
 
+def _shift_year(d: str | None, n: int) -> str | None:
+    return f"{int(d[:4]) + n:04d}{d[4:]}" if d else d
+
+
+def fix_dates(v: dict) -> None:
+    """연도 없이 '10/18'처럼 공개된 기간에 연도를 잘못 붙인 경우 바로잡음.
+    마감일이 출간·발송일보다 늦거나, 종료된 펀딩의 마감일이 미래면 1년 앞당김."""
+    end, rel = v.get("end_date"), v.get("release_date")
+    wrong = (end and rel and end > rel and _shift_year(end, -1) <= rel) or \
+            (end and v.get("status") == "종료" and end > today())
+    if wrong:
+        v["start_date"], v["end_date"] = _shift_year(v.get("start_date"), -1), _shift_year(end, -1)
+        if v.get("reg_date") and v["reg_date"] > (v.get("first_seen") or "9999"):
+            v["reg_date"] = v.get("start_date") or v.get("first_seen")
+
+
 def merge(old: dict | None, new: dict, cfg: dict) -> dict:
     d = today()
     if old:
@@ -62,6 +78,7 @@ def merge(old: dict | None, new: dict, cfg: dict) -> dict:
     else:
         merged = dict(new, first_seen=d, history=[])
     merged["last_seen"] = d
+    fix_dates(merged)
     # 등록일: 서점이 공개한 시작일 → 매일 수집에서 처음 발견한 날 → (과거 채우기 건) 목표 달성일·마감일 중 이른 날
     late = [x for x in (merged.get("achieved_date"), merged.get("end_date"), merged.get("release_date")) if x]
     merged["reg_date"] = merged.get("start_date") or (
@@ -233,9 +250,10 @@ def main():
                 new_items.append(items[k])
         save(db)  # 서점 하나 끝날 때마다 저장 (중간에 멈춰도 앞 서점 결과는 남음)
 
-    # 분야 규칙이 바뀌어도 저장된 모든 건에 반영
+    # 분야 규칙·날짜 보정을 저장된 모든 건에 반영
     for v in items.values():
         v["category"], _ = map_category(v.get("category_raw"), cfg)
+        fix_dates(v)
 
     # 기준일 이전 펀딩이 이미 저장돼 있으면 정리
     for k in [k for k, v in items.items() if (ref_date(v) or "9999") < SINCE]:
