@@ -55,6 +55,10 @@ def merge(old: dict | None, new: dict, cfg: dict) -> dict:
     else:
         merged = dict(new, first_seen=d, history=[])
     merged["last_seen"] = d
+    # 등록일: 서점이 공개한 시작일 → 매일 수집에서 처음 발견한 날 → (과거 채우기 건) 목표 달성일·마감일 중 이른 날
+    late = [x for x in (merged.get("achieved_date"), merged.get("end_date"), merged.get("release_date")) if x]
+    merged["reg_date"] = merged.get("start_date") or (
+        min(late) if merged.get("backfilled") and late else merged.get("first_seen"))
     merged["category"], _ = map_category(merged.get("category_raw"), cfg)
     if not merged.get("count") and merged.get("amount") and merged.get("price"):
         merged["count_est"] = round(merged["amount"] / merged["price"])
@@ -92,7 +96,9 @@ def dashboard_url() -> str | None:
 
 def notify_teams(url: str, items: list[dict], cfg: dict) -> None:
     """Teams 워크플로('웹후크 요청을 받으면 채널에 게시')로 적응형 카드 전송."""
-    body = [{"type": "TextBlock", "text": f"북펀딩 신규 {len(items)}건", "weight": "Bolder", "size": "Large"}]
+    cats = sorted({it["category"] for it in items})
+    head = f"북펀딩 신규 {len(items)}건" + (f" · {', '.join(cats)}" if len(cats) <= 3 else "")
+    body = [{"type": "TextBlock", "text": head, "weight": "Bolder", "size": "Large", "wrap": True}]
     for it in items[:MAX_ALERT]:
         title, meta = _line(it, cfg)
         body += [
@@ -119,16 +125,45 @@ def notify_slack(url: str, items: list[dict], cfg: dict) -> None:
     requests.post(url, json={"text": "\n".join(lines)}, timeout=15)
 
 
+def secret(name: str) -> str | None:
+    """환경변수 → 워크플로가 넘긴 SECRETS_JSON 순으로 찾음 (분야별 채널 웹후크를 이름만으로 추가하기 위해)."""
+    if v := os.environ.get(name):
+        return v
+    try:
+        return json.loads(os.environ.get("SECRETS_JSON") or "{}").get(name)
+    except json.JSONDecodeError:
+        return None
+
+
 def notify(new_items: list[dict], cfg: dict) -> None:
+    """config/categories.json의 alert 설정에 따라 분야별로 걸러 Teams에 보냄.
+    alert.categories가 비어 있으면 전체 분야, 분야별 채널은 alert.channels에 웹후크 Secret 이름으로 지정."""
     if not new_items:
         return
-    items = sorted(new_items, key=lambda x: (x["category"], x["store"]))
-    for env, fn in (("TEAMS_WEBHOOK_URL", notify_teams), ("SLACK_WEBHOOK_URL", notify_slack)):
-        if url := os.environ.get(env):
-            try:
-                fn(url, items, cfg)
-            except requests.RequestException as e:
-                print(f"{env} 전송 실패: {e}")
+    alert = cfg.get("alert") or {}
+    watch = set(alert.get("categories") or [])
+    channels = alert.get("channels") or {}
+    items = [it for it in new_items if not watch or it["category"] in watch]
+    items.sort(key=lambda x: (x["category"], x["store"]))
+    if not items:
+        print(f"신규 {len(new_items)}건 중 알림 대상 분야 없음")
+        return
+    groups: dict[str, list[dict]] = {}
+    for it in items:
+        groups.setdefault(channels.get(it["category"], "TEAMS_WEBHOOK_URL"), []).append(it)
+    for name, group in groups.items():
+        if not (url := secret(name)):
+            print(f"{name} Secret이 없어 {len(group)}건 알림 생략")
+            continue
+        try:
+            notify_teams(url, group, cfg)
+        except requests.RequestException as e:
+            print(f"{name} 전송 실패: {e}")
+    if url := secret("SLACK_WEBHOOK_URL"):
+        try:
+            notify_slack(url, items, cfg)
+        except requests.RequestException as e:
+            print(f"SLACK_WEBHOOK_URL 전송 실패: {e}")
 
 
 def save(db: dict) -> None:
@@ -141,11 +176,19 @@ def save(db: dict) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=list(STORES))
+    ap.add_argument("--test-alert", action="store_true", help="수집 없이, 알림 대상 분야의 최근 펀딩 3건으로 알림만 시험 발송")
     ap.add_argument("--backfill", action="store_true", help="알라딘·교보의 SINCE 이후 종료 펀딩을 번호를 거슬러 올라가며 채움")
     args = ap.parse_args()
 
     cfg = load(CATS, {"rules": [], "fallback": {"category": "미분류"}})
     db = load(DATA, {"updated_at": None, "runs": {}, "items": {}})
+    if args.test_alert:
+        watch = set((cfg.get("alert") or {}).get("categories") or [])
+        pool = [v for v in db["items"].values() if (not watch or v.get("category") in watch) and v.get("status") != "종료"]
+        pool.sort(key=lambda v: v.get("reg_date") or v.get("first_seen") or "", reverse=True)
+        print(f"[시험 알림] 대상 {len(pool)}건 중 최근 3건 발송")
+        notify(pool[:3], cfg)
+        return
     items, runs = db["items"], db.setdefault("runs", {})
     bootstrap = not items  # 첫 실행엔 알림 생략 (기존 펀딩이 전부 신규로 잡히므로)
     new_items = []
@@ -170,7 +213,7 @@ def main():
             set_budget(BACKFILL_BUDGET)
             known.update({it["id"]: it for it in got})
             try:
-                got += mod.backfill(known, SINCE)
+                got += [dict(x, backfilled=True) for x in mod.backfill(known, SINCE)]
             except Exception:
                 traceback.print_exc()
         for it in got:
