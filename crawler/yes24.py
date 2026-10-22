@@ -61,13 +61,13 @@ def parse_detail(html: str, it: dict) -> dict:
     it["amount"] = to_int(state.get("펀딩액")) or it["amount"]
     it["count"] = to_int(re.sub(r"부.*", "", state.get("펀딩수", ""))) or None
     it["goal"] = to_int(state.get("목표액")) or None
+    if (ico := soup.select_one(".stateDl .state_ico")) and it["status"] != "마감임박":
+        it["status"] = _status(ico.get_text(strip=True), "") or it["status"]
     pairs = [(int(m), int(d)) for m, d in re.findall(r"(\d{1,2})/(\d{1,2})", state.get("기간", ""))]
     s, e = period_from_md(pairs, ended=it["status"] == "종료")
     it["start_date"], it["end_date"] = s or it["start_date"], e or it["end_date"]
     if it["goal"] and it["amount"] is not None:
         it["rate"] = round(it["amount"] / it["goal"] * 100)
-    if ico := soup.select_one(".stateDl .state_ico"):
-        it["status"] = _status(ico.get_text(strip=True), "") if it["status"] != "마감임박" else it["status"]
 
     # 펀딩 구성: '15,120원: 『책』 1부, 키캡 키링'
     options, prices = [], []
