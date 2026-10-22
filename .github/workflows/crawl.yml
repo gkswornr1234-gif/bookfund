@@ -45,7 +45,7 @@ jobs:
       - name: 수집
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
-          SECRETS_JSON: ${{ toJSON(secrets) }}   # 분야별 채널 웹후크(TEAMS_WEBHOOK_*)를 이름으로 찾기 위해
+          # 분야별로 다른 채널을 쓰면 여기에 한 줄씩 추가 (예: TEAMS_WEBHOOK_KIDS: ${{ secrets.TEAMS_WEBHOOK_KIDS }})
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DEBUG_DIR: ${{ inputs.debug && 'debug' || '' }}
           ONLY: ${{ inputs.only }}
