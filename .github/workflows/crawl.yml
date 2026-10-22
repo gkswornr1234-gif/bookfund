@@ -1,12 +1,15 @@
 name: 북펀딩 수집
 
 on:
-  schedule:
-    - cron: "30 22 * * *"   # 매일 07:30 (KST). GitHub 예약은 UTC 기준이라 9시간 뺀 값
+  # 매일 07:30 실행은 cron-job.org가 이 워크플로를 호출하는 방식 (GitHub 자체 예약은 지연·누락이 잦아 사용 안 함)
   workflow_dispatch:
     inputs:
       debug:
         description: "받은 HTML을 아티팩트로 저장 (셀렉터 점검용)"
+        type: boolean
+        default: false
+      test_alert:
+        description: "수집 없이 팀즈 알림만 시험 발송 (알림 분야의 최근 3건)"
         type: boolean
         default: false
       backfill:
@@ -42,13 +45,16 @@ jobs:
       - name: 수집
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          SECRETS_JSON: ${{ toJSON(secrets) }}   # 분야별 채널 웹후크(TEAMS_WEBHOOK_*)를 이름으로 찾기 위해
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DEBUG_DIR: ${{ inputs.debug && 'debug' || '' }}
           ONLY: ${{ inputs.only }}
           BACKFILL: ${{ inputs.backfill && '--backfill' || '' }}
+          TEST_ALERT: ${{ inputs.test_alert && '--test-alert' || '' }}
           PYTHONUNBUFFERED: "1"
         run: |
-          if [ -n "$ONLY" ]; then python run.py --only "$ONLY" $BACKFILL; else python run.py $BACKFILL; fi
+          if [ -n "$TEST_ALERT" ]; then python run.py --test-alert
+          elif [ -n "$ONLY" ]; then python run.py --only "$ONLY" $BACKFILL; else python run.py $BACKFILL; fi
 
       - name: HTML 저장 (디버그)
         if: ${{ always() && inputs.debug }}
