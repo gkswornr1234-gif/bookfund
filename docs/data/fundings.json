@@ -1,22 +1,22 @@
 {
- "updated_at": "2026-10-26T07:33+09:00",
+ "updated_at": "2026-10-27T07:33+09:00",
  "runs": {
   "aladin": {
-   "at": "2026-10-26T07:31+09:00",
+   "at": "2026-10-27T07:31+09:00",
    "ok": true,
    "count": 60,
    "error": null
   },
   "yes24": {
-   "at": "2026-10-26T07:32+09:00",
+   "at": "2026-10-27T07:32+09:00",
    "ok": true,
-   "count": 22,
+   "count": 24,
    "error": null
   },
   "kyobo": {
-   "at": "2026-10-26T07:33+09:00",
+   "at": "2026-10-27T07:33+09:00",
    "ok": true,
-   "count": 21,
+   "count": 17,
    "error": null
   }
  },
@@ -69,9 +69,15 @@
      "amount": 1670500,
      "count": 73,
      "rate": 334
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1670500,
+     "count": 73,
+     "rate": 334
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "만화",
    "reg_date": "2026-10-21"
   },
@@ -125,9 +131,15 @@
      "amount": 6812100,
      "count": 87,
      "rate": 681
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 6812100,
+     "count": 87,
+     "rate": 681
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "achieved_date": "2026-10-14",
    "reg_date": "2026-10-21"
@@ -181,9 +193,15 @@
      "amount": 4611600,
      "count": 305,
      "rate": 461
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4611600,
+     "count": 305,
+     "rate": 461
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "achieved_date": "2026-10-14",
    "reg_date": "2026-10-21"
@@ -201,9 +219,9 @@
    "release_date": "2026-11-11",
    "price": 27000,
    "goal": 1500000,
-   "amount": 5508000,
-   "count": 204,
-   "rate": 367,
+   "amount": 5481000,
+   "count": 203,
+   "rate": 365,
    "benefits": [
     "27,000원 펀딩",
     "<돌미나리의 꿈> 도서 1부",
@@ -237,9 +255,15 @@
      "amount": 5508000,
      "count": 204,
      "rate": 367
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 5481000,
+     "count": 203,
+     "rate": 365
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "achieved_date": "2026-10-15",
    "reg_date": "2026-10-21"
@@ -251,15 +275,15 @@
    "title": "모자",
    "publisher": "문학동네",
    "category_raw": "국내도서 > 유아 그림책",
-   "status": "마감임박",
+   "status": "종료",
    "start_date": null,
    "end_date": "2026-10-26",
    "release_date": "2026-11-05",
    "price": 15750,
    "goal": 1000000,
-   "amount": 1896750,
-   "count": 109,
-   "rate": 190,
+   "amount": 2091000,
+   "count": 120,
+   "rate": 209,
    "benefits": [
     "15,750원 펀딩",
     "<모자> 도서 1부",
@@ -293,9 +317,15 @@
      "amount": 1896750,
      "count": 109,
      "rate": 190
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2091000,
+     "count": 120,
+     "rate": 209
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "achieved_date": "2026-10-12",
    "reg_date": "2026-10-21"
@@ -304,18 +334,18 @@
    "store": "aladin",
    "id": "3024",
    "url": "https://www.aladin.co.kr/m/bookfund/view.aspx?pid=3024",
-   "title": "깜짝깜짝 세계 명작 팝업북 : 호두까기 인형",
+   "title": "깜짝깜짝 세계 명작 팝업북 호두까기 인형",
    "publisher": "어스본 코리아",
    "category_raw": "국내도서 > 유아 > 놀이책 > 팝업북/플랩북",
-   "status": "마감임박",
+   "status": "종료",
    "start_date": null,
    "end_date": "2026-10-26",
    "release_date": "2026-10-27",
    "price": 20700,
    "goal": 1000000,
-   "amount": 1438300,
-   "count": 57,
-   "rate": 144,
+   "amount": 1631100,
+   "count": 65,
+   "rate": 163,
    "benefits": [
     "20,700원 펀딩",
     "<깜짝깜짝 세계 명작 팝업북: 호두까기 인형> 도서 1부",
@@ -348,9 +378,15 @@
      "amount": 1438300,
      "count": 57,
      "rate": 144
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1631100,
+     "count": 65,
+     "rate": 163
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "achieved_date": "2026-10-11",
    "reg_date": "2026-10-21"
@@ -368,9 +404,9 @@
    "release_date": "2026-11-09",
    "price": 19800,
    "goal": 500000,
-   "amount": 3069000,
-   "count": 155,
-   "rate": 614,
+   "amount": 3425400,
+   "count": 173,
+   "rate": 685,
    "benefits": [
     "19,800원 펀딩",
     "<웹소설 오늘부터 씁니다> 도서 1부",
@@ -403,9 +439,15 @@
      "amount": 3069000,
      "count": 155,
      "rate": 614
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3425400,
+     "count": 173,
+     "rate": 685
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "IT",
    "achieved_date": "2026-10-15",
    "reg_date": "2026-10-21"
@@ -423,9 +465,9 @@
    "release_date": "2026-11-03",
    "price": 31500,
    "goal": 1000000,
-   "amount": 1202700,
-   "count": 33,
-   "rate": 120,
+   "amount": 1284900,
+   "count": 35,
+   "rate": 128,
    "benefits": [
     "31,500원 펀딩",
     "<예술가의 말> 도서 1부",
@@ -459,9 +501,15 @@
      "amount": 1202700,
      "count": 33,
      "rate": 120
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1284900,
+     "count": 35,
+     "rate": 128
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "reg_date": "2026-10-21",
    "achieved_date": "2026-10-23"
@@ -479,9 +527,9 @@
    "release_date": "2026-11-04",
    "price": 17820,
    "goal": 1000000,
-   "amount": 2904660,
-   "count": 163,
-   "rate": 290,
+   "amount": 2940300,
+   "count": 165,
+   "rate": 294,
    "benefits": [
     "17,820원 펀딩",
     "<피폭된 조선> 도서 1부",
@@ -515,9 +563,15 @@
      "amount": 2904660,
      "count": 163,
      "rate": 290
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2940300,
+     "count": 165,
+     "rate": 294
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "achieved_date": "2026-10-09",
    "reg_date": "2026-10-21"
@@ -571,9 +625,15 @@
      "amount": 1507500,
      "count": 67,
      "rate": 151
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1507500,
+     "count": 67,
+     "rate": 151
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "achieved_date": "2026-10-13",
    "reg_date": "2026-10-21"
@@ -627,9 +687,15 @@
      "amount": 1044000,
      "count": 29,
      "rate": 104
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1044000,
+     "count": 29,
+     "rate": 104
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "reg_date": "2026-10-21",
    "achieved_date": "2026-10-24"
@@ -647,9 +713,9 @@
    "release_date": "2026-10-31",
    "price": 36000,
    "goal": 2000000,
-   "amount": 8136000,
-   "count": 226,
-   "rate": 407,
+   "amount": 8244000,
+   "count": 229,
+   "rate": 412,
    "benefits": [
     "36,000원 펀딩",
     "<이토 도요 관찰기> 1권",
@@ -683,9 +749,15 @@
      "amount": 8136000,
      "count": 226,
      "rate": 407
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 8244000,
+     "count": 229,
+     "rate": 412
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "achieved_date": "2026-10-02",
    "reg_date": "2026-10-21"
@@ -703,9 +775,9 @@
    "release_date": "2026-11-10",
    "price": 18000,
    "goal": 2000000,
-   "amount": 3888000,
-   "count": 216,
-   "rate": 194,
+   "amount": 4050000,
+   "count": 225,
+   "rate": 202,
    "benefits": [
     "18,000원 펀딩",
     "<우리는 투명노동자입니다> 도서 1부",
@@ -739,9 +811,15 @@
      "amount": 3888000,
      "count": 216,
      "rate": 194
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4050000,
+     "count": 225,
+     "rate": 202
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "achieved_date": "2026-10-19",
    "reg_date": "2026-10-21"
@@ -795,9 +873,15 @@
      "amount": 729000,
      "count": 45,
      "rate": 146
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 729000,
+     "count": 45,
+     "rate": 146
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "어린이",
    "achieved_date": "2026-10-15",
    "reg_date": "2026-10-21"
@@ -815,9 +899,9 @@
    "release_date": "2026-11-05",
    "price": 26100,
    "goal": 1000000,
-   "amount": 9589800,
-   "count": 358,
-   "rate": 959,
+   "amount": 9670100,
+   "count": 361,
+   "rate": 967,
    "benefits": [
     "26,100원 펀딩",
     "<관객의 꿈: 테레사 학경 차 1951~1982> 도서 1부",
@@ -851,9 +935,15 @@
      "amount": 9589800,
      "count": 358,
      "rate": 959
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 9670100,
+     "count": 361,
+     "rate": 967
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "achieved_date": "2026-10-13",
    "reg_date": "2026-10-21"
@@ -871,9 +961,9 @@
    "release_date": "2026-11-19",
    "price": 41400,
    "goal": 1000000,
-   "amount": 2949200,
-   "count": 85,
-   "rate": 295,
+   "amount": 3352200,
+   "count": 95,
+   "rate": 335,
    "benefits": [
     "27,000원 펀딩",
     "<백석 평전> 도서 1부",
@@ -907,9 +997,15 @@
      "amount": 2949200,
      "count": 85,
      "rate": 295
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3352200,
+     "count": 95,
+     "rate": 335
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "achieved_date": "2026-10-20",
    "reg_date": "2026-10-21"
@@ -927,9 +1023,9 @@
    "release_date": "2026-11-20",
    "price": 22500,
    "goal": 1000000,
-   "amount": 16380000,
-   "count": 728,
-   "rate": 1638,
+   "amount": 18045000,
+   "count": 802,
+   "rate": 1805,
    "benefits": [
     "22,500원 펀딩",
     "<암살 공작 1974> 도서 1부",
@@ -963,9 +1059,15 @@
      "amount": 16380000,
      "count": 728,
      "rate": 1638
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 18045000,
+     "count": 802,
+     "rate": 1805
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "achieved_date": "2026-10-19",
    "reg_date": "2026-10-21"
@@ -1019,9 +1121,15 @@
      "amount": 12744900,
      "count": 439,
      "rate": 1274
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 12744900,
+     "count": 439,
+     "rate": 1274
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "reg_date": "2026-10-21"
   },
@@ -1074,9 +1182,15 @@
      "amount": 10210860,
      "count": 573,
      "rate": 1021
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 10210860,
+     "count": 573,
+     "rate": 1021
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -1128,9 +1242,15 @@
      "amount": 641500,
      "count": 35,
      "rate": 128
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 641500,
+     "count": 35,
+     "rate": 128
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "reg_date": "2026-10-21"
   },
@@ -1184,9 +1304,15 @@
      "amount": 8977400,
      "count": 282,
      "rate": 898
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 8977400,
+     "count": 282,
+     "rate": 898
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "역사·문화",
    "reg_date": "2026-10-21"
   },
@@ -1239,9 +1365,15 @@
      "amount": 2356200,
      "count": 154,
      "rate": 236
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2356200,
+     "count": 154,
+     "rate": 236
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "소설",
    "reg_date": "2026-10-21"
   },
@@ -1295,9 +1427,15 @@
      "amount": 3042900,
      "count": 147,
      "rate": 203
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3042900,
+     "count": 147,
+     "rate": 203
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "reg_date": "2026-10-21"
   },
@@ -1349,9 +1487,15 @@
      "amount": 3679200,
      "count": 146,
      "rate": 368
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3679200,
+     "count": 146,
+     "rate": 368
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
    "reg_date": "2026-10-21"
   },
@@ -1447,9 +1591,15 @@
      "amount": 756000,
      "count": 35,
      "rate": 76
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 756000,
+     "count": 35,
+     "rate": 76
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -1502,9 +1652,15 @@
      "amount": 1252800,
      "count": 29,
      "rate": 125
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1252800,
+     "count": 29,
+     "rate": 125
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "reg_date": "2026-10-21"
   },
@@ -1557,9 +1713,15 @@
      "amount": 3391000,
      "count": 38,
      "rate": 339
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3391000,
+     "count": 38,
+     "rate": 339
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "reg_date": "2026-10-21"
   },
@@ -1611,9 +1773,15 @@
      "amount": 75874140,
      "count": 3865,
      "rate": 7587
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 75874140,
+     "count": 3865,
+     "rate": 7587
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "소설",
    "reg_date": "2026-10-21"
   },
@@ -1667,9 +1835,15 @@
      "amount": 2925000,
      "count": 65,
      "rate": 292
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2925000,
+     "count": 65,
+     "rate": 292
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "만화",
    "reg_date": "2026-10-21"
   },
@@ -1722,9 +1896,15 @@
      "amount": 3017600,
      "count": 75,
      "rate": 302
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3017600,
+     "count": 75,
+     "rate": 302
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "reg_date": "2026-10-21"
   },
@@ -1777,9 +1957,15 @@
      "amount": 6372000,
      "count": 295,
      "rate": 637
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 6372000,
+     "count": 295,
+     "rate": 637
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "만화",
    "reg_date": "2026-10-21"
   },
@@ -1832,9 +2018,15 @@
      "amount": 9162000,
      "count": 509,
      "rate": 183
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 9162000,
+     "count": 509,
+     "rate": 183
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -1886,9 +2078,15 @@
      "amount": 612000,
      "count": 40,
      "rate": 122
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 612000,
+     "count": 40,
+     "rate": 122
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "어린이",
    "reg_date": "2026-10-21"
   },
@@ -1941,9 +2139,15 @@
      "amount": 6385500,
      "count": 215,
      "rate": 639
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 6385500,
+     "count": 215,
+     "rate": 639
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -1995,9 +2199,15 @@
      "amount": 3385800,
      "count": 209,
      "rate": 339
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3385800,
+     "count": 209,
+     "rate": 339
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -2050,9 +2260,15 @@
      "amount": 1761800,
      "count": 98,
      "rate": 176
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1761800,
+     "count": 98,
+     "rate": 176
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "소설",
    "reg_date": "2026-10-21"
   },
@@ -2104,9 +2320,15 @@
      "amount": 3645000,
      "count": 135,
      "rate": 364
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3645000,
+     "count": 135,
+     "rate": 364
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "reg_date": "2026-10-21"
   },
@@ -2159,9 +2381,15 @@
      "amount": 1764000,
      "count": 98,
      "rate": 176
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1764000,
+     "count": 98,
+     "rate": 176
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "만화",
    "reg_date": "2026-10-21"
   },
@@ -2213,9 +2441,15 @@
      "amount": 1052400,
      "count": 64,
      "rate": 210
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1052400,
+     "count": 64,
+     "rate": 210
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "reg_date": "2026-10-21"
   },
@@ -2267,9 +2501,15 @@
      "amount": 1254440,
      "count": 67,
      "rate": 125
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1254440,
+     "count": 67,
+     "rate": 125
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "reg_date": "2026-10-21"
   },
@@ -2322,9 +2562,15 @@
      "amount": 5242300,
      "count": 267,
      "rate": 524
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 5242300,
+     "count": 267,
+     "rate": 524
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "인문",
    "reg_date": "2026-10-21"
   },
@@ -2709,9 +2955,9 @@
    "release_date": "2026-10-29",
    "price": 15120,
    "goal": 1000000,
-   "amount": 2782080,
-   "count": 184,
-   "rate": 278,
+   "amount": 3008880,
+   "count": 199,
+   "rate": 301,
    "benefits": [
     "15,120원: 『나로 걷는 길, 고요하게 단단하게』 1부",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -2742,9 +2988,15 @@
      "amount": 2782080,
      "count": 184,
      "rate": 278
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3008880,
+     "count": 199,
+     "rate": 301
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "goods_id": "198278278",
    "reg_date": "2026-10-21"
@@ -2762,9 +3014,9 @@
    "release_date": "2026-11-09",
    "price": 16200,
    "goal": 1000000,
-   "amount": 4527900,
-   "count": 196,
-   "rate": 453,
+   "amount": 4572900,
+   "count": 198,
+   "rate": 457,
    "benefits": [
     "16,200원: 『나는 나비』 1부, 사인 인쇄 엽서",
     "16,200원: 『흰수염고래』 1부, 사인 인쇄 엽서",
@@ -2799,9 +3051,15 @@
      "amount": 4527900,
      "count": 196,
      "rate": 453
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4572900,
+     "count": 198,
+     "rate": 457
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "goods_id": "198990800",
    "reg_date": "2026-10-20"
@@ -2819,9 +3077,9 @@
    "release_date": "2026-11-04",
    "price": 18000,
    "goal": 1000000,
-   "amount": 748000,
-   "count": 39,
-   "rate": 75,
+   "amount": 888000,
+   "count": 46,
+   "rate": 89,
    "benefits": [
     "18,000원: 『우리들의 오줌권』 1부",
     "20,000원: 『우리들의 오줌권』 1부＋키링",
@@ -2854,9 +3112,15 @@
      "amount": 748000,
      "count": 39,
      "rate": 75
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 888000,
+     "count": 46,
+     "rate": 89
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
    "goods_id": "198912178",
    "reg_date": "2026-10-19"
@@ -2874,9 +3138,9 @@
    "release_date": "2026-11-10",
    "price": 15120,
    "goal": 1000000,
-   "amount": 1514880,
-   "count": 51,
-   "rate": 151,
+   "amount": 1548120,
+   "count": 52,
+   "rate": 155,
    "benefits": [
     "15,120원: 『찾아라 한국사』 1부",
     "15,120원: 『칠해라 한국사』 1부",
@@ -2910,9 +3174,15 @@
      "amount": 1514880,
      "count": 51,
      "rate": 151
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1548120,
+     "count": 52,
+     "rate": 155
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "어린이",
    "goods_id": "198909232",
    "reg_date": "2026-10-19"
@@ -2930,9 +3200,9 @@
    "release_date": "2026-11-17",
    "price": 19800,
    "goal": 1000000,
-   "amount": 966900,
-   "count": 48,
-   "rate": 97,
+   "amount": 1086700,
+   "count": 54,
+   "rate": 109,
    "benefits": [
     "19,800원: 『2027 깡력』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "20,300원: 『2027 깡력』 1부＋스티커, 펀딩 목표액별 추가 한줄평 리워드 지급",
@@ -2964,9 +3234,15 @@
      "amount": 966900,
      "count": 48,
      "rate": 97
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1086700,
+     "count": 54,
+     "rate": 109
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "goods_id": "198286989",
    "reg_date": "2026-10-19"
@@ -2984,9 +3260,9 @@
    "release_date": "2026-11-02",
    "price": 15300,
    "goal": 1000000,
-   "amount": 550800,
-   "count": 36,
-   "rate": 55,
+   "amount": 688500,
+   "count": 45,
+   "rate": 69,
    "benefits": [
     "15,300원: 도서 1부, 엽서 3종 세트 (책과 랩핑), 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3017,9 +3293,15 @@
      "amount": 550800,
      "count": 36,
      "rate": 55
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 688500,
+     "count": 45,
+     "rate": 69
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "goods_id": "198404976",
    "reg_date": "2026-10-16"
@@ -3037,9 +3319,9 @@
    "release_date": "2026-11-06",
    "price": 17820,
    "goal": 1000000,
-   "amount": 944460,
-   "count": 53,
-   "rate": 94,
+   "amount": 1015740,
+   "count": 57,
+   "rate": 102,
    "benefits": [
     "17,820원: 도서 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3070,9 +3352,15 @@
      "amount": 944460,
      "count": 53,
      "rate": 94
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1015740,
+     "count": 57,
+     "rate": 102
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "가정·건강·취미",
    "goods_id": "198391460",
    "reg_date": "2026-10-16"
@@ -3090,9 +3378,9 @@
    "release_date": "2026-11-05",
    "price": 15120,
    "goal": 1000000,
-   "amount": 2676240,
-   "count": 177,
-   "rate": 268,
+   "amount": 2857680,
+   "count": 189,
+   "rate": 286,
    "benefits": [
     "15,120원: 『봄 내음보다 너를』 (김나영 작가 친필 사인본) 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3123,9 +3411,15 @@
      "amount": 2676240,
      "count": 177,
      "rate": 268
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2857680,
+     "count": 189,
+     "rate": 286
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "goods_id": "198346886",
    "reg_date": "2026-10-16"
@@ -3143,9 +3437,9 @@
    "release_date": "2026-10-28",
    "price": 15120,
    "goal": 1000000,
-   "amount": 1339080,
-   "count": 84,
-   "rate": 134,
+   "amount": 1481160,
+   "count": 93,
+   "rate": 148,
    "benefits": [
     "15,120원: 『2026-2027 자문자답 나의 1년』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "18,120원: 『2026-2027 자문자답 나의 1년』 1부＋온라인 코칭 워크숍 초대권, 펀딩 목표액별 추가 한줄평 리워드 지급",
@@ -3177,9 +3471,15 @@
      "amount": 1339080,
      "count": 84,
      "rate": 134
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1481160,
+     "count": 93,
+     "rate": 148
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "goods_id": "198282027",
    "reg_date": "2026-10-16"
@@ -3197,9 +3497,9 @@
    "release_date": "2026-10-29",
    "price": 21600,
    "goal": 1000000,
-   "amount": 2052000,
-   "count": 95,
-   "rate": 205,
+   "amount": 2095200,
+   "count": 97,
+   "rate": 210,
    "benefits": [
     "21,600원: 『감각창조자들』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3230,9 +3530,15 @@
      "amount": 2052000,
      "count": 95,
      "rate": 205
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2095200,
+     "count": 97,
+     "rate": 210
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "경제·경영",
    "goods_id": "198217082",
    "reg_date": "2026-10-15"
@@ -3250,9 +3556,9 @@
    "release_date": "2026-11-09",
    "price": 18000,
    "goal": 1000000,
-   "amount": 3668000,
-   "count": 197,
-   "rate": 367,
+   "amount": 3821000,
+   "count": 205,
+   "rate": 382,
    "benefits": [
     "18,000원: 『영어 명문장 필사 노트 2』 1부",
     "19,000원: 『영어 명문장 필사 노트 2』 1부&북밴딩 펜홀더(랜덤,펜미포함)",
@@ -3284,9 +3590,15 @@
      "amount": 3668000,
      "count": 197,
      "rate": 367
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3821000,
+     "count": 205,
+     "rate": 382
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "외국어",
    "goods_id": "198056343",
    "reg_date": "2026-10-16"
@@ -3298,15 +3610,15 @@
    "title": "소원을 들어주는 주전자 요정",
    "publisher": "비룡소",
    "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 우리나라 그림책",
-   "status": "진행중",
+   "status": "마감임박",
    "start_date": "2026-10-13",
    "end_date": "2026-11-02",
    "release_date": "2026-11-03",
    "price": 15120,
-   "goal": 1000000,
-   "amount": 315400,
-   "count": 20,
-   "rate": 32,
+   "goal": 500000,
+   "amount": 345640,
+   "count": 22,
+   "rate": 69,
    "benefits": [
     "15,120원: 도서 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "16,120원: 도서 1부, 미니 포스터 4종 세트, 펀딩 목표액별 추가 한줄평 리워드 지급",
@@ -3338,9 +3650,15 @@
      "amount": 315400,
      "count": 20,
      "rate": 32
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 345640,
+     "count": 22,
+     "rate": 69
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "goods_id": "198009608",
    "reg_date": "2026-10-13"
@@ -3391,9 +3709,15 @@
      "amount": 1053000,
      "count": 65,
      "rate": 105
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1053000,
+     "count": 65,
+     "rate": 105
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "유아",
    "goods_id": "197974808",
    "reg_date": "2026-10-12"
@@ -3445,9 +3769,15 @@
      "amount": 1545900,
      "count": 93,
      "rate": 155
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1545900,
+     "count": 93,
+     "rate": 155
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "자기계발",
    "goods_id": "197774968",
    "reg_date": "2026-10-12"
@@ -3465,9 +3795,9 @@
    "release_date": "2026-10-29",
    "price": 19800,
    "goal": 1000000,
-   "amount": 1956800,
-   "count": 96,
-   "rate": 196,
+   "amount": 2018200,
+   "count": 99,
+   "rate": 202,
    "benefits": [
     "19,800원: 『읽으면 논술이 되는 최신과학뉴스 40』 1부",
     "20,800원: 『읽으면 논술이 되는 최신과학뉴스 40』 1부 & 최신과학 배경지식 노트",
@@ -3499,9 +3829,15 @@
      "amount": 1956800,
      "count": 96,
      "rate": 196
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2018200,
+     "count": 99,
+     "rate": 202
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "청소년",
    "goods_id": "197815893",
    "reg_date": "2026-10-08"
@@ -3668,9 +4004,9 @@
    "release_date": "2026-10-29",
    "price": 19800,
    "goal": 1000000,
-   "amount": 10593800,
-   "count": 526,
-   "rate": 1059,
+   "amount": 11984000,
+   "count": 595,
+   "rate": 1198,
    "benefits": [
     "19,800원: 『초등 3년 Q&A 다이어리』 1부(친필 인쇄 사인본)",
     "20,300원: 『초등 3년 Q&A 다이어리』 1부(친필 인쇄 사인본) , 저자 손글씨 각인 연필 & 지우개 세트",
@@ -3696,9 +4032,15 @@
      "amount": 10593800,
      "count": 526,
      "rate": 1059
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 11984000,
+     "count": 595,
+     "rate": 1198
     }
    ],
-   "last_seen": "2026-10-25",
+   "last_seen": "2026-10-27",
    "category": "어린이",
    "goods_id": "197648767",
    "reg_date": "2026-10-07"
@@ -3968,45 +4310,6 @@
    "last_seen": "2026-10-21",
    "category": "소설",
    "count_est": 169
-  },
-  "kyobo:649": {
-   "store": "kyobo",
-   "id": "649",
-   "url": "https://event.kyobobook.co.kr/funding/detail/649",
-   "title": "가방에 넣지 않아도 되는 이북리더기 파우치",
-   "publisher": "커먼누보",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 북백",
-   "status": "종료",
-   "start_date": "2026-09-07",
-   "end_date": "2026-09-20",
-   "release_date": "2026-09-21",
-   "price": 43900,
-   "goal": 500000,
-   "amount": 10167300,
-   "count": null,
-   "rate": 2033,
-   "benefits": [
-    "혜택1 ([★무료배송+25%할인★] 누보 이북백(글로시 아이보리))",
-    "혜택2 ([★무료배송+25%할인★] 누보 이북백(글로시 블랙))",
-    "혜택3 ([★무료배송+25%할인★] 누보 이북백(글로시 실버))",
-    "혜택4 (★10/7~순차발송★[무료배송+30%할인] SET: 누보 이북백(글로시 아이보리)+스트랩(블랙))",
-    "혜택5 (★10/7~순차발송★[무료배송+30%할인] SET: 누보 이북백(글로시 블랙)+스트랩(블랙))",
-    "혜택6 (★10/7~순차발송★[무료배송+30%할인]SET: 누보 이북백(글로시 실버)+스트랩(블랙))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c4231a22f9334c07972230e6bd46e70b.jpg",
-   "headline": "가방에 넣지 않아도 되는 이북리더기 파우치",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 10167300,
-     "count": 232,
-     "rate": 2033
-    }
-   ],
-   "last_seen": "2026-10-21",
-   "category": "굿즈·문구",
-   "count_est": 232
   },
   "kyobo:650": {
    "store": "kyobo",
@@ -4330,155 +4633,6 @@
    "category": "시·에세이",
    "count_est": 184
   },
-  "kyobo:659": {
-   "store": "kyobo",
-   "id": "659",
-   "url": "https://event.kyobobook.co.kr/funding/detail/659",
-   "title": "[단독 구성] AI NOTE Air2 + 정품 케이스 + sam 무제한 6개월",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > ebook용품 > sam/e북기기",
-   "status": "종료",
-   "start_date": "2026-09-17",
-   "end_date": "2026-10-05",
-   "release_date": "2026-10-15",
-   "price": null,
-   "goal": 5000000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/2893f26d79bf4d2b93cf9a958930d0c1.png",
-   "headline": "[단독 구성] AI NOTE Air2 + 정품 케이스 + sam 무제한 6개월",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-21",
-   "category": "굿즈·문구"
-  },
-  "kyobo:660": {
-   "store": "kyobo",
-   "id": "660",
-   "url": "https://event.kyobobook.co.kr/funding/detail/660",
-   "title": "스테들러 귀여운 페파피그 컬러링 세트",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 색연필",
-   "status": "종료",
-   "start_date": "2026-09-17",
-   "end_date": "2026-10-13",
-   "release_date": "2026-10-15",
-   "price": 36000,
-   "goal": 500000,
-   "amount": 1368000,
-   "count": null,
-   "rate": 273,
-   "benefits": [
-    "혜택1 ( [교보단독] 스테들러 페파피그 컬러링세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/ed149f5de57641ce9e89d318b18a95df.jpg",
-   "headline": "스테들러 귀여운 페파피그 컬러링 세트",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 1368000,
-     "count": 38,
-     "rate": 273
-    }
-   ],
-   "last_seen": "2026-10-21",
-   "category": "굿즈·문구",
-   "count_est": 38
-  },
-  "kyobo:661": {
-   "store": "kyobo",
-   "id": "661",
-   "url": "https://event.kyobobook.co.kr/funding/detail/661",
-   "title": "[단독 구성] AI NOTE Air2 + 정품 케이스 + sam 무제한 6개월",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > ebook용품 > sam/e북기기",
-   "status": "종료",
-   "start_date": "2026-09-18",
-   "end_date": "2026-10-05",
-   "release_date": "2026-10-15",
-   "price": null,
-   "goal": 5000000,
-   "amount": 65369000,
-   "count": null,
-   "rate": 1307,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/d7c5a18e14e74f93b2025c1205c2a7b0.png",
-   "headline": "[단독 구성] AI NOTE Air2 + 정품 케이스 + sam 무제한 6개월",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 65369000,
-     "count": null,
-     "rate": 1307
-    }
-   ],
-   "last_seen": "2026-10-21",
-   "category": "굿즈·문구"
-  },
-  "kyobo:662": {
-   "store": "kyobo",
-   "id": "662",
-   "url": "https://event.kyobobook.co.kr/funding/detail/662",
-   "title": "[한정판] 독도 1025 에디션 만년필",
-   "publisher": "로그",
-   "category_raw": "핫트랙스 > 필기구 > 세트",
-   "status": "종료",
-   "start_date": "2026-09-21",
-   "end_date": "2026-10-25",
-   "release_date": "2026-10-26",
-   "price": 51000,
-   "goal": 500000,
-   "amount": 25857000,
-   "count": null,
-   "rate": 5171,
-   "benefits": [
-    "혜택1 ([한정판] 독도1025 에디션 만년필)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/2b7e1763847644e3820745f4a833a932.jpg",
-   "headline": "[한정판] 독도 1025 에디션 만년필",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 21369000,
-     "count": 419,
-     "rate": 4273
-    },
-    {
-     "d": "2026-10-22",
-     "amount": 24225000,
-     "count": 475,
-     "rate": 4845
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 25755000,
-     "count": 505,
-     "rate": 5151
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 25857000,
-     "count": 507,
-     "rate": 5171
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "count_est": 507,
-   "reg_date": "2026-09-21"
-  },
   "kyobo:663": {
    "store": "kyobo",
    "id": "663",
@@ -4589,47 +4743,6 @@
    "category": "시·에세이",
    "count_est": 82
   },
-  "kyobo:666": {
-   "store": "kyobo",
-   "id": "666",
-   "url": "https://event.kyobobook.co.kr/funding/detail/666",
-   "title": "SWEET THINGS FOR YOUR DAY",
-   "publisher": "민도비또",
-   "category_raw": "핫트랙스 > 전시/굿즈 > 굿즈/에디션 > 스테이셔너리",
-   "status": "종료",
-   "start_date": "2026-09-30",
-   "end_date": "2026-10-21",
-   "release_date": "2026-10-22",
-   "price": 23000,
-   "goal": 500000,
-   "amount": 575000,
-   "count": null,
-   "rate": 115,
-   "benefits": [
-    "혜택1 ([단독구성/특가] PLAY WITH CATS SET)",
-    "혜택2 ([단독구성/특가] SWEET ANIMALS SET)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/5246e812bd2b44639d4486e5b4c03445.jpg",
-   "headline": "SWEET THINGS FOR YOUR DAY",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 575000,
-     "count": 25,
-     "rate": 115
-    },
-    {
-     "d": "2026-10-22",
-     "amount": 575000,
-     "count": 25,
-     "rate": 115
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 25
-  },
   "kyobo:667": {
    "store": "kyobo",
    "id": "667",
@@ -4643,9 +4756,9 @@
    "release_date": "2026-10-29",
    "price": 17820,
    "goal": 500000,
-   "amount": 6825060,
+   "amount": 6878520,
    "count": null,
-   "rate": 1365,
+   "rate": 1375,
    "benefits": [
     "혜택1 (컨디션 리셋)"
    ],
@@ -4677,12 +4790,19 @@
      "amount": 6825060,
      "count": 383,
      "rate": 1365
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 6878520,
+     "count": 386,
+     "rate": 1375
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "가정·건강·취미",
-   "count_est": 383,
-   "reg_date": "2026-10-01"
+   "count_est": 386,
+   "reg_date": "2026-10-01",
+   "kind": "book"
   },
   "kyobo:668": {
    "store": "kyobo",
@@ -4697,9 +4817,9 @@
    "release_date": "2026-10-28",
    "price": 19800,
    "goal": 500000,
-   "amount": 554400,
+   "amount": 594000,
    "count": null,
-   "rate": 110,
+   "rate": 118,
    "benefits": [
     "혜택1 (지역에서 부산스럽게 출판하기)"
    ],
@@ -4731,12 +4851,19 @@
      "amount": 554400,
      "count": 28,
      "rate": 110
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 594000,
+     "count": 30,
+     "rate": 118
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "사회·정치",
-   "count_est": 28,
-   "reg_date": "2026-10-02"
+   "count_est": 30,
+   "reg_date": "2026-10-02",
+   "kind": "book"
   },
   "kyobo:669": {
    "store": "kyobo",
@@ -4825,9 +4952,9 @@
    "release_date": "2026-11-11",
    "price": 46800,
    "goal": 1500000,
-   "amount": 4753000,
+   "amount": 4942200,
    "count": null,
-   "rate": 316,
+   "rate": 329,
    "benefits": [
     "혜택1 (노벨문학상 수상 강연집)",
     "혜택2 (노벨문학상 수상 강연집+한강 노벨상 강연 미니북)"
@@ -4860,12 +4987,19 @@
      "amount": 4753000,
      "count": 102,
      "rate": 316
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4942200,
+     "count": 106,
+     "rate": 329
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 102,
-   "reg_date": "2026-10-08"
+   "count_est": 106,
+   "reg_date": "2026-10-08",
+   "kind": "book"
   },
   "kyobo:672": {
    "store": "kyobo",
@@ -4965,59 +5099,6 @@
    "count_est": 79,
    "reg_date": "2026-10-07"
   },
-  "kyobo:674": {
-   "store": "kyobo",
-   "id": "674",
-   "url": "https://event.kyobobook.co.kr/funding/detail/674",
-   "title": "집중을 돕는 플로우 타이머",
-   "publisher": "오베가트",
-   "category_raw": "핫트랙스 > 디자인문구 > 스톱워치/타이머 > 스톱워치/타이머",
-   "status": "마감임박",
-   "start_date": "2026-10-13",
-   "end_date": "2026-10-27",
-   "release_date": "2026-10-28",
-   "price": 26900,
-   "goal": 500000,
-   "amount": 1856100,
-   "count": null,
-   "rate": 371,
-   "benefits": [
-    "혜택1 (오베가트 무소음 LED 뽀모도로 타이머)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/06641c1908ab4f5391e8e3142c34d383.jpg",
-   "headline": "집중을 돕는 플로우 타이머",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 1506400,
-     "count": 56,
-     "rate": 301
-    },
-    {
-     "d": "2026-10-22",
-     "amount": 1560200,
-     "count": 58,
-     "rate": 312
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 1802300,
-     "count": 67,
-     "rate": 360
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 1856100,
-     "count": 69,
-     "rate": 371
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "count_est": 69,
-   "reg_date": "2026-10-13"
-  },
   "kyobo:675": {
    "store": "kyobo",
    "id": "675",
@@ -5031,9 +5112,9 @@
    "release_date": "2026-10-29",
    "price": 16200,
    "goal": 1000000,
-   "amount": 4768400,
+   "amount": 5103600,
    "count": null,
-   "rate": 476,
+   "rate": 510,
    "benefits": [
     "혜택1 (스스로 해내는 아이의 감정 회복력 + 부모 특강 vod)",
     "혜택2 (스스로 해내는 아이의 감정 회복력 + 부모 특강 vod + 북토크 티켓)"
@@ -5066,12 +5147,19 @@
      "amount": 4768400,
      "count": 294,
      "rate": 476
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 5103600,
+     "count": 315,
+     "rate": 510
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "가정·건강·취미",
-   "count_est": 294,
-   "reg_date": "2026-10-13"
+   "count_est": 315,
+   "reg_date": "2026-10-13",
+   "kind": "book"
   },
   "kyobo:676": {
    "store": "kyobo",
@@ -5086,9 +5174,9 @@
    "release_date": "2026-11-13",
    "price": 23850,
    "goal": 1500000,
-   "amount": 4455100,
+   "amount": 4642050,
    "count": null,
-   "rate": 297,
+   "rate": 309,
    "benefits": [
     "혜택1 (다음 계절엔 홋카이도)",
     "혜택2 (다음 계절엔 홋카이도+홋카이도 지도 NFC 키링)"
@@ -5121,65 +5209,19 @@
      "amount": 4455100,
      "count": 187,
      "rate": 297
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4642050,
+     "count": 195,
+     "rate": 309
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 187,
-   "reg_date": "2026-10-15"
-  },
-  "kyobo:677": {
-   "store": "kyobo",
-   "id": "677",
-   "url": "https://event.kyobobook.co.kr/funding/detail/677",
-   "title": "[교보단독] 스테들러 내추럴 점보 스쿨세트",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 세트",
-   "status": "마감임박",
-   "start_date": "2026-10-14",
-   "end_date": "2026-10-29",
-   "release_date": "2026-10-30",
-   "price": 18000,
-   "goal": 500000,
-   "amount": 1458000,
-   "count": null,
-   "rate": 291,
-   "benefits": [
-    "혜택1 ([교보단독] 스테들러 내추럴 점보 스쿨세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/ab126434d77f40a7adfd1e4352279ea9.jpg",
-   "headline": "[교보단독] 스테들러 내추럴 점보 스쿨세트",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 1296000,
-     "count": 72,
-     "rate": 259
-    },
-    {
-     "d": "2026-10-22",
-     "amount": 1332000,
-     "count": 74,
-     "rate": 266
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 1458000,
-     "count": 81,
-     "rate": 291
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 1458000,
-     "count": 81,
-     "rate": 291
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "count_est": 81,
-   "reg_date": "2026-10-14"
+   "count_est": 195,
+   "reg_date": "2026-10-15",
+   "kind": "book"
   },
   "kyobo:678": {
    "store": "kyobo",
@@ -5188,15 +5230,15 @@
    "title": "3개월 영어 천재 김 과장, 완결판",
    "publisher": "서울문화사",
    "category_raw": "국내도서 > 자기계발 > 성공/처세 > 자기관리/처세",
-   "status": "마감임박",
+   "status": "종료",
    "start_date": "2026-10-16",
    "end_date": "2026-10-26",
    "release_date": "2026-10-27",
    "price": 16200,
    "goal": 500000,
-   "amount": 543400,
+   "amount": 561600,
    "count": null,
-   "rate": 108,
+   "rate": 112,
    "benefits": [
     "혜택1 (3개월 영어 천재 김 과장, 완결판)",
     "혜택2 (3개월 영어 천재 김 과장, 완결판+비즈니스 영어 특별 강연 수강권)",
@@ -5230,12 +5272,19 @@
      "amount": 543400,
      "count": 34,
      "rate": 108
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 561600,
+     "count": 35,
+     "rate": 112
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "자기계발",
-   "count_est": 34,
-   "reg_date": "2026-10-16"
+   "count_est": 35,
+   "reg_date": "2026-10-16",
+   "kind": "book"
   },
   "kyobo:679": {
    "store": "kyobo",
@@ -5250,9 +5299,9 @@
    "release_date": "2026-10-30",
    "price": 16200,
    "goal": 500000,
-   "amount": 680400,
+   "amount": 712800,
    "count": null,
-   "rate": 136,
+   "rate": 142,
    "benefits": [
     "혜택1 (안티 도파민)"
    ],
@@ -5284,12 +5333,19 @@
      "amount": 680400,
      "count": 42,
      "rate": 136
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 712800,
+     "count": 44,
+     "rate": 142
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "자기계발",
-   "count_est": 42,
-   "reg_date": "2026-10-19"
+   "count_est": 44,
+   "reg_date": "2026-10-19",
+   "kind": "book"
   },
   "kyobo:680": {
    "store": "kyobo",
@@ -5304,9 +5360,9 @@
    "release_date": "2026-11-05",
    "price": 12870,
    "goal": 500000,
-   "amount": 840720,
+   "amount": 889330,
    "count": null,
-   "rate": 168,
+   "rate": 177,
    "benefits": [
     "혜택1 (방울방울 추억 컬러링북)",
     "혜택2 (방울방울 추억 컬러링북 + 스테들러 색연필36색)"
@@ -5339,12 +5395,19 @@
      "amount": 840720,
      "count": 65,
      "rate": 168
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 889330,
+     "count": 69,
+     "rate": 177
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "예술",
-   "count_est": 65,
-   "reg_date": "2026-10-16"
+   "count_est": 69,
+   "reg_date": "2026-10-16",
+   "kind": "book"
   },
   "kyobo:681": {
    "store": "kyobo",
@@ -5359,9 +5422,9 @@
    "release_date": "2026-11-04",
    "price": 18000,
    "goal": 500000,
-   "amount": 2919000,
+   "amount": 3104000,
    "count": null,
-   "rate": 583,
+   "rate": 620,
    "benefits": [
     "혜택1 (이승조의 첫 주식투자 교과서)",
     "혜택2 (이승조의 첫 주식투자 교과서 + 저자 강연회 티켓)"
@@ -5394,12 +5457,19 @@
      "amount": 2919000,
      "count": 162,
      "rate": 583
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3104000,
+     "count": 172,
+     "rate": 620
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "경제·경영",
-   "count_est": 162,
-   "reg_date": "2026-10-19"
+   "count_est": 172,
+   "reg_date": "2026-10-19",
+   "kind": "book"
   },
   "kyobo:682": {
    "store": "kyobo",
@@ -5408,15 +5478,15 @@
    "title": "나뭇잎 프레디 이야기",
    "publisher": "윌북",
    "category_raw": "국내도서 > 시/에세이 > 나라별 에세이 > 영미에세이",
-   "status": "진행중",
+   "status": "마감임박",
    "start_date": "2026-10-21",
    "end_date": "2026-11-03",
    "release_date": "2026-11-04",
    "price": 15120,
    "goal": 1500000,
-   "amount": 5124740,
+   "amount": 5592600,
    "count": null,
-   "rate": 341,
+   "rate": 372,
    "benefits": [
     "혜택1 (나뭇잎 프레디 이야기)",
     "혜택2 (나뭇잎 프레디 이야기+엽서 세트)",
@@ -5450,69 +5520,19 @@
      "amount": 5124740,
      "count": 339,
      "rate": 341
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 5592600,
+     "count": 370,
+     "rate": 372
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 339,
-   "reg_date": "2026-10-21"
-  },
-  "kyobo:683": {
-   "store": "kyobo",
-   "id": "683",
-   "url": "https://event.kyobobook.co.kr/funding/detail/683",
-   "title": "한 손에 슥, 세상에 없던 하이엔드 휴대용 독서대",
-   "publisher": "노르잇",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "진행중",
-   "start_date": "2026-10-20",
-   "end_date": "2026-12-13",
-   "release_date": "2026-12-15",
-   "price": 59000,
-   "goal": 500000,
-   "amount": 8865000,
-   "count": null,
-   "rate": 1773,
-   "benefits": [
-    "혜택1 ([★최초공개+34%할인★] 포터블 북스탠드(매트블랙&월넛))",
-    "혜택2 ([★최초공개+34%할인★] 포터블 북스탠드(새틴실버&메이플))",
-    "혜택3 ([★최초공개+34%할인★] 포터블 북스탠드(새틴실버&월넛))",
-    "혜택4 ([★최초공개+38%할인★] 포터블 북스탠드(매트블랙))",
-    "혜택5 ([★최초공개+38%할인★] 포터블 북스탠드(새틴 실버))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/e6682495b60943f0b215cf8ac8f531d6.jpg",
-   "headline": "한 손에 슥, 세상에 없던 하이엔드 휴대용 독서대",
-   "first_seen": "2026-10-21",
-   "history": [
-    {
-     "d": "2026-10-21",
-     "amount": 4796000,
-     "count": 81,
-     "rate": 959
-    },
-    {
-     "d": "2026-10-22",
-     "amount": 5926000,
-     "count": 100,
-     "rate": 1185
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 8629000,
-     "count": 146,
-     "rate": 1725
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 8865000,
-     "count": 150,
-     "rate": 1773
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "count_est": 150,
-   "reg_date": "2026-10-20"
+   "count_est": 370,
+   "reg_date": "2026-10-21",
+   "kind": "book"
   },
   "aladin:3044": {
    "store": "aladin",
@@ -5527,9 +5547,9 @@
    "release_date": "2026-11-10",
    "price": 15120,
    "goal": 500000,
-   "amount": 1531760,
-   "count": 97,
-   "rate": 306,
+   "amount": 1594000,
+   "count": 101,
+   "rate": 319,
    "benefits": [
     "15,120원 펀딩",
     "<집, 집, 집, 곰 아주머니 집> 초판 도서 1부",
@@ -5557,9 +5577,15 @@
      "amount": 1531760,
      "count": 97,
      "rate": 306
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1594000,
+     "count": 101,
+     "rate": 319
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "어린이",
    "reg_date": "2026-10-22"
   },
@@ -13549,103 +13575,6 @@
    "last_seen": "2026-10-22",
    "category": "인문"
   },
-  "kyobo:684": {
-   "store": "kyobo",
-   "id": "684",
-   "url": "https://event.kyobobook.co.kr/funding/detail/684",
-   "title": "[x상품오등록]시험장까지 함께할, 합격 응원 양말",
-   "publisher": "스카이 패스 삭스",
-   "category_raw": "핫트랙스 > 홈/라이프 > 패션 > 양말/스타킹 > 양말 세트",
-   "status": "진행중",
-   "start_date": "2026-10-21",
-   "end_date": "2026-11-04",
-   "release_date": "2026-11-05",
-   "price": 12900,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [
-    "혜택1 ([한 사람을 위한 응원] SKY PASS 양말 1세트 (총 3켤레))",
-    "혜택2 ([친구들과 함께] SKY PASS 양말 5세트)",
-    "혜택3 ([우리 반 합격 기원] SKY PASS 양말 10세트 (총 30켤레))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/1ccab12c67334233904238249d157aee.jpg",
-   "headline": "[x상품오등록]시험장까지 함께할, 합격 응원 양말",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "reg_date": "2026-10-21"
-  },
-  "kyobo:685": {
-   "store": "kyobo",
-   "id": "685",
-   "url": "https://event.kyobobook.co.kr/funding/detail/685",
-   "title": "시험장까지 함께할, 수능 응원 양말",
-   "publisher": "스카이 패스 삭스",
-   "category_raw": "핫트랙스 > 홈/라이프 > 패션 > 양말/스타킹 > 양말 세트",
-   "status": "진행중",
-   "start_date": "2026-10-21",
-   "end_date": "2026-11-04",
-   "release_date": "2026-11-05",
-   "price": 12900,
-   "goal": 500000,
-   "amount": 890100,
-   "count": null,
-   "rate": 178,
-   "benefits": [
-    "혜택1 ([한 사람을 위한 응원] SKY PASS 양말 1세트 (총 3켤레))",
-    "혜택2 ([친구들과 함께] SKY PASS 양말 5세트 (총 15켤레))",
-    "혜택3 ([우리 반 합격 기원] SKY PASS 양말 10세트 (총 30켤레))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/9c51a4cbd138409484273a4c83d51fea.jpg",
-   "headline": "시험장까지 함께할, 수능 응원 양말",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 438600,
-     "count": 34,
-     "rate": 87
-    },
-    {
-     "d": "2026-10-25",
-     "amount": 890100,
-     "count": 69,
-     "rate": 178
-    },
-    {
-     "d": "2026-10-26",
-     "amount": 890100,
-     "count": 69,
-     "rate": 178
-    }
-   ],
-   "last_seen": "2026-10-26",
-   "category": "굿즈·문구",
-   "count_est": 69,
-   "reg_date": "2026-10-21"
-  },
   "kyobo:643": {
    "store": "kyobo",
    "id": "643",
@@ -13714,41 +13643,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "가정·건강·취미"
-  },
-  "kyobo:641": {
-   "store": "kyobo",
-   "id": "641",
-   "url": "https://event.kyobobook.co.kr/funding/detail/641",
-   "title": "하루 한 낱말, 마음에 새기는 순우리말 필사",
-   "publisher": "커버서울",
-   "category_raw": "핫트랙스 > 디자인문구 > 노트/메모 > 유선 일반노트",
-   "status": "종료",
-   "start_date": "2026-09-01",
-   "end_date": "2026-09-16",
-   "release_date": "2026-09-18",
-   "price": 7000,
-   "goal": 500000,
-   "amount": 2107000,
-   "count": null,
-   "rate": 421,
-   "benefits": [
-    "혜택1 (커버서울 필사 해빛 노트 (낱말))",
-    "혜택2 (커버서울 필사 해빛 노트 (낱말) + 한국문학 2종 세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/62001fef4a124271b831d29f3cb3d886.jpg",
-   "headline": "하루 한 낱말, 마음에 새기는 순우리말 필사",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2107000,
-     "count": 301,
-     "rate": 421
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 301
   },
   "kyobo:640": {
    "store": "kyobo",
@@ -13956,143 +13850,6 @@
    "category": "인문",
    "count_est": 216
   },
-  "kyobo:634": {
-   "store": "kyobo",
-   "id": "634",
-   "url": "https://event.kyobobook.co.kr/funding/detail/634",
-   "title": "꽃처럼 피어나는 이야기, 부케북&머그",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > 리빙/홈데코 > 기타",
-   "status": "종료",
-   "start_date": "2026-08-26",
-   "end_date": "2026-09-17",
-   "release_date": "2026-09-23",
-   "price": 40900,
-   "goal": 1500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [
-    "혜택1 ([부케북+머그] Thinking of you + 블루버드 블룸머그)",
-    "혜택2 ([부케북+머그] Happy Day + 블루버드 블룸머그)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/16e45e7891ba408595bf62b058045173.jpg",
-   "headline": "꽃처럼 피어나는 이야기, 부케북&머그",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:633": {
-   "store": "kyobo",
-   "id": "633",
-   "url": "https://event.kyobobook.co.kr/funding/detail/633",
-   "title": "교보문고X트위그뉴욕",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > 리빙/홈데코 > 기타",
-   "status": "종료",
-   "start_date": "2026-08-25",
-   "end_date": "2026-09-17",
-   "release_date": "2026-09-23",
-   "price": null,
-   "goal": 1500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c0838ff25dc84517910c630bacd118e8.jpg",
-   "headline": "교보문고X트위그뉴욕",
-   "isbn": "0",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:632": {
-   "store": "kyobo",
-   "id": "632",
-   "url": "https://event.kyobobook.co.kr/funding/detail/632",
-   "title": "한 손에 가볍게, 접이식 알루미늄 독서대",
-   "publisher": "오브리즈",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 아크릴/투명/알루미늄",
-   "status": "종료",
-   "start_date": "2026-08-26",
-   "end_date": "2026-09-28",
-   "release_date": "2026-09-30",
-   "price": 32800,
-   "goal": 1500000,
-   "amount": 23911200,
-   "count": null,
-   "rate": 1594,
-   "benefits": [
-    "혜택1 ([★~10/8 발송★] 오브리즈 플립 휴대용 2중관절 독서대+가죽파우치SET)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/002400941cf04e33a844adf452cfcb88.jpg",
-   "headline": "한 손에 가볍게, 접이식 알루미늄 독서대",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 23911200,
-     "count": 729,
-     "rate": 1594
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 729
-  },
-  "kyobo:631": {
-   "store": "kyobo",
-   "id": "631",
-   "url": "https://event.kyobobook.co.kr/funding/detail/631",
-   "title": "우드 크래프트 브랜드가 만든 첫 번째 독서대",
-   "publisher": "양장박웍스",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "종료",
-   "start_date": "2026-08-21",
-   "end_date": "2026-09-13",
-   "release_date": "2026-09-15",
-   "price": 88000,
-   "goal": 500000,
-   "amount": 2446000,
-   "count": null,
-   "rate": 489,
-   "benefits": [
-    "혜택1 ([10개 한정] 양장박웍스 각도 조절 우드 독서대(월넛))",
-    "혜택2 ([10개 한정] 양장박웍스 각도 조절 우드 독서대(오크))",
-    "혜택3 (양장박웍스 각도 조절 우드 독서대(월넛))",
-    "혜택4 (양장박웍스 각도 조절 우드 독서대(오크))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/fb9390d2216942d09390b8cf9b4f89fd.jpg",
-   "headline": "우드 크래프트 브랜드가 만든 첫 번째 독서대",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2446000,
-     "count": 28,
-     "rate": 489
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 28
-  },
   "kyobo:630": {
    "store": "kyobo",
    "id": "630",
@@ -14128,83 +13885,6 @@
    "last_seen": "2026-10-22",
    "category": "인문",
    "count_est": 287
-  },
-  "kyobo:629": {
-   "store": "kyobo",
-   "id": "629",
-   "url": "https://event.kyobobook.co.kr/funding/detail/629",
-   "title": "쓰는 재미를 더하는 필사 최적의 조합",
-   "publisher": "컴포지션 스튜디오",
-   "category_raw": "핫트랙스 > 독서용품 > 독서노트",
-   "status": "종료",
-   "start_date": "2026-08-20",
-   "end_date": "2026-09-06",
-   "release_date": "2026-09-08",
-   "price": 16500,
-   "goal": 500000,
-   "amount": 1241400,
-   "count": null,
-   "rate": 248,
-   "benefits": [
-    "혜택1 ([25%할인/단품] 원고지 노트(버건디핑크))",
-    "혜택2 ([25%할인/단품] 원고지 노트(블루 레드))",
-    "혜택3 ([25%할인/단품] 원고지 노트(민트 브라운))",
-    "혜택4 ([30%할인/SET] 원고지 노트(버건디 핑크)+메모패드(선택))",
-    "혜택5 ([30%할인/SET] 원고지 노트(블루 레드)+메모패드(선택))",
-    "혜택6 ([30%할인/SET] 원고지 노트(민트 브라운)+메모패드(선택))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/a745c9e25684438795bed061ca162f42.png",
-   "headline": "쓰는 재미를 더하는 필사 최적의 조합",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1241400,
-     "count": 75,
-     "rate": 248
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 75
-  },
-  "kyobo:624": {
-   "store": "kyobo",
-   "id": "624",
-   "url": "https://event.kyobobook.co.kr/funding/detail/624",
-   "title": "X",
-   "publisher": "컴포지션 스튜디오",
-   "category_raw": "핫트랙스 > 독서용품 > 독서노트",
-   "status": "종료",
-   "start_date": "2026-08-20",
-   "end_date": "2026-09-06",
-   "release_date": "2026-09-07",
-   "price": 16500,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [
-    "혜택1 ([25%할인/단품] 원고지 노트(버건디핑크))",
-    "혜택2 ([25%할인/단품] 원고지 노트(블루 레드))",
-    "혜택3 ([25%할인/단품] 원고지 노트(민트 브라운))",
-    "혜택4 ([30%할인/SET] 원고지 노트(버건디 핑크)+메모패드(선택))",
-    "혜택5 ([30%할인/SET] 원고지 노트(블루 레드)+메모패드(선택))",
-    "혜택6 (어린이 메디컬 스쿨 1~5권 세트 (전 5권))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/d6b1c0d547754dc8a742995f46426805.png",
-   "headline": "X",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:623": {
    "store": "kyobo",
@@ -14277,74 +13957,6 @@
    "category": "자기계발",
    "count_est": 76
   },
-  "kyobo:621": {
-   "store": "kyobo",
-   "id": "621",
-   "url": "https://event.kyobobook.co.kr/funding/detail/621",
-   "title": "X",
-   "publisher": "오브리즈",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 아크릴/투명/알루미늄",
-   "status": "종료",
-   "start_date": "2026-08-27",
-   "end_date": "2026-09-28",
-   "release_date": "2026-09-30",
-   "price": 29800,
-   "goal": 1500000,
-   "amount": 62600,
-   "count": null,
-   "rate": 4,
-   "benefits": [
-    "혜택1 (오브리즈 휴대용 독서대)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/765a18c78b884b0a94600fb25d67aca7.jpg",
-   "headline": "X",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 62600,
-     "count": 2,
-     "rate": 4
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 2
-  },
-  "kyobo:620": {
-   "store": "kyobo",
-   "id": "620",
-   "url": "https://event.kyobobook.co.kr/funding/detail/620",
-   "title": "동아 miffy Pen Club (미피 펜클럽) 12본 세트",
-   "publisher": "동아연필",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 연필",
-   "status": "종료",
-   "start_date": "2026-08-20",
-   "end_date": "2026-09-10",
-   "release_date": "2026-09-11",
-   "price": 6700,
-   "goal": 500000,
-   "amount": 2170800,
-   "count": null,
-   "rate": 434,
-   "benefits": [
-    "혜택1 (동아 미피 PEN CLUB/12본세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/4cecd81248974fd7a65f1d850a4f004c.jpg",
-   "headline": "동아 miffy Pen Club (미피 펜클럽) 12본 세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2170800,
-     "count": 324,
-     "rate": 434
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 324
-  },
   "kyobo:619": {
    "store": "kyobo",
    "id": "619",
@@ -14380,43 +13992,6 @@
    "last_seen": "2026-10-22",
    "category": "시·에세이",
    "count_est": 125
-  },
-  "kyobo:618": {
-   "store": "kyobo",
-   "id": "618",
-   "url": "https://event.kyobobook.co.kr/funding/detail/618",
-   "title": "MERGE X 교보문고 '책베개'",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > 독서용품 > 기타",
-   "status": "종료",
-   "start_date": "2026-08-25",
-   "end_date": "2026-09-15",
-   "release_date": "2026-09-16",
-   "price": 59200,
-   "goal": 500000,
-   "amount": 4562800,
-   "count": null,
-   "rate": 912,
-   "benefits": [
-    "혜택1 (Book Pillow(체크)+Keyring)",
-    "혜택2 (Book Pillow(포도)+Keyring)",
-    "혜택3 (Book Pillow-책 베개(체크))",
-    "혜택4 (Book Pillow-책 베개(포도))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/d222018dfe3e4301a032699cd8b6044a.png",
-   "headline": "MERGE X 교보문고 '책베개'",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 4562800,
-     "count": 77,
-     "rate": 912
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 77
   },
   "kyobo:617": {
    "store": "kyobo",
@@ -14594,74 +14169,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "소설"
-  },
-  "kyobo:612": {
-   "store": "kyobo",
-   "id": "612",
-   "url": "https://event.kyobobook.co.kr/funding/detail/612",
-   "title": "책상 위 아름답게 피어나는 나만의 책 정원",
-   "publisher": "우딕",
-   "category_raw": "핫트랙스 > 독서용품 > 책수납 > 북엔드",
-   "status": "종료",
-   "start_date": "2026-08-10",
-   "end_date": "2026-08-27",
-   "release_date": "2026-08-31",
-   "price": 29900,
-   "goal": 500000,
-   "amount": 1345500,
-   "count": null,
-   "rate": 269,
-   "benefits": [
-    "혜택1 (★바로펀딩 한정 1만원 할인★페이퍼플라워 북&기록 보드)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/f5cd0f5265134e61beffb4e4ccebece5.jpg",
-   "headline": "책상 위 아름답게 피어나는 나만의 책 정원",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1345500,
-     "count": 45,
-     "rate": 269
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 45
-  },
-  "kyobo:611": {
-   "store": "kyobo",
-   "id": "611",
-   "url": "https://event.kyobobook.co.kr/funding/detail/611",
-   "title": "[한정판] 안중근 대한독립(大韓獨立) 기록 만년필",
-   "publisher": "아그네스마틴",
-   "category_raw": "핫트랙스 > 필기구 > 만년필 > 기타 브랜드 만년필",
-   "status": "종료",
-   "start_date": "2026-08-10",
-   "end_date": "2026-09-18",
-   "release_date": "2026-09-19",
-   "price": 48000,
-   "goal": 1500000,
-   "amount": 8928000,
-   "count": null,
-   "rate": 595,
-   "benefits": [
-    "혜택1 ([한정판] 안중근 대한독립(大韓獨立) 기록 만년필)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/161e24449eda444bbf841303f0209733.jpg",
-   "headline": "[한정판] 안중근 대한독립(大韓獨立) 기록 만년필",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 8928000,
-     "count": 186,
-     "rate": 595
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 186
   },
   "kyobo:610": {
    "store": "kyobo",
@@ -14910,40 +14417,6 @@
    "category": "소설",
    "count_est": 121
   },
-  "kyobo:603": {
-   "store": "kyobo",
-   "id": "603",
-   "url": "https://event.kyobobook.co.kr/funding/detail/603",
-   "title": "끝없이 펼쳐지는 푸르른 물결을 따라",
-   "publisher": "책과 마주하는 마음으로",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-07-31",
-   "end_date": "2026-08-12",
-   "release_date": "2026-08-14",
-   "price": 28500,
-   "goal": 1500000,
-   "amount": 1539000,
-   "count": null,
-   "rate": 102,
-   "benefits": [
-    "혜택1 ([한정판] 요리 바다숲 북커버)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/af6e3b6deb434950807d4dd5f8b5b4e0.jpg",
-   "headline": "끝없이 펼쳐지는 푸르른 물결을 따라",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1539000,
-     "count": 54,
-     "rate": 102
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 54
-  },
   "kyobo:602": {
    "store": "kyobo",
    "id": "602",
@@ -14975,40 +14448,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "참고서·수험서"
-  },
-  "kyobo:601": {
-   "store": "kyobo",
-   "id": "601",
-   "url": "https://event.kyobobook.co.kr/funding/detail/601",
-   "title": "읽기와 생각, 쓰기를 하나로 잇는 독서링 연필세트",
-   "publisher": "아그네스마틴",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 연필",
-   "status": "종료",
-   "start_date": "2026-07-29",
-   "end_date": "2026-08-30",
-   "release_date": "2026-08-31",
-   "price": 28900,
-   "goal": 500000,
-   "amount": 1098200,
-   "count": null,
-   "rate": 219,
-   "benefits": [
-    "혜택1 (읽기와 생각, 쓰기를 하나로 잇는 독서링 연필세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/40c6d25ae0fb4b55a7438dd4878befbf.jpg",
-   "headline": "읽기와 생각, 쓰기를 하나로 잇는 독서링 연필세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1098200,
-     "count": 38,
-     "rate": 219
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 38
   },
   "kyobo:600": {
    "store": "kyobo",
@@ -15187,151 +14626,6 @@
    "category": "인문",
    "count_est": 450
   },
-  "kyobo:595": {
-   "store": "kyobo",
-   "id": "595",
-   "url": "https://event.kyobobook.co.kr/funding/detail/595",
-   "title": "책에 꽂는 순간, 켜지는 나만의 독서공간",
-   "publisher": "울티",
-   "category_raw": "핫트랙스 > 독서용품 > 북라이트 > 스탠드 조명",
-   "status": "종료",
-   "start_date": "2026-07-24",
-   "end_date": "2026-08-23",
-   "release_date": "2026-08-24",
-   "price": 17900,
-   "goal": 1500000,
-   "amount": 7392700,
-   "count": null,
-   "rate": 492,
-   "benefits": [
-    "혜택1 (★무료배송★울티 북마크라이트(멜로우 핑크))",
-    "혜택2 (★무료배송★울티 북마크라이트(코튼 블루))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/e0ae20ac192c4a64bacb7031d1415592.jpg",
-   "headline": "책에 꽂는 순간, 켜지는 나만의 독서공간",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 7392700,
-     "count": 413,
-     "rate": 492
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 413
-  },
-  "kyobo:594": {
-   "store": "kyobo",
-   "id": "594",
-   "url": "https://event.kyobobook.co.kr/funding/detail/594",
-   "title": "나의 책상 위 사적인 수집",
-   "publisher": "키오스크키오스크",
-   "category_raw": "핫트랙스 > 전시/굿즈 > 굿즈/에디션 > 리빙",
-   "status": "종료",
-   "start_date": "2026-07-28",
-   "end_date": "2026-08-17",
-   "release_date": "2026-08-31",
-   "price": 55200,
-   "goal": 500000,
-   "amount": 1139700,
-   "count": null,
-   "rate": 227,
-   "benefits": [
-    "· 온라인 판매 최초 공개",
-    "혜택1 ([20% OFF] 아카이브 포켓)",
-    "혜택2 ([20% OFF] 문고본 북엔드)",
-    "혜택3 ([25% OFF] 문고본 북엔드 2개)",
-    "혜택4 ([25% OFF] 문고본 북엔드 + 아카이브 포켓)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/2dee4bef138842df91fd792473a9934f.jpg",
-   "headline": "나의 책상 위 사적인 수집",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1139700,
-     "count": 21,
-     "rate": 227
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 21
-  },
-  "kyobo:592": {
-   "store": "kyobo",
-   "id": "592",
-   "url": "https://event.kyobobook.co.kr/funding/detail/592",
-   "title": "(누적 3만명돌파) 나만의 특별한 사인제작",
-   "publisher": "사인어스",
-   "category_raw": "핫트랙스 > 필기구 > 기타",
-   "status": "종료",
-   "start_date": "2026-07-27",
-   "end_date": "2026-08-20",
-   "release_date": "2026-09-18",
-   "price": 84000,
-   "goal": 500000,
-   "amount": 2451500,
-   "count": null,
-   "rate": 490,
-   "benefits": [
-    "혜택1 ([교보단독] B형사인+사인 태슬 북마크)",
-    "혜택2 ([교보단독] B형사인+사인 태슬북마크+사인스탬프)",
-    "혜택3 (A형 결재형 사인제작)",
-    "혜택4 (B형(결재+서명형) 사인제작)",
-    "혜택5 (C형 개성있는(연예인+운동선수) 사인제작)",
-    "혜택6 (D형 회사대표자형 사인제작)",
-    "혜택7 (E형 화가,작가형 사인제작)",
-    "혜택8 (F형 한자 사인제작)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/865a2da36ae742e89ab3394a365a3b25.jpg",
-   "headline": "(누적 3만명돌파) 나만의 특별한 사인제작",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2451500,
-     "count": 29,
-     "rate": 490
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 29
-  },
-  "kyobo:591": {
-   "store": "kyobo",
-   "id": "591",
-   "url": "https://event.kyobobook.co.kr/funding/detail/591",
-   "title": "삭제",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > 패션잡화 > 가방/파우치",
-   "status": "종료",
-   "start_date": "2026-07-24",
-   "end_date": "2026-08-16",
-   "release_date": "2027-07-31",
-   "price": null,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/fa5787b17d334127b757b64d6dacbf30.jpg",
-   "headline": "삭제",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
   "kyobo:590": {
    "store": "kyobo",
    "id": "590",
@@ -15369,227 +14663,6 @@
    "last_seen": "2026-10-22",
    "category": "시·에세이",
    "count_est": 1460
-  },
-  "kyobo:589": {
-   "store": "kyobo",
-   "id": "589",
-   "url": "https://event.kyobobook.co.kr/funding/detail/589",
-   "title": "[로이텀] 계절마다 새로운 컬러를 만나보세요.",
-   "publisher": "로이텀",
-   "category_raw": "핫트랙스 > 디자인문구 > 로이텀 > 노트",
-   "status": "종료",
-   "start_date": "2026-07-23",
-   "end_date": "2026-08-23",
-   "release_date": "2026-08-26",
-   "price": 48000,
-   "goal": 500000,
-   "amount": 816000,
-   "count": null,
-   "rate": 163,
-   "benefits": [
-    "혜택1 (컬러풀 위클리 플래너 (SPRING))",
-    "혜택2 (컬러풀 위클리 플래너 (SUMMER))",
-    "혜택3 (컬러풀 위클리 플래너 (AUTUMN))",
-    "혜택4 (컬러풀 위클리 플래너 (WINTER))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/794e278dbd4843b4893ea98cef41a12d.jpg",
-   "headline": "[로이텀] 계절마다 새로운 컬러를 만나보세요.",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 816000,
-     "count": 17,
-     "rate": 163
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 17
-  },
-  "kyobo:588": {
-   "store": "kyobo",
-   "id": "588",
-   "url": "https://event.kyobobook.co.kr/funding/detail/588",
-   "title": "[로이텀] 매일 한 페이지씩, 천천히 채워보세요.",
-   "publisher": "로이텀",
-   "category_raw": "핫트랙스 > 디자인문구 > 로이텀 > 노트",
-   "status": "종료",
-   "start_date": "2026-07-23",
-   "end_date": "2026-08-23",
-   "release_date": "2026-08-26",
-   "price": 48000,
-   "goal": 500000,
-   "amount": 2856000,
-   "count": null,
-   "rate": 571,
-   "benefits": [
-    "혜택1 (쿼털리 데일리 플래너 (그린))",
-    "혜택2 (쿼털리 데일리 플래너 (로즈))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/3e5e4e632e3b4afd9d709a181849bb60.jpg",
-   "headline": "[로이텀] 매일 한 페이지씩, 천천히 채워보세요.",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2856000,
-     "count": 60,
-     "rate": 571
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 60
-  },
-  "kyobo:587": {
-   "store": "kyobo",
-   "id": "587",
-   "url": "https://event.kyobobook.co.kr/funding/detail/587",
-   "title": "패치파이의 여름방학: 업사이클링 북커버",
-   "publisher": "패치파이",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-07-20",
-   "end_date": "2026-08-04",
-   "release_date": "2026-08-05",
-   "price": 34000,
-   "goal": 500000,
-   "amount": 3245000,
-   "count": null,
-   "rate": 649,
-   "benefits": [
-    "혜택1 ([한정수량] Sora Mochi Pie 북커버)",
-    "혜택2 ([한정수량] Mizuiro Swim Pie 북커버)",
-    "혜택3 ([한정수량] Cozy Tatami Pie 북커버)",
-    "혜택4 ([한정수량] Blue Cream Soda Pie 북커버)",
-    "혜택5 ([한정수량] Aoi Umi Pie 북커버)",
-    "혜택6 ([한정수량] Midori Candy Pie 북커버)",
-    "혜택7 ([한정수량] Sora Mochi Pie 북커버+이어폰 클램(줄감개))",
-    "혜택8 ([한정수량] Mizuiro Swim Pie 북커버+이어폰 클램(줄감개))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c1405786640d4c0b8cc2e64cf87dfc1e.jpg",
-   "headline": "패치파이의 여름방학: 업사이클링 북커버",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3245000,
-     "count": 95,
-     "rate": 649
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 95
-  },
-  "kyobo:586": {
-   "store": "kyobo",
-   "id": "586",
-   "url": "https://event.kyobobook.co.kr/funding/detail/586",
-   "title": "단순한 독서를 넘어 '기록과 축적'으로.",
-   "publisher": "오브리즈",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 가죽",
-   "status": "종료",
-   "start_date": "2026-07-17",
-   "end_date": "2026-08-24",
-   "release_date": "2026-08-25",
-   "price": 27800,
-   "goal": 500000,
-   "amount": 3447200,
-   "count": null,
-   "rate": 689,
-   "benefits": [
-    "혜택1 ([최초공개] 독서기록 북커버 세트(올리브카키 L))",
-    "혜택2 ([최초공개] 독서기록 북커버 세트(클래식브라운 L))",
-    "혜택3 ([최초공개] 독서기록 북커버 세트(비비드그린 L))",
-    "혜택4 ([최초공개] 독서기록 북커버 세트(다크브라운 L))",
-    "혜택5 ([최초공개] 독서기록 북커버 세트(포기블루 L))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/79f27f8528044ae190e54c863194d68b.jpg",
-   "headline": "단순한 독서를 넘어 '기록과 축적'으로.",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3447200,
-     "count": 124,
-     "rate": 689
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 124
-  },
-  "kyobo:585": {
-   "store": "kyobo",
-   "id": "585",
-   "url": "https://event.kyobobook.co.kr/funding/detail/585",
-   "title": "별 헤는 밤, 윤동주 스페셜 에디션 만년필",
-   "publisher": "로그",
-   "category_raw": "핫트랙스 > 필기구 > 세트",
-   "status": "종료",
-   "start_date": "2026-07-15",
-   "end_date": "2026-08-12",
-   "release_date": "2026-08-13",
-   "price": 36000,
-   "goal": 1500000,
-   "amount": 11880000,
-   "count": null,
-   "rate": 792,
-   "benefits": [
-    "혜택1 (별 헤는 밤, 윤동주 스페셜 에디션 만년필)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/54db59f0c0a64f308c154ef27a3bac7b.jpg",
-   "headline": "별 헤는 밤, 윤동주 스페셜 에디션 만년필",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 11880000,
-     "count": 330,
-     "rate": 792
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 330
-  },
-  "kyobo:584": {
-   "store": "kyobo",
-   "id": "584",
-   "url": "https://event.kyobobook.co.kr/funding/detail/584",
-   "title": "새로운 작업 공간의 시작, 스탠딩 데스크",
-   "publisher": "마음껏",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "종료",
-   "start_date": "2026-07-13",
-   "end_date": "2026-07-27",
-   "release_date": "2026-07-28",
-   "price": 59000,
-   "goal": 500000,
-   "amount": 3480000,
-   "count": null,
-   "rate": 696,
-   "benefits": [
-    "혜택1 (우드홀릭 스탠딩 데스크 심플)",
-    "혜택2 (우드홀릭 스탠딩 데스크 멀티 워크)",
-    "혜택3 (우드홀릭 스탠딩 데스크 올인원)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/6cd2172769584437878357eb19e57aed.jpg",
-   "headline": "새로운 작업 공간의 시작, 스탠딩 데스크",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3480000,
-     "count": 59,
-     "rate": 696
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 59
   },
   "kyobo:583": {
    "store": "kyobo",
@@ -15629,45 +14702,6 @@
    "last_seen": "2026-10-22",
    "category": "예술",
    "count_est": 295
-  },
-  "kyobo:582": {
-   "store": "kyobo",
-   "id": "582",
-   "url": "https://event.kyobobook.co.kr/funding/detail/582",
-   "title": "[교보문고X누하서울] 북커버를 좋아하세요. . .",
-   "publisher": "누하서울",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-07-10",
-   "end_date": "2026-08-09",
-   "release_date": "2026-08-10",
-   "price": 37000,
-   "goal": 1500000,
-   "amount": 3023000,
-   "count": null,
-   "rate": 201,
-   "benefits": [
-    "혜택1 (누아쥬 북커버_White)",
-    "혜택2 (누아쥬 북커버_Ivory)",
-    "혜택3 (누아쥬 북커버_Sage)",
-    "혜택4 (누아쥬 북커버_Black)",
-    "혜택5 (누아쥬 북커버_2ea(색상선택)+북마크)",
-    "혜택6 (누아쥬 북커버_4ea(색상선택)+북마크)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c2242889c6f54c20abae9912ad116e3d.jpg",
-   "headline": "[교보문고X누하서울] 북커버를 좋아하세요. . .",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3023000,
-     "count": 82,
-     "rate": 201
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 82
   },
   "kyobo:581": {
    "store": "kyobo",
@@ -15739,43 +14773,6 @@
    "last_seen": "2026-10-22",
    "category": "경제·경영",
    "count_est": 572
-  },
-  "kyobo:579": {
-   "store": "kyobo",
-   "id": "579",
-   "url": "https://event.kyobobook.co.kr/funding/detail/579",
-   "title": "책을 챙기는 작은 루틴, 북키퍼파우치",
-   "publisher": "소로",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 북파우치",
-   "status": "종료",
-   "start_date": "2026-07-07",
-   "end_date": "2026-07-21",
-   "release_date": "2026-07-22",
-   "price": 26000,
-   "goal": 500000,
-   "amount": 3068000,
-   "count": null,
-   "rate": 613,
-   "benefits": [
-    "혜택1 ([무료배송] 북키퍼파우치(그레이 도트))",
-    "혜택2 ([무료배송] 북키퍼파우치(민트 스트라이프))",
-    "혜택3 ([무료배송] 북키퍼파우치(아이보리 플라워))",
-    "혜택4 ([무료배송] 북키퍼파우치(그레이 스트라이프))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/f723ec813018467abc9417a5ab248d5a.jpg",
-   "headline": "책을 챙기는 작은 루틴, 북키퍼파우치",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3068000,
-     "count": 118,
-     "rate": 613
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 118
   },
   "kyobo:578": {
    "store": "kyobo",
@@ -16165,74 +15162,6 @@
    "category": "예술",
    "count_est": 209
   },
-  "kyobo:567": {
-   "store": "kyobo",
-   "id": "567",
-   "url": "https://event.kyobobook.co.kr/funding/detail/567",
-   "title": "[EVERBREW x 교보문고] sam, 그리고 커피",
-   "publisher": "에버브루",
-   "category_raw": "핫트랙스 > 전시/굿즈 > 굿즈/에디션 > 리빙",
-   "status": "종료",
-   "start_date": "2026-07-02",
-   "end_date": "2026-07-31",
-   "release_date": "2026-08-07",
-   "price": null,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/27777b8c74414b97abdde636245dc9be.jpg",
-   "headline": "[EVERBREW x 교보문고] sam, 그리고 커피",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:566": {
-   "store": "kyobo",
-   "id": "566",
-   "url": "https://event.kyobobook.co.kr/funding/detail/566",
-   "title": "[교보문고X잉구] 고래가 머문 자리에는",
-   "publisher": "잉구스토어",
-   "category_raw": "핫트랙스 > 독서용품 > 문진 > 독서링",
-   "status": "종료",
-   "start_date": "2026-07-01",
-   "end_date": "2026-08-24",
-   "release_date": "2026-08-25",
-   "price": 26500,
-   "goal": 500000,
-   "amount": 10313500,
-   "count": null,
-   "rate": 2062,
-   "benefits": [
-    "혜택1 ([2차/8.25이후 순차발송]01.바다 고래 독서링/단품)",
-    "혜택2 ([2차/8.25이후 순차발송] 02.투명한 바다 독서링/단품)",
-    "혜택3 ([2차/8.25이후 순차발송] 03.바다 고래+투명한 바다/독서링 2종 세트)",
-    "혜택4 ([2차/8.25이후 순차발송] 04.바다 고래+바다 고래/독서링 2종 세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/9d66069ffd644cc8af6900d07b9e706c.jpg",
-   "headline": "[교보문고X잉구] 고래가 머문 자리에는",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 10313500,
-     "count": 389,
-     "rate": 2062
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 389
-  },
   "kyobo:565": {
    "store": "kyobo",
    "id": "565",
@@ -16271,37 +15200,6 @@
    "last_seen": "2026-10-22",
    "category": "청소년",
    "count_est": 150
-  },
-  "kyobo:564": {
-   "store": "kyobo",
-   "id": "564",
-   "url": "https://event.kyobobook.co.kr/funding/detail/564",
-   "title": "오늘, 책 읽는 누군가에게",
-   "publisher": "비온뒤",
-   "category_raw": "핫트랙스 > 디자인문구 > 문구세트",
-   "status": "종료",
-   "start_date": "2026-07-01",
-   "end_date": "2026-07-24",
-   "release_date": "2026-07-27",
-   "price": null,
-   "goal": 500000,
-   "amount": 2102700,
-   "count": null,
-   "rate": 420,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/d18d8cd3aa494d3d85707dc1972daae8.jpg",
-   "headline": "오늘, 책 읽는 누군가에게",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2102700,
-     "count": null,
-     "rate": 420
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:563": {
    "store": "kyobo",
@@ -16545,84 +15443,6 @@
    "last_seen": "2026-10-22",
    "category": "경제·경영",
    "count_est": 424
-  },
-  "kyobo:556": {
-   "store": "kyobo",
-   "id": "556",
-   "url": "https://event.kyobobook.co.kr/funding/detail/556",
-   "title": "사용할수록 자연스러운 멋이 더해지는 북커버",
-   "publisher": "소이믹스",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-06-22",
-   "end_date": "2026-07-12",
-   "release_date": "2026-07-13",
-   "price": 11900,
-   "goal": 500000,
-   "amount": 2689400,
-   "count": null,
-   "rate": 537,
-   "benefits": [
-    "혜택1 (베이직M + 베이직M)",
-    "혜택2 (베이직M + 베이직L)",
-    "혜택3 (베이직M + 멀티M)",
-    "혜택4 (베이직M + 멀티L)",
-    "혜택5 (베이직L + 베이직L)",
-    "혜택6 (베이직L + 멀티M)",
-    "혜택7 (베이직L + 멀티L)",
-    "혜택8 (멀티M + 멀티M)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/1d018c0d2489416084eb8134ae38ceb4.jpg",
-   "headline": "사용할수록 자연스러운 멋이 더해지는 북커버",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2689400,
-     "count": 226,
-     "rate": 537
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 226
-  },
-  "kyobo:555": {
-   "store": "kyobo",
-   "id": "555",
-   "url": "https://event.kyobobook.co.kr/funding/detail/555",
-   "title": "[PIEPII X 교보문고] 레스트 북 스탠드",
-   "publisher": "파이피",
-   "category_raw": "핫트랙스 > 전시/굿즈 > 굿즈/에디션 > 리빙",
-   "status": "종료",
-   "start_date": "2026-06-23",
-   "end_date": "2026-07-14",
-   "release_date": "2026-07-15",
-   "price": 128800,
-   "goal": 500000,
-   "amount": 9093150,
-   "count": null,
-   "rate": 1818,
-   "benefits": [
-    "혜택1 (레스트 북 스탠드 + 코지 티슈 케이스 SET)",
-    "혜택2 (레스트 북 스탠드)",
-    "혜택3 (레스트 북 스탠드 칸막이)",
-    "혜택4 (코지 티슈 케이스)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/6667bf42e0404b789d21785050c90b42.jpg",
-   "headline": "[PIEPII X 교보문고] 레스트 북 스탠드",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 9093150,
-     "count": 71,
-     "rate": 1818
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 71
   },
   "kyobo:554": {
    "store": "kyobo",
@@ -17266,41 +16086,6 @@
    "category": "소설",
    "count_est": 403
   },
-  "kyobo:536": {
-   "store": "kyobo",
-   "id": "536",
-   "url": "https://event.kyobobook.co.kr/funding/detail/536",
-   "title": "자연과 내 문장이 하나 되는, 데스크 디퓨저",
-   "publisher": "우딕",
-   "category_raw": "핫트랙스 > 미술/오피스 > 데스크용품 > 데스크테리어",
-   "status": "종료",
-   "start_date": "2026-05-29",
-   "end_date": "2026-06-21",
-   "release_date": "2026-06-22",
-   "price": 39500,
-   "goal": 500000,
-   "amount": 829500,
-   "count": null,
-   "rate": 165,
-   "benefits": [
-    "혜택1 ([최대할인+무료배송] 압화 데스크 디퓨저(모닝라임))",
-    "혜택2 ([최대할인+무료배송] 압화 데스크 디퓨저(이브닝모스))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/f4658e125a26498f9d4da4119b915109.jpg",
-   "headline": "자연과 내 문장이 하나 되는, 데스크 디퓨저",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 829500,
-     "count": 21,
-     "rate": 165
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 21
-  },
   "kyobo:535": {
    "store": "kyobo",
    "id": "535",
@@ -17514,40 +16299,6 @@
    "last_seen": "2026-10-22",
    "category": "인문"
   },
-  "kyobo:529": {
-   "store": "kyobo",
-   "id": "529",
-   "url": "https://event.kyobobook.co.kr/funding/detail/529",
-   "title": "[펀딩] The Kiss, 클림트 에디션 만년필",
-   "publisher": "로그",
-   "category_raw": "핫트랙스 > 필기구 > 만년필 > 기타 브랜드 만년필",
-   "status": "종료",
-   "start_date": "2026-05-21",
-   "end_date": "2026-06-11",
-   "release_date": "2026-06-12",
-   "price": 34400,
-   "goal": 500000,
-   "amount": 4884800,
-   "count": null,
-   "rate": 976,
-   "benefits": [
-    "혜택1 ([펀딩] The Kiss, 클림트 에디션 만년필)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/92d9c0b6caf64657a4b298952e8413c7.jpg",
-   "headline": "[펀딩] The Kiss, 클림트 에디션 만년필",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 4884800,
-     "count": 142,
-     "rate": 976
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 142
-  },
   "kyobo:528": {
    "store": "kyobo",
    "id": "528",
@@ -17654,40 +16405,6 @@
    "category": "사회·정치",
    "count_est": 162
   },
-  "kyobo:525": {
-   "store": "kyobo",
-   "id": "525",
-   "url": "https://event.kyobobook.co.kr/funding/detail/525",
-   "title": "[교보단독_선공개] 스테들러 그래픽 3000듀오 6색 세트",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 캘리그래피펜 > 붓펜/캘리그래피펜",
-   "status": "종료",
-   "start_date": "2026-05-15",
-   "end_date": "2026-06-01",
-   "release_date": "2026-06-02",
-   "price": 24000,
-   "goal": 500000,
-   "amount": 648000,
-   "count": null,
-   "rate": 129,
-   "benefits": [
-    "혜택1 ([교보단독_선공개] 스테들러 그래픽 3000듀오 6색 세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/3fcaf38dae0349e9afe317a3af2f6532.jpg",
-   "headline": "[교보단독_선공개] 스테들러 그래픽 3000듀오 6색 세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 648000,
-     "count": 27,
-     "rate": 129
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 27
-  },
   "kyobo:524": {
    "store": "kyobo",
    "id": "524",
@@ -17722,40 +16439,6 @@
    "last_seen": "2026-10-22",
    "category": "시·에세이",
    "count_est": 87
-  },
-  "kyobo:523": {
-   "store": "kyobo",
-   "id": "523",
-   "url": "https://event.kyobobook.co.kr/funding/detail/523",
-   "title": "[교보단독_선공개] 스테들러 컴플리트 키트 (올인원 필통)",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 펜 파우치/필통 > 패브릭필통",
-   "status": "종료",
-   "start_date": "2026-05-14",
-   "end_date": "2026-05-28",
-   "release_date": "2026-05-29",
-   "price": 9000,
-   "goal": 500000,
-   "amount": 4500000,
-   "count": null,
-   "rate": 900,
-   "benefits": [
-    "혜택1 ([교보단독] 스테들러 컴플리트 키트 (올인원 필통))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/1055bd8867094abea753b2ea8c681d1a.jpg",
-   "headline": "[교보단독_선공개] 스테들러 컴플리트 키트 (올인원 필통)",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 4500000,
-     "count": 500,
-     "rate": 900
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 500
   },
   "kyobo:522": {
    "store": "kyobo",
@@ -17796,11 +16479,18 @@
      "amount": 0,
      "count": null,
      "rate": 0
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 0,
+     "count": null,
+     "rate": 0
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "외국어",
-   "reg_date": "2026-12-31"
+   "reg_date": "2026-12-31",
+   "kind": "book"
   },
   "kyobo:521": {
    "store": "kyobo",
@@ -17836,43 +16526,6 @@
    "last_seen": "2026-10-22",
    "category": "가정·건강·취미",
    "count_est": 752
-  },
-  "kyobo:520": {
-   "store": "kyobo",
-   "id": "520",
-   "url": "https://event.kyobobook.co.kr/funding/detail/520",
-   "title": "부드러운 촉감으로 시작되는 기분 좋은 독서",
-   "publisher": "소이믹스",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버",
-   "status": "종료",
-   "start_date": "2026-05-11",
-   "end_date": "2026-05-25",
-   "release_date": "2026-05-26",
-   "price": 14800,
-   "goal": 500000,
-   "amount": 3751600,
-   "count": null,
-   "rate": 750,
-   "benefits": [
-    "혜택1 ([★무료배송★/25%할인] 소프트 블랙 북커버(국판))",
-    "혜택2 ([★무료배송★/25%할인] 소프트 블랙 북커버(신국판))",
-    "혜택3 ([★무료배송★/26%할인] 스탈릿 starlit 블랙 북커버(국판))",
-    "혜택4 ([★무료배송★/26%할인] 스탈릿 starlit 블랙 북커버(신국판))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c5d2f6336f9b4d388c3f53752c10cc2e.jpg",
-   "headline": "부드러운 촉감으로 시작되는 기분 좋은 독서",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3751600,
-     "count": 253,
-     "rate": 750
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 253
   },
   "kyobo:519": {
    "store": "kyobo",
@@ -18020,40 +16673,6 @@
    "category": "소설",
    "count_est": 49
   },
-  "kyobo:515": {
-   "store": "kyobo",
-   "id": "515",
-   "url": "https://event.kyobobook.co.kr/funding/detail/515",
-   "title": "자연스럽게 만들어지는 독서 시간",
-   "publisher": "룸인커머스",
-   "category_raw": "핫트랙스 > 홈/라이프 > 홈/리빙 > 데코/조명 > 조명",
-   "status": "종료",
-   "start_date": "2026-05-06",
-   "end_date": "2026-05-31",
-   "release_date": "2026-06-11",
-   "price": 19900,
-   "goal": 500000,
-   "amount": 3184000,
-   "count": null,
-   "rate": 636,
-   "benefits": [
-    "혜택1 ([33%할인] 루브 타임 로딩 무드등)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/27e0d62df6d941509e58021719d0b334.jpg",
-   "headline": "자연스럽게 만들어지는 독서 시간",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3184000,
-     "count": 160,
-     "rate": 636
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 160
-  },
   "kyobo:514": {
    "store": "kyobo",
    "id": "514",
@@ -18089,104 +16708,6 @@
    "last_seen": "2026-10-22",
    "category": "어린이",
    "count_est": 37
-  },
-  "kyobo:513": {
-   "store": "kyobo",
-   "id": "513",
-   "url": "https://event.kyobobook.co.kr/funding/detail/513",
-   "title": "[최초공개] 1883년, 피노키오 타임리스 독서연필",
-   "publisher": "아그네스마틴",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 연필",
-   "status": "종료",
-   "start_date": "2026-04-30",
-   "end_date": "2026-05-26",
-   "release_date": "2026-05-27",
-   "price": 36000,
-   "goal": 500000,
-   "amount": 1980000,
-   "count": null,
-   "rate": 396,
-   "benefits": [
-    "혜택1 ([최조공개] 1883년, 피노키오 타임리스 독서연필)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/ebc754a2f10440b0afd17b6f05b41e72.jpg",
-   "headline": "[최초공개] 1883년, 피노키오 타임리스 독서연필",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1980000,
-     "count": 55,
-     "rate": 396
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 55
-  },
-  "kyobo:512": {
-   "store": "kyobo",
-   "id": "512",
-   "url": "https://event.kyobobook.co.kr/funding/detail/512",
-   "title": "루브 타임 로딩 무드등",
-   "publisher": "룸인커머스",
-   "category_raw": "핫트랙스 > 홈/라이프 > 홈/리빙 > 데코/조명 > 조명",
-   "status": "종료",
-   "start_date": "2026-05-06",
-   "end_date": "2026-05-31",
-   "release_date": "2026-06-11",
-   "price": 19900,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [
-    "혜택1 ([33%할인] 루브 타임 로딩 무드등)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/4622cc106e334892888574e54dbd30f1.jpg",
-   "headline": "루브 타임 로딩 무드등",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:511": {
-   "store": "kyobo",
-   "id": "511",
-   "url": "https://event.kyobobook.co.kr/funding/detail/511",
-   "title": "글 쓰는 사람이 만든, 글 쓰는 사람을 위한 키보드",
-   "publisher": "시이닷",
-   "category_raw": "핫트랙스 > 디자인문구 > 굿노트/디지털문구",
-   "status": "종료",
-   "start_date": "2026-04-29",
-   "end_date": "2026-05-20",
-   "release_date": "2026-06-08",
-   "price": null,
-   "goal": 1500000,
-   "amount": 30777000,
-   "count": null,
-   "rate": 2051,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/31aef94d6f6e48648535e58c82ec2718.jpg",
-   "headline": "글 쓰는 사람이 만든, 글 쓰는 사람을 위한 키보드",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 30777000,
-     "count": null,
-     "rate": 2051
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:510": {
    "store": "kyobo",
@@ -18329,77 +16850,6 @@
    "category": "역사·문화",
    "count_est": 124
   },
-  "kyobo:506": {
-   "store": "kyobo",
-   "id": "506",
-   "url": "https://event.kyobobook.co.kr/funding/detail/506",
-   "title": "독서에 센스를 더하다, 트위너 북커버 출시",
-   "publisher": "트위너",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-04-27",
-   "end_date": "2026-05-10",
-   "release_date": "2026-05-11",
-   "price": 25560,
-   "goal": 500000,
-   "amount": 3700520,
-   "count": null,
-   "rate": 740,
-   "benefits": [
-    "혜택1 ([단독/10%할인+메모지 증정] 버블 북커버 단품(S 사이즈) )",
-    "혜택2 ([단독/10%할인+메모지 증정] 버블 북커버 단품(M 사이즈) )",
-    "혜택3 ([단독/15%할인+메모지 증정] 버블 북커버 2개 세트(S+M))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/cecc32349a80412eaf821289a73a4165.jpg",
-   "headline": "독서에 센스를 더하다, 트위너 북커버 출시",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 3700520,
-     "count": 145,
-     "rate": 740
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 145
-  },
-  "kyobo:505": {
-   "store": "kyobo",
-   "id": "505",
-   "url": "https://event.kyobobook.co.kr/funding/detail/505",
-   "title": "친애하는 나의 이북리더기에게...",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > 패션잡화 > 가방/파우치",
-   "status": "종료",
-   "start_date": "2026-04-28",
-   "end_date": "2026-05-25",
-   "release_date": "2026-05-26",
-   "price": 23900,
-   "goal": 1500000,
-   "amount": 6524700,
-   "count": null,
-   "rate": 434,
-   "benefits": [
-    "혜택1 ([바로펀딩 단독 26% 할인 혜택] Dear - 버튼 파우치 (선착순 스티커 증정))",
-    "혜택2 ([바로펀딩 단독 26% 할인 혜택] Dear - 버튼 파우치 (선착순 스티커 증정))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/7235f536529444fc8f516b0abbdb04fd.jpg",
-   "headline": "친애하는 나의 이북리더기에게...",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 6524700,
-     "count": 273,
-     "rate": 434
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 273
-  },
   "kyobo:504": {
    "store": "kyobo",
    "id": "504",
@@ -18469,40 +16919,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "예술"
-  },
-  "kyobo:502": {
-   "store": "kyobo",
-   "id": "502",
-   "url": "https://event.kyobobook.co.kr/funding/detail/502",
-   "title": "[무료각인] 트레블러 펜슬 세트",
-   "publisher": "로그",
-   "category_raw": "핫트랙스 > 필기구 > 세트",
-   "status": "종료",
-   "start_date": "2026-04-22",
-   "end_date": "2026-05-07",
-   "release_date": "2026-05-11",
-   "price": 17200,
-   "goal": 500000,
-   "amount": 1720000,
-   "count": null,
-   "rate": 344,
-   "benefits": [
-    "혜택1 ([무료각인] 트레블러 펜슬 세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/36bcfff2065f458090d6d0442c452dfd.jpg",
-   "headline": "[무료각인] 트레블러 펜슬 세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1720000,
-     "count": 100,
-     "rate": 344
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 100
   },
   "kyobo:501": {
    "store": "kyobo",
@@ -18575,74 +16991,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "소설"
-  },
-  "kyobo:499": {
-   "store": "kyobo",
-   "id": "499",
-   "url": "https://event.kyobobook.co.kr/funding/detail/499",
-   "title": "싱거미싱기1306 + 쏘스티치 북커버 DIY 키트",
-   "publisher": "싱거",
-   "category_raw": "핫트랙스 > 디지털-tech > 생활가전 > 기타가전",
-   "status": "종료",
-   "start_date": "2026-04-10",
-   "end_date": "2026-04-29",
-   "release_date": "2026-05-01",
-   "price": 186000,
-   "goal": 500000,
-   "amount": 1488000,
-   "count": null,
-   "rate": 297,
-   "benefits": [
-    "혜택1 (싱거미싱기1306 + 쏘스티치 북커버 DIY 키트 [체리 가든 레드])",
-    "혜택2 (싱거미싱기1306 + 쏘스티치 북커버 DIY 키트 [레몬 드롭 옐로우])",
-    "혜택3 (싱거미싱기1306 + 쏘스티치 북커버 DIY 키트 [포레스트 그린])",
-    "혜택4 (싱거미싱기1306 + 쏘스티치 북커버 DIY 키트 [코코아 베이지])"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/0bec890a96864668ba21a17269a82e9a.jpg",
-   "headline": "싱거미싱기1306 + 쏘스티치 북커버 DIY 키트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1488000,
-     "count": 8,
-     "rate": 297
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 8
-  },
-  "kyobo:498": {
-   "store": "kyobo",
-   "id": "498",
-   "url": "https://event.kyobobook.co.kr/funding/detail/498",
-   "title": "싱거미싱",
-   "publisher": "싱거",
-   "category_raw": "핫트랙스 > 디지털-tech > 생활가전 > 기타가전",
-   "status": "종료",
-   "start_date": "2026-04-10",
-   "end_date": "2026-04-29",
-   "release_date": "2026-05-01",
-   "price": null,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/85c512e515bf40fd8d596a6715cba984.jpg",
-   "headline": "싱거미싱",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:497": {
    "store": "kyobo",
@@ -18820,45 +17168,6 @@
    "last_seen": "2026-10-22",
    "category": "예술",
    "count_est": 359
-  },
-  "kyobo:492": {
-   "store": "kyobo",
-   "id": "492",
-   "url": "https://event.kyobobook.co.kr/funding/detail/492",
-   "title": "로제트 나라 땡땡이 공주님 북커버 DIY 키트",
-   "publisher": "아드바크",
-   "category_raw": "핫트랙스 > 전시/굿즈 > 굿즈/에디션",
-   "status": "종료",
-   "start_date": "2026-04-08",
-   "end_date": "2026-04-22",
-   "release_date": "2026-04-27",
-   "price": 45900,
-   "goal": 500000,
-   "amount": 4260900,
-   "count": null,
-   "rate": 852,
-   "benefits": [
-    "혜택1 ([바로펀딩 단독 할인] 그린+블랙 땡땡이 공주님들)",
-    "혜택2 ([바로펀딩 단독 할인] 그린 땡땡이 공주님 )",
-    "혜택3 ([바로펀딩 단독 할인] 블랙 땡땡이 공주님)",
-    "혜택4 (코바늘 3mm 추가 구매)",
-    "혜택5 (코바늘 6mm 추가 구매)",
-    "혜택6 (글루건(스틱 포함) 추가 구매)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/03b320ece7da4c3cbeff6bd15ebfb302.png",
-   "headline": "로제트 나라 땡땡이 공주님 북커버 DIY 키트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 4260900,
-     "count": 93,
-     "rate": 852
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 93
   },
   "kyobo:491": {
    "store": "kyobo",
@@ -19072,47 +17381,6 @@
    "category": "경제·경영",
    "count_est": 751
   },
-  "kyobo:485": {
-   "store": "kyobo",
-   "id": "485",
-   "url": "https://event.kyobobook.co.kr/funding/detail/485",
-   "title": "(누적 3만명돌파) 나만의 특별한 사인제작",
-   "publisher": "사인어스",
-   "category_raw": "핫트랙스 > 필기구 > 기타",
-   "status": "종료",
-   "start_date": "2026-03-24",
-   "end_date": "2026-04-17",
-   "release_date": "2026-04-21",
-   "price": 99000,
-   "goal": 500000,
-   "amount": 6069000,
-   "count": null,
-   "rate": 1213,
-   "benefits": [
-    "혜택1 ([교보단독] B형 고급형 서명+new 사인스탬프 26% 할인)",
-    "혜택2 (A형(간결한 결재형 사인제작) 15% 할인)",
-    "혜택3 (B형(결재+서명형 사인제작) 15% 할인)",
-    "혜택4 (C형(개성있는 연예인+운동선수형 사인제작) 15% 할인)",
-    "혜택5 (D형(회사 대표자형 사인제작) 15% 할인 )",
-    "혜택6 (E형(작가 화가형 사인제작) 15% 할인)",
-    "혜택7 (F형(한자형 사인제작) 15% 할인)",
-    "혜택8 (NEW 사인스탬프+리필잉크 20% 할인)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/9226188dd2f94947acffef65348e4401.jpg",
-   "headline": "(누적 3만명돌파) 나만의 특별한 사인제작",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 6069000,
-     "count": 61,
-     "rate": 1213
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 61
-  },
   "kyobo:484": {
    "store": "kyobo",
    "id": "484",
@@ -19252,40 +17520,6 @@
    "last_seen": "2026-10-22",
    "category": "소설"
   },
-  "kyobo:480": {
-   "store": "kyobo",
-   "id": "480",
-   "url": "https://event.kyobobook.co.kr/funding/detail/480",
-   "title": "평생 쓰는 56cm 와이드 2단 독서대",
-   "publisher": "강경숙칠판",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "종료",
-   "start_date": "2026-03-16",
-   "end_date": "2026-03-29",
-   "release_date": "2026-03-31",
-   "price": 147000,
-   "goal": 500000,
-   "amount": 8232000,
-   "count": null,
-   "rate": 1646,
-   "benefits": [
-    "혜택1 ([블랙윙연필+책고정클립 증정] 파페 와이드 듀얼 독서대)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/2a730a1bdcac4296983e248932903391.jpg",
-   "headline": "평생 쓰는 56cm 와이드 2단 독서대",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 8232000,
-     "count": 56,
-     "rate": 1646
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 56
-  },
   "kyobo:479": {
    "store": "kyobo",
    "id": "479",
@@ -19320,70 +17554,6 @@
    ],
    "last_seen": "2026-10-22",
    "category": "어린이"
-  },
-  "kyobo:478": {
-   "store": "kyobo",
-   "id": "478",
-   "url": "https://event.kyobobook.co.kr/funding/detail/478",
-   "title": "X",
-   "publisher": "강경숙칠판",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "종료",
-   "start_date": "2026-03-16",
-   "end_date": "2026-03-29",
-   "release_date": "2026-03-31",
-   "price": 218000,
-   "goal": 500000,
-   "amount": 0,
-   "count": null,
-   "rate": 0,
-   "benefits": [
-    "혜택1 (X)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/82696ee57f8341f9bb282195fcce6642.jpg",
-   "headline": "X",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 0,
-     "count": null,
-     "rate": 0
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:477": {
-   "store": "kyobo",
-   "id": "477",
-   "url": "https://event.kyobobook.co.kr/funding/detail/477",
-   "title": "[교보문고X수수진X공예가] 아보카도 북커버",
-   "publisher": "책과 마주하는 마음으로",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-03-16",
-   "end_date": "2026-03-29",
-   "release_date": "2026-04-02",
-   "price": null,
-   "goal": 1500000,
-   "amount": 7505100,
-   "count": null,
-   "rate": 500,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/b54504bd34664e839d050685f23d57c4.jpg",
-   "headline": "[교보문고X수수진X공예가] 아보카도 북커버",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 7505100,
-     "count": null,
-     "rate": 500
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:476": {
    "store": "kyobo",
@@ -19802,40 +17972,6 @@
    "category": "예술",
    "count_est": 137
   },
-  "kyobo:464": {
-   "store": "kyobo",
-   "id": "464",
-   "url": "https://event.kyobobook.co.kr/funding/detail/464",
-   "title": "[최초공개] 스테들러 2026 리미티드 그린&골드 샤프",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 샤프",
-   "status": "종료",
-   "start_date": "2026-03-03",
-   "end_date": "2026-03-15",
-   "release_date": "2026-03-17",
-   "price": 31500,
-   "goal": 500000,
-   "amount": 5166000,
-   "count": null,
-   "rate": 1033,
-   "benefits": [
-    "혜택1 (2026 스테들러 리미티드 그린&골드 샤프)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/49f2c1a085ff4b3e99010feefadadf87.jpg",
-   "headline": "[최초공개] 스테들러 2026 리미티드 그린&골드 샤프",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 5166000,
-     "count": 164,
-     "rate": 1033
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 164
-  },
   "kyobo:463": {
    "store": "kyobo",
    "id": "463",
@@ -19905,37 +18041,6 @@
    "last_seen": "2026-10-22",
    "category": "가정·건강·취미",
    "count_est": 455
-  },
-  "kyobo:461": {
-   "store": "kyobo",
-   "id": "461",
-   "url": "https://event.kyobobook.co.kr/funding/detail/461",
-   "title": "[단독] 교보문고 신규 eBook 리더기, sam 7 출시",
-   "publisher": null,
-   "category_raw": "교보Only > 교보문고 굿즈 > ebook용품 > sam/e북기기",
-   "status": "종료",
-   "start_date": "2026-02-26",
-   "end_date": "2026-03-18",
-   "release_date": "2026-03-27",
-   "price": null,
-   "goal": 15000000,
-   "amount": 1047720000,
-   "count": null,
-   "rate": 6984,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/b150ddd860fd49f4bfcddc6db4b3de3c.png",
-   "headline": "[단독] 교보문고 신규 eBook 리더기, sam 7 출시",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1047720000,
-     "count": null,
-     "rate": 6984
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:460": {
    "store": "kyobo",
@@ -20076,37 +18181,6 @@
    "category": "역사·문화",
    "count_est": 158
   },
-  "kyobo:456": {
-   "store": "kyobo",
-   "id": "456",
-   "url": "https://event.kyobobook.co.kr/funding/detail/456",
-   "title": "[교보단독] 파버카스텔X교보문고 스타터 6종 문구세트",
-   "publisher": "파버카스텔",
-   "category_raw": "핫트랙스 > 필기구 > 세트",
-   "status": "종료",
-   "start_date": "2026-02-19",
-   "end_date": "2026-03-08",
-   "release_date": "2026-03-09",
-   "price": null,
-   "goal": 500000,
-   "amount": 1246400,
-   "count": null,
-   "rate": 249,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/db07790610cc4aa2b2ccf3a2805a8b10.jpg",
-   "headline": "[교보단독] 파버카스텔X교보문고 스타터 6종 문구세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 1246400,
-     "count": null,
-     "rate": 249
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
   "kyobo:455": {
    "store": "kyobo",
    "id": "455",
@@ -20142,41 +18216,6 @@
    "last_seen": "2026-10-22",
    "category": "소설",
    "count_est": 82
-  },
-  "kyobo:454": {
-   "store": "kyobo",
-   "id": "454",
-   "url": "https://event.kyobobook.co.kr/funding/detail/454",
-   "title": "화면 터치 없이 깊어지는 이북 독서의 몰입감",
-   "publisher": "소이믹스",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 기타",
-   "status": "종료",
-   "start_date": "2026-02-12",
-   "end_date": "2026-02-26",
-   "release_date": "2026-02-27",
-   "price": 28900,
-   "goal": 1500000,
-   "amount": 6849300,
-   "count": null,
-   "rate": 456,
-   "benefits": [
-    "혜택1 ([★가죽파우치 증정★] 에어링_화이트)",
-    "혜택2 ([★가죽파우치 증정★] 에어링_블랙)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c0c66366e4a74257add0756385e2b38f.jpg",
-   "headline": "화면 터치 없이 깊어지는 이북 독서의 몰입감",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 6849300,
-     "count": 237,
-     "rate": 456
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 237
   },
   "kyobo:453": {
    "store": "kyobo",
@@ -20248,47 +18287,6 @@
    "category": "역사·문화",
    "count_est": 325
   },
-  "kyobo:451": {
-   "store": "kyobo",
-   "id": "451",
-   "url": "https://event.kyobobook.co.kr/funding/detail/451",
-   "title": "읽고 기록하고 사색하는 북마크",
-   "publisher": "오브리즈",
-   "category_raw": "핫트랙스 > 독서용품 > 북마크 > 기타",
-   "status": "종료",
-   "start_date": "2026-02-10",
-   "end_date": "2026-02-24",
-   "release_date": "2026-02-25",
-   "price": 13800,
-   "goal": 500000,
-   "amount": 947000,
-   "count": null,
-   "rate": 189,
-   "benefits": [
-    "혜택1 ([앞면 무료 각인/단품] 포레스트그린)",
-    "혜택2 ([앞면 무료 각인/단품] 라즈베리레드)",
-    "혜택3 ([앞면 무료 각인/단품] 시나몬브라운)",
-    "혜택4 ([앞면 무료 각인/단품] 딥브라운)",
-    "혜택5 ([앞면 무료 각인/단품] 프러시안블루)",
-    "혜택6 ([앞면 무료 각인/1+1] 포레스트그린)",
-    "혜택7 ([앞면 무료 각인/1+1] 라즈베리레드)",
-    "혜택8 ([앞면 무료 각인/1+1] 시나몬브라운)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/e27eacd13c6d45f5917642f324a0adb1.jpg",
-   "headline": "읽고 기록하고 사색하는 북마크",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 947000,
-     "count": 69,
-     "rate": 189
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 69
-  },
   "kyobo:450": {
    "store": "kyobo",
    "id": "450",
@@ -20356,37 +18354,6 @@
    "last_seen": "2026-10-22",
    "category": "가정·건강·취미"
   },
-  "kyobo:448": {
-   "store": "kyobo",
-   "id": "448",
-   "url": "https://event.kyobobook.co.kr/funding/detail/448",
-   "title": "[교보단독] 스테들러 스터디 팩 6종 세트",
-   "publisher": "스테들러",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 샤프",
-   "status": "종료",
-   "start_date": "2026-02-04",
-   "end_date": "2026-02-20",
-   "release_date": "2026-02-23",
-   "price": null,
-   "goal": 500000,
-   "amount": 4726800,
-   "count": null,
-   "rate": 945,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/c9fb496ae3e94b14bc42a83caa65d147.jpg",
-   "headline": "[교보단독] 스테들러 스터디 팩 6종 세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 4726800,
-     "count": null,
-     "rate": 945
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
   "kyobo:445": {
    "store": "kyobo",
    "id": "445",
@@ -20422,37 +18389,6 @@
    "last_seen": "2026-10-22",
    "category": "어린이",
    "count_est": 166
-  },
-  "kyobo:444": {
-   "store": "kyobo",
-   "id": "444",
-   "url": "https://event.kyobobook.co.kr/funding/detail/444",
-   "title": "[한정판] 1888 아를, 반고흐 기록 만년필",
-   "publisher": "아그네스마틴",
-   "category_raw": "핫트랙스 > 필기구 > 만년필 > 기타 브랜드 만년필",
-   "status": "종료",
-   "start_date": "2026-02-03",
-   "end_date": "2026-02-28",
-   "release_date": "2026-03-03",
-   "price": null,
-   "goal": 500000,
-   "amount": 18672000,
-   "count": null,
-   "rate": 3734,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/e83c57e1fbe94776ac099ae90bc8ea2d.jpg",
-   "headline": "[한정판] 1888 아를, 반고흐 기록 만년필",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 18672000,
-     "count": null,
-     "rate": 3734
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
   },
   "kyobo:443": {
    "store": "kyobo",
@@ -20560,41 +18496,6 @@
    "category": "가정·건강·취미",
    "count_est": 177
   },
-  "kyobo:440": {
-   "store": "kyobo",
-   "id": "440",
-   "url": "https://event.kyobobook.co.kr/funding/detail/440",
-   "title": "디자인과 기능이 하나된 인생 독서대",
-   "publisher": "메이우드",
-   "category_raw": "핫트랙스 > 독서용품 > 독서대 > 원목",
-   "status": "종료",
-   "start_date": "2026-01-23",
-   "end_date": "2026-02-10",
-   "release_date": "2026-02-23",
-   "price": 79000,
-   "goal": 500000,
-   "amount": 130034000,
-   "count": null,
-   "rate": 26006,
-   "benefits": [
-    "혜택1 ([3차입고/5.1발송] 메이우드 프레스티지 독서대(월넛))",
-    "혜택2 ([3차입고/5.1발송] 메이우드 프레스티지 독서대(메이플))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/29d9c5907d3a4c279d513f067d592dd7.jpg",
-   "headline": "디자인과 기능이 하나된 인생 독서대",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 130034000,
-     "count": 1646,
-     "rate": 26006
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 1646
-  },
   "kyobo:439": {
    "store": "kyobo",
    "id": "439",
@@ -20700,46 +18601,6 @@
    "last_seen": "2026-10-22",
    "category": "경제·경영",
    "count_est": 220
-  },
-  "kyobo:436": {
-   "store": "kyobo",
-   "id": "436",
-   "url": "https://event.kyobobook.co.kr/funding/detail/436",
-   "title": "핸드폰 대신 책을 들게 하는, 초경량 북라이트",
-   "publisher": "울티",
-   "category_raw": "핫트랙스 > 독서용품 > 북라이트 > 스탠드 조명",
-   "status": "종료",
-   "start_date": "2026-01-20",
-   "end_date": "2026-02-08",
-   "release_date": "2026-02-10",
-   "price": 17900,
-   "goal": 1500000,
-   "amount": 43133000,
-   "count": null,
-   "rate": 2875,
-   "benefits": [
-    "혜택1 ([배터리 업그레이드] 북라이트 단품(크림화이트))",
-    "혜택2 ([배터리 업그레이드] 북라이트 단품(버터/NEW컬러))",
-    "혜택3 ([배터리 업그레이드] 북라이트 단품(말차/NEW컬러))",
-    "혜택4 ([배터리 업그레이드] 북라이트 단품+파우치(크림화이트))",
-    "혜택5 ([배터리 업그레이드] 북라이트 단품+파우치(버터/NEW컬러))",
-    "혜택6 ([배터리 업그레이드] 북라이트 단품+파우치(말차/NEW컬러))",
-    "혜택7 ([펀딩 한정 특가 SET] 접이식스탠드+북마크라이트 단품+파우치)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/1233e9f703394b83942e7dace74ffa65.jpg",
-   "headline": "핸드폰 대신 책을 들게 하는, 초경량 북라이트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 43133000,
-     "count": 2410,
-     "rate": 2875
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 2410
   },
   "kyobo:435": {
    "store": "kyobo",
@@ -20849,40 +18710,6 @@
    "category": "유아",
    "count_est": 66
   },
-  "kyobo:432": {
-   "store": "kyobo",
-   "id": "432",
-   "url": "https://event.kyobobook.co.kr/funding/detail/432",
-   "title": "[교보문고 X 엄주] 겨울 기록 무한연필 세트",
-   "publisher": "읽는 사람의 카탈로그",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/색연필",
-   "status": "종료",
-   "start_date": "2026-01-21",
-   "end_date": "2026-02-09",
-   "release_date": "2026-02-11",
-   "price": 18800,
-   "goal": 500000,
-   "amount": 789600,
-   "count": null,
-   "rate": 157,
-   "benefits": [
-    "혜택1 ([교보문고 X 엄주] 겨울 기록을 위한 무한연필 세트)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/e4bf66ac4963475690e7b43c722e6d9d.jpg",
-   "headline": "[교보문고 X 엄주] 겨울 기록 무한연필 세트",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 789600,
-     "count": 42,
-     "rate": 157
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 42
-  },
   "kyobo:431": {
    "store": "kyobo",
    "id": "431",
@@ -20950,43 +18777,6 @@
    "last_seen": "2026-10-22",
    "category": "경제·경영"
   },
-  "kyobo:429": {
-   "store": "kyobo",
-   "id": "429",
-   "url": "https://event.kyobobook.co.kr/funding/detail/429",
-   "title": "도전을 앞둔 모두를 위한, 데미안 아트웍",
-   "publisher": "혜슬",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2026-01-13",
-   "end_date": "2026-01-27",
-   "release_date": "2026-01-29",
-   "price": 54400,
-   "goal": 1500000,
-   "amount": 2833600,
-   "count": null,
-   "rate": 188,
-   "benefits": [
-    "혜택1 ([20%할인+포스터증정] 북백(패브릭 책갈피 포함))",
-    "혜택2 ([20%할인+포스터증정] 북커버(국판))",
-    "혜택3 ([20%할인+포스터증정] 북커버(신국판))",
-    "혜택4 ([20%할인+포스터증정] 노트커버)"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/16697cc38c0a4035a428a527c59123de.jpg",
-   "headline": "도전을 앞둔 모두를 위한, 데미안 아트웍",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2833600,
-     "count": 52,
-     "rate": 188
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 52
-  },
   "kyobo:428": {
    "store": "kyobo",
    "id": "428",
@@ -21021,76 +18811,6 @@
    "last_seen": "2026-10-22",
    "category": "인문",
    "count_est": 191
-  },
-  "kyobo:427": {
-   "store": "kyobo",
-   "id": "427",
-   "url": "https://event.kyobobook.co.kr/funding/detail/427",
-   "title": "무게는 가볍게, 충전은 강력하게",
-   "publisher": "리큐엠",
-   "category_raw": "핫트랙스 > 디지털-tech > 스마트폰/태블릿 주변기기 > 보조배터리/표준배터리",
-   "status": "종료",
-   "start_date": "2026-01-12",
-   "end_date": "2026-01-26",
-   "release_date": "2026-01-28",
-   "price": null,
-   "goal": 500000,
-   "amount": 5136400,
-   "count": null,
-   "rate": 1027,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/2f7bcebd7f6e4233a282d832ebf80b3c.jpg",
-   "headline": "무게는 가볍게, 충전은 강력하게",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 5136400,
-     "count": null,
-     "rate": 1027
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:426": {
-   "store": "kyobo",
-   "id": "426",
-   "url": "https://event.kyobobook.co.kr/funding/detail/426",
-   "title": "책의 자연스런 흐름 그대로",
-   "publisher": "비카",
-   "category_raw": "핫트랙스 > 독서용품 > 책수납 > 책꽂이",
-   "status": "종료",
-   "start_date": "2026-01-09",
-   "end_date": "2026-01-27",
-   "release_date": "2026-01-29",
-   "price": 29700,
-   "goal": 1500000,
-   "amount": 2207800,
-   "count": null,
-   "rate": 147,
-   "benefits": [
-    "혜택1 ([무료배송] 북바스켓 미니/샌드 화이트)",
-    "혜택2 ([무료배송] 북바스켓 미니/샌드 블랙)",
-    "혜택3 ([무료배송] 북바스켓 /샌드 화이트)",
-    "혜택4 ([무료배송] 북바스켓 /샌드 블랙)",
-    "혜택5 ([무료배송] 북바스켓+북바스켓 미니(샌드 화이트))",
-    "혜택6 ([무료배송] 북바스켓+북바스켓 미니(샌드 블랙))"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/55c40f68aaf94464acbb00de0e3d20d4.jpg",
-   "headline": "책의 자연스런 흐름 그대로",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2207800,
-     "count": 74,
-     "rate": 147
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 74
   },
   "kyobo:425": {
    "store": "kyobo",
@@ -21265,76 +18985,6 @@
    "category": "시·에세이",
    "count_est": 276
   },
-  "kyobo:416": {
-   "store": "kyobo",
-   "id": "416",
-   "url": "https://event.kyobobook.co.kr/funding/detail/416",
-   "title": "2026 붉은 말의 기운과 함께 무한연필 에디션",
-   "publisher": "로그",
-   "category_raw": "핫트랙스 > 필기구 > 연필/샤프/홀더 > 연필",
-   "status": "종료",
-   "start_date": "2025-12-12",
-   "end_date": "2026-01-05",
-   "release_date": "2026-01-07",
-   "price": null,
-   "goal": 500000,
-   "amount": 2511000,
-   "count": null,
-   "rate": 502,
-   "benefits": [],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/1875e79b8852490c8c871e3acdf7e85a.jpg",
-   "headline": "2026 붉은 말의 기운과 함께 무한연필 에디션",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2511000,
-     "count": null,
-     "rate": 502
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구"
-  },
-  "kyobo:414": {
-   "store": "kyobo",
-   "id": "414",
-   "url": "https://event.kyobobook.co.kr/funding/detail/414",
-   "title": "[교보문고X풀풀] 사랑이 멀리 퍼지는 방법",
-   "publisher": "풀풀",
-   "category_raw": "핫트랙스 > 독서용품 > 북커버 > 패브릭",
-   "status": "종료",
-   "start_date": "2025-12-12",
-   "end_date": "2026-01-15",
-   "release_date": "2026-01-16",
-   "price": 20000,
-   "goal": 500000,
-   "amount": 2913000,
-   "count": null,
-   "rate": 582,
-   "benefits": [
-    "혜택1 ([무료배송/5,000원 할인] 강아지 리아 Book lover 키링(NFC))",
-    "혜택2 ([무료배송/3,000원 할인] 안경 쓴 강아지 리아 Book lover 키링(NFC))",
-    "혜택3 ([무료배송/2,000원 할인] 사랑의 물결 다이어리 커버 A6(그린))",
-    "혜택4 ([무료배송/2,000원 할인] 사랑의 물결 다이어리 커버 A6(블루))",
-    "혜택5 ([무료배송/3,000원 할인] 사랑의 물결 북커버 A5(그린))",
-    "혜택6 ([무료배송/3,000원 할인] 사랑의 물결 북커버 A5(블루) )"
-   ],
-   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/3b619e7b120743278dce1e312b3b689a.jpg",
-   "headline": "[교보문고X풀풀] 사랑이 멀리 퍼지는 방법",
-   "first_seen": "2026-10-22",
-   "history": [
-    {
-     "d": "2026-10-22",
-     "amount": 2913000,
-     "count": 146,
-     "rate": 582
-    }
-   ],
-   "last_seen": "2026-10-22",
-   "category": "굿즈·문구",
-   "count_est": 146
-  },
   "yes24:277536": {
    "store": "yes24",
    "id": "277536",
@@ -21348,9 +18998,9 @@
    "release_date": "2026-11-06",
    "price": 16650,
    "goal": 1000000,
-   "amount": 582750,
-   "count": 35,
-   "rate": 58,
+   "amount": 599400,
+   "count": 36,
+   "rate": 60,
    "benefits": [
     "16,650원: 『나는 더 이상 살을 빼지 않기로 했다』 1부",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -21376,9 +19026,15 @@
      "amount": 582750,
      "count": 35,
      "rate": 58
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 599400,
+     "count": 36,
+     "rate": 60
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "시·에세이",
    "reg_date": "2026-10-22"
   },
@@ -21395,9 +19051,9 @@
    "release_date": "2026-11-03",
    "price": 15300,
    "goal": 500000,
-   "amount": 1016600,
-   "count": 60,
-   "rate": 203,
+   "amount": 1088000,
+   "count": 64,
+   "rate": 218,
    "benefits": [
     "15,300원 펀딩",
     "<충분해 귤귤> 도서 1부",
@@ -21426,9 +19082,15 @@
      "amount": 1016600,
      "count": 60,
      "rate": 203
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1088000,
+     "count": 64,
+     "rate": 218
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-22",
    "category": "유아",
    "achieved_date": "2026-10-23"
@@ -21446,9 +19108,9 @@
    "release_date": "2026-11-11",
    "price": 31500,
    "goal": 1000000,
-   "amount": 2614500,
-   "count": 83,
-   "rate": 261,
+   "amount": 2803500,
+   "count": 89,
+   "rate": 280,
    "benefits": [
     "31,500원 펀딩",
     "<새소식> 도서 1부",
@@ -21476,9 +19138,15 @@
      "amount": 2614500,
      "count": 83,
      "rate": 261
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 2803500,
+     "count": 89,
+     "rate": 280
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-22",
    "category": "시·에세이",
    "achieved_date": "2026-10-22"
@@ -21526,7 +19194,7 @@
    "title": "물음표의 책",
    "publisher": "아이스크림미디어",
    "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 그림/동화책 > 1-2학년 창작동화",
-   "status": "진행중",
+   "status": "마감임박",
    "start_date": "2026-09-23",
    "end_date": "2026-11-01",
    "release_date": "2026-11-02",
@@ -21555,9 +19223,15 @@
      "amount": 610000,
      "count": 33,
      "rate": 61
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 610000,
+     "count": 33,
+     "rate": 61
     }
    ],
-   "last_seen": "2026-10-25",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-09-23",
    "category": "어린이"
   },
@@ -21574,9 +19248,9 @@
    "release_date": "2026-10-28",
    "price": 20700,
    "goal": 1000000,
-   "amount": 6127200,
-   "count": 296,
-   "rate": 613,
+   "amount": 6334200,
+   "count": 306,
+   "rate": 633,
    "benefits": [
     "20,700원: 『이 월배당 ETF는 꼭 사십시오!』 1부＋커버드콜&월배당 ETF 리스트 부록, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -21602,9 +19276,15 @@
      "amount": 6127200,
      "count": 296,
      "rate": 613
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 6334200,
+     "count": 306,
+     "rate": 633
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-09-10",
    "category": "경제·경영"
   },
@@ -31289,9 +28969,9 @@
    "release_date": "2026-11-11",
    "price": 16920,
    "goal": 1000000,
-   "amount": 3062520,
-   "count": 181,
-   "rate": 306,
+   "amount": 3485520,
+   "count": 206,
+   "rate": 349,
    "benefits": [
     "16,920원 펀딩",
     "<옥희와 상열> 도서 1부",
@@ -31314,9 +28994,15 @@
      "amount": 3062520,
      "count": 181,
      "rate": 306
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 3485520,
+     "count": 206,
+     "rate": 349
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-25",
    "category": "인문"
   },
@@ -31333,9 +29019,9 @@
    "release_date": "2026-11-12",
    "price": 13500,
    "goal": 500000,
-   "amount": 307500,
-   "count": 21,
-   "rate": 62,
+   "amount": 499500,
+   "count": 34,
+   "rate": 100,
    "benefits": [
     "13,500원 펀딩",
     "<무료인 줄 알았는데 저작권에 걸린다고? > 도서 1부",
@@ -31357,9 +29043,15 @@
      "amount": 307500,
      "count": 21,
      "rate": 62
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 499500,
+     "count": 34,
+     "rate": 100
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-25",
    "category": "어린이"
   },
@@ -31401,9 +29093,15 @@
      "amount": 61200,
      "count": 4,
      "rate": 6
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 61200,
+     "count": 4,
+     "rate": 6
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-25",
    "category": "시·에세이"
   },
@@ -31420,9 +29118,9 @@
    "release_date": "2026-11-09",
    "price": 15300,
    "goal": 1000000,
-   "amount": 1300500,
-   "count": 85,
-   "rate": 130,
+   "amount": 1422900,
+   "count": 93,
+   "rate": 142,
    "benefits": [
     "15,300원: 『와귤와귤』 1부, 2027 캘린더 포스터(책과 랩핑)",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -31442,9 +29140,15 @@
      "amount": 1300500,
      "count": 85,
      "rate": 130
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1422900,
+     "count": 93,
+     "rate": 142
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "유아"
   },
@@ -31461,9 +29165,9 @@
    "release_date": "2026-11-10",
    "price": 16650,
    "goal": 1000000,
-   "amount": 1465200,
-   "count": 88,
-   "rate": 147,
+   "amount": 1565100,
+   "count": 94,
+   "rate": 157,
    "benefits": [
     "16,650원: 『진짜 산타가 되는 법』 1부(작가 친필 사인본)",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -31483,9 +29187,15 @@
      "amount": 1465200,
      "count": 88,
      "rate": 147
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1565100,
+     "count": 94,
+     "rate": 157
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "유아"
   },
@@ -31525,9 +29235,15 @@
      "amount": 1355320,
      "count": 86,
      "rate": 136
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 1355320,
+     "count": 86,
+     "rate": 136
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-22",
    "category": "유아"
   },
@@ -31544,9 +29260,9 @@
    "release_date": "2026-11-24",
    "price": 26100,
    "goal": 500000,
-   "amount": 809100,
+   "amount": 965700,
    "count": null,
-   "rate": 161,
+   "rate": 193,
    "benefits": [
     "혜택1 (먹기들)"
    ],
@@ -31566,12 +29282,19 @@
      "amount": 809100,
      "count": 31,
      "rate": 161
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 965700,
+     "count": 37,
+     "rate": 193
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-22",
    "category": "인문",
-   "count_est": 31
+   "count_est": 37,
+   "kind": "book"
   },
   "kyobo:687": {
    "store": "kyobo",
@@ -31586,9 +29309,9 @@
    "release_date": "2026-11-16",
    "price": 15120,
    "goal": 500000,
-   "amount": 62880,
+   "amount": 845400,
    "count": null,
-   "rate": 12,
+   "rate": 169,
    "benefits": [
     "혜택1 (돈의 대모험 2)",
     "혜택2 (돈의 대모험 2 + 카드포켓)",
@@ -31611,12 +29334,19 @@
      "amount": 62880,
      "count": 4,
      "rate": 12
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 845400,
+     "count": 56,
+     "rate": 169
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "어린이",
-   "count_est": 4
+   "count_est": 56,
+   "kind": "book"
   },
   "kyobo:688": {
    "store": "kyobo",
@@ -31631,9 +29361,9 @@
    "release_date": "2026-11-11",
    "price": 20700,
    "goal": 500000,
-   "amount": 841300,
+   "amount": 862000,
    "count": null,
-   "rate": 168,
+   "rate": 172,
    "benefits": [
     "혜택1 (우리들의 첫모험)",
     "혜택2 (우리들의 첫모험 + 첫모험단 어린이단원 생태수첩)"
@@ -31654,12 +29384,19 @@
      "amount": 841300,
      "count": 41,
      "rate": 168
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 862000,
+     "count": 42,
+     "rate": 172
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "어린이",
-   "count_est": 41
+   "count_est": 42,
+   "kind": "book"
   },
   "kyobo:689": {
    "store": "kyobo",
@@ -31674,9 +29411,9 @@
    "release_date": "2026-11-11",
    "price": 17550,
    "goal": 500000,
-   "amount": 0,
+   "amount": 72200,
    "count": null,
-   "rate": 0,
+   "rate": 14,
    "benefits": [
     "혜택1 (오뒷세이아, 어른의 바다를 쓰다)",
     "혜택2 (오뒷세이아, 어른의 바다를 쓰다 + 윤슬 & 구름메모지)"
@@ -31697,11 +29434,275 @@
      "amount": 0,
      "count": null,
      "rate": 0
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 72200,
+     "count": 4,
+     "rate": 14
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
-   "category": "인문"
+   "category": "인문",
+   "kind": "book",
+   "count_est": 4
+  },
+  "aladin:3047": {
+   "store": "aladin",
+   "id": "3047",
+   "url": "https://www.aladin.co.kr/m/bookfund/view.aspx?pid=3047",
+   "title": "유물력",
+   "publisher": "김영사",
+   "category_raw": "국내도서 > 예술",
+   "status": "진행중",
+   "start_date": null,
+   "end_date": "2026-11-11",
+   "release_date": "2026-11-12",
+   "price": 24120,
+   "goal": 1000000,
+   "amount": 873460,
+   "count": 33,
+   "rate": 87,
+   "benefits": [
+    "24,120원 펀딩",
+    "<유물력> 도서 1부",
+    "달성 단계별 추가 마일리지 최대 4%"
+   ],
+   "image": "https://image.aladin.co.kr/img/banner/mobile/2026/04/bookfund3047_sum.jpg",
+   "isbn": "K572131511",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 873460,
+     "count": 33,
+     "rate": 87
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "예술"
+  },
+  "aladin:3048": {
+   "store": "aladin",
+   "id": "3048",
+   "url": "https://www.aladin.co.kr/m/bookfund/view.aspx?pid=3048",
+   "title": "재즈 앨범 인덱스",
+   "publisher": "커뮤니케이션북스",
+   "category_raw": "국내도서 > 예술/대중문화 > 음악 > 재즈",
+   "status": "진행중",
+   "start_date": null,
+   "end_date": "2026-11-15",
+   "release_date": "2026-11-27",
+   "price": 57000,
+   "goal": 1000000,
+   "amount": 570000,
+   "count": 10,
+   "rate": 57,
+   "benefits": [
+    "57,000원 펀딩",
+    "<재즈 앨범 인덱스> 도서 1부",
+    "후원자 명단 엽서 삽지",
+    "달성 단계별 추가 마일리지 최대 4%"
+   ],
+   "image": "https://image.aladin.co.kr/img/banner/mobile/2026/04/bookfund3048_sum.jpg",
+   "isbn": "K512131511",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 570000,
+     "count": 10,
+     "rate": 57
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "예술"
+  },
+  "aladin:3052": {
+   "store": "aladin",
+   "id": "3052",
+   "url": "https://www.aladin.co.kr/m/bookfund/view.aspx?pid=3052",
+   "title": "2026 세계문학 어드벤트 캘린더",
+   "publisher": "더모던",
+   "category_raw": "국내도서 > 소설/시/희곡 > 영미소설",
+   "status": "진행중",
+   "start_date": null,
+   "end_date": "2026-11-15",
+   "release_date": "2026-11-16",
+   "price": 99000,
+   "goal": 1000000,
+   "amount": 693000,
+   "count": 7,
+   "rate": 69,
+   "benefits": [
+    "99,000원 펀딩",
+    "<2026 세계문학 어드벤트 캘린더> 1개",
+    "달성 단계별 추가 마일리지 최대 4%"
+   ],
+   "image": "https://image.aladin.co.kr/img/banner/mobile/2026/04/bookfund3052_sum.jpg",
+   "isbn": "K772131728",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 693000,
+     "count": 7,
+     "rate": 69
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "소설"
+  },
+  "yes24:277637": {
+   "store": "yes24",
+   "id": "277637",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=277637",
+   "title": "보리 의성어 의태어 사전",
+   "publisher": "보리",
+   "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 학습 > 1-2학년 한글/국어/사전",
+   "status": "진행중",
+   "start_date": "2026-10-19",
+   "end_date": "2026-11-15",
+   "release_date": "2026-11-17",
+   "price": 63000,
+   "goal": 1000000,
+   "amount": 191000,
+   "count": 3,
+   "rate": 19,
+   "benefits": [
+    "63,000원: 『보리 의성어 의태어 사전』 1부",
+    "65,000원: 『보리 의성어 의태어 사전』 1부 , 에코백",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/1022Brs/Img_760x580.jpg",
+   "goods_id": "199255644",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 191000,
+     "count": 3,
+     "rate": 19
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-19",
+   "category": "어린이"
+  },
+  "yes24:277628": {
+   "store": "yes24",
+   "id": "277628",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=277628",
+   "title": "찬실이는 복도 많지 각본집",
+   "publisher": "마음산책",
+   "category_raw": "국내도서 > 예술 > 영화/드라마 > 시나리오/연출",
+   "status": "진행중",
+   "start_date": "2026-10-26",
+   "end_date": "2026-11-12",
+   "release_date": "2026-11-16",
+   "price": 21600,
+   "goal": 1000000,
+   "amount": 1782000,
+   "count": 80,
+   "rate": 178,
+   "benefits": [
+    "21,600원: 『찬실이는 복도 많지』 1부＋김초희&윤가은 무삭제 대화집, 펀딩 달성 단계 별 추가 포인트 적립",
+    "22,600원: 『찬실이는 복도 많지』 1부＋김초희&윤가은 무삭제 대화집＋포스터, 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/1021yesfunding01/bn_760x580.jpg",
+   "goods_id": "199437231",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1782000,
+     "count": 80,
+     "rate": 178
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-26",
+   "category": "예술"
+  },
+  "kyobo:690": {
+   "store": "kyobo",
+   "id": "690",
+   "url": "https://event.kyobobook.co.kr/funding/detail/690",
+   "title": "판다월드에 놀러 오세요!",
+   "publisher": "서울문화사",
+   "category_raw": "국내도서 > 어린이(초등) > 어린이만화 > 만화/애니메이션 > TV/애니메이션/영화",
+   "status": "진행중",
+   "start_date": "2026-10-27",
+   "end_date": "2026-11-10",
+   "release_date": "2026-11-11",
+   "price": 15120,
+   "goal": 1500000,
+   "amount": 0,
+   "count": null,
+   "rate": 0,
+   "benefits": [
+    "혜택1 (말하는동물원 뿌빠TV 1: 우당탕탕 루이&후이 영상툰 판다월드에 놀러 오세요!)",
+    "혜택2 (말하는동물원 뿌빠TV 1: 우당탕탕 루이&후이 영상툰 판다월드에 놀러 오세요! + 루이후이 북파우치)"
+   ],
+   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/6c038534bdc94929b3a10662b5155923.jpg",
+   "headline": "루이후이 추억 소장 영상툰! 모두가 사랑하는 바오패밀리의 특별한 일상",
+   "kind": "book",
+   "isbn": "9791173713422",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 0,
+     "count": null,
+     "rate": 0
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "어린이"
+  },
+  "kyobo:691": {
+   "store": "kyobo",
+   "id": "691",
+   "url": "https://event.kyobobook.co.kr/funding/detail/691",
+   "title": "그림자 사건",
+   "publisher": "은행나무",
+   "category_raw": "국내도서 > 소설 > 영미소설 > 영미소설일반",
+   "status": "진행중",
+   "start_date": "2026-10-26",
+   "end_date": "2026-11-16",
+   "release_date": "2026-11-18",
+   "price": 17820,
+   "goal": 1500000,
+   "amount": 935180,
+   "count": null,
+   "rate": 62,
+   "benefits": [
+    "혜택1 (그림자 사건)",
+    "혜택2 (그림자 사건+비밀술집 암구호 카드)"
+   ],
+   "image": "https://contents.kyobobook.co.kr/etc/ec/fndg/fb7ad4e46fd84cc684b487debd47bc4b.png",
+   "headline": "미국 현대문학의 거장 토머스 핀천, 12년 만의 신작 《그림자 사건》",
+   "kind": "book",
+   "isbn": "9791167377081",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 935180,
+     "count": 52,
+     "rate": 62
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-26",
+   "category": "소설",
+   "count_est": 52
   }
  }
 }
