@@ -26,6 +26,20 @@
 
   /* ---------- Header ---------- */
   header{padding:40px 0 0}
+  /* 서비스 전환 탭 (bookbest·bookfund 공통) — 교보 패밀리 사이트 탭: '\' 방향 S곡선, 뒤 탭이 앞 탭을 덮음 */
+  .svc-tabs{display:flex;align-items:flex-end;margin-bottom:20px;padding-left:16px}
+  .svc-tabs a{position:relative;display:inline-flex;align-items:center;height:30px;padding:0 10px 0 8px;margin-right:16px;font-size:12.5px;font-weight:700;letter-spacing:-0.02em;text-decoration:none;white-space:nowrap;color:var(--ink-3);background:#fff;border-top:1px solid #D5D7DC;border-bottom:1px solid #D5D7DC}
+  .svc-tabs a::before,.svc-tabs a::after{content:"";position:absolute;top:-1px;width:16px;height:30px;background-repeat:no-repeat}
+  .svc-tabs a::before{left:-16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0H16V30C8 30 8 0 0 0Z' fill='white'/%3E%3Cpath d='M16 29.5C8 29.5 8 .5 0 .5H16' fill='none' stroke='%23D5D7DC'/%3E%3C/svg%3E")}
+  .svc-tabs a::after{right:-16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0C8 0 8 30 16 30H0Z' fill='white'/%3E%3Cpath d='M0 .5C8 .5 8 29.5 16 29.5H0' fill='none' stroke='%23D5D7DC'/%3E%3C/svg%3E")}
+  .svc-tabs a:nth-child(1){z-index:1} .svc-tabs a:nth-child(2){z-index:2} .svc-tabs a:nth-child(3){z-index:3}
+  .svc-tabs a:hover{color:var(--ink)}
+  .svc-tabs a.on{color:#fff;background:var(--tab);border-color:var(--tab)}
+  .svc-tabs a.on::before,.svc-tabs a.on::after{background:var(--tab);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+  .svc-tabs a.on::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0H16V30C8 30 8 0 0 0Z' fill='black'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0H16V30C8 30 8 0 0 0Z' fill='black'/%3E%3C/svg%3E")}
+  .svc-tabs a.on::after{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0C8 0 8 30 16 30H0Z' fill='black'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' viewBox='0 0 16 30'%3E%3Cpath d='M0 0C8 0 8 30 16 30H0Z' fill='black'/%3E%3C/svg%3E")}
+  .svc-tabs a[data-svc="best"]{--tab:#3D3B9B}
+  .svc-tabs a[data-svc="fund"]{--tab:#1BA3A0}
   .crumb{font-size:13px;color:var(--ink-3);font-weight:500;margin-bottom:14px}
   .crumb b{color:var(--ink-2);font-weight:500}
   .title-row{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap;padding-bottom:18px;border-bottom:2px solid var(--ink)}
@@ -36,6 +50,24 @@
   .search-input::placeholder{color:var(--ink-3)}
   .search-input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(31,157,60,.10)}
   .search-ico{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.5;pointer-events:none}
+  .search-input::-webkit-search-cancel-button{display:none}
+  .search-clear{position:absolute;right:40px;top:50%;transform:translateY(-50%);border:none;background:none;cursor:pointer;font-size:13px;color:var(--ink-3);padding:4px;line-height:1}
+  /* 검색 결과 미리보기 (bookbest와 같은 형태) */
+  .search-results{position:absolute;left:0;right:0;top:calc(100% + 5px);min-width:420px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 26px rgba(0,0,0,.13);z-index:30;max-height:440px;overflow-y:auto;display:none}
+  .search-results.on{display:block}
+  .sr-group{font-size:11.5px;font-weight:700;color:var(--ink-3);padding:10px 14px 4px;background:#fff;position:sticky;top:0}
+  .sr-item{display:flex;align-items:center;gap:12px;padding:9px 14px;cursor:pointer;border-bottom:1px solid var(--line-2)}
+  .sr-item:hover,.sr-item.act{background:var(--bg-soft)}
+  .sr-info{min-width:0;flex:1}
+  .sr-title{font-size:14px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sr-title mark{background:none;color:var(--blue);font-weight:700}
+  .sr-meta{font-size:12px;color:var(--ink-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sr-stores{display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-size:11.5px;color:var(--ink-2);white-space:nowrap;flex-shrink:0}
+  .sr-stores span{display:inline-flex;align-items:center;gap:5px}
+  .sr-stores .live{color:var(--blue);font-weight:700}
+  .sr-all{padding:11px 14px;font-size:13px;color:var(--blue);font-weight:700;cursor:pointer}
+  .sr-all:hover,.sr-all.act{background:var(--bg-soft)}
+  .sr-empty{padding:16px;color:var(--ink-3);font-size:13px;text-align:center}
   .dateline{text-align:right;flex-shrink:0;margin-left:auto}
   .dateline .today{font-weight:700;font-size:22px}
   .dateline .vs{font-size:13px;color:var(--ink-2);margin-top:3px;display:flex;gap:12px;justify-content:flex-end}
@@ -113,7 +145,8 @@
   .pub-filter .name{font-weight:700;color:var(--blue)}
   .pub-filter .dist{color:var(--ink-2);display:inline-flex;gap:12px}
   .pub-filter .dist span{display:inline-flex;align-items:center;gap:5px}
-  .pub-filter .x{margin-left:auto;border:1px solid var(--blue);color:var(--blue);background:#fff;border-radius:99px;font-size:12px;font-weight:700;padding:3px 10px;cursor:pointer}
+  .pub-filter .x.all{margin-left:auto}
+  .pub-filter .x{margin-left:4px;border:1px solid var(--blue);color:var(--blue);background:#fff;border-radius:99px;font-size:12px;font-weight:700;padding:3px 10px;cursor:pointer}
 
   /* 수집 실패 안내 */
 
@@ -210,12 +243,14 @@
 <div class="wrap">
 
   <header>
-    <div class="crumb">경쟁사 모니터링 <b>›</b> 펀딩 <b>›</b> 3사 비교</div>
+    <nav class="svc-tabs" aria-label="모니터링 도구"><a href="https://gkswornr1234-gif.github.io/bookbest/" data-svc="best">베스트셀러</a><a href="https://gkswornr1234-gif.github.io/bookfund/" data-svc="fund" class="on" aria-current="page">북펀딩</a></nav>
     <div class="title-row">
       <h1>서점 북펀딩 <span class="accent">한눈에</span> 모니터링</h1>
       <div class="search-wrap">
         <span class="search-ico">🔍</span>
-        <input id="q" class="search-input" type="search" placeholder="도서명·출판사 검색" autocomplete="off">
+        <input id="q" class="search-input" type="search" placeholder="도서명·출판사 검색" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <button id="search-clear" class="search-clear" type="button" aria-label="검색어 지우기" hidden>✕</button>
+        <div id="search-results" class="search-results" role="listbox"></div>
       </div>
       <div class="dateline">
         <div class="today num" id="upd">–</div>
@@ -423,10 +458,12 @@ function visible(){
 function perk(it){
   const extras = [];
   for (const b of it.benefits || []){
-    const body = b.replace(/^[\d,]+\s*원\s*(펀딩)?\s*[:：]?\s*/, '').replace(/『[^』]*』[^,＋+]*/g, '').replace(/<[^>]*>\s*도서[^,＋+]*/g, '');
+    const body = b.replace(/^(혜택|구성|옵션)\s*\d*\s*\(/, '').replace(/\)\s*$/, '').replace(/^[\d,]+\s*원\s*(펀딩)?\s*[:：]?\s*/, '').replace(/『[^』]*』[^,＋+]*/g, '').replace(/<[^>]*>\s*도서[^,＋+]*/g, '');
     for (const part of body.split(/,|＋|\+/)){
       const p = part.trim();
-      if (!p || /『|도서\s*\d*부|^\d+부$|마일리지|적립|리워드|펀딩$/.test(p) || /^<.*>\s*도서/.test(p)) continue;
+      if (!p || p.length < 3 || /『|도서\s*\d*부|^\d+부$|마일리지|적립|리워드|펀딩$|^펀딩\s*기간|동안$|^\[|\]$/.test(p) || /^<.*>\s*도서/.test(p)) continue;
+      const np = normS(p), nt = normS(it.title);
+      if (nt && (np.includes(nt) || nt.includes(np))) continue;  // 책 본품 이름
       if (!extras.includes(p)) extras.push(p);
     }
   }
@@ -459,14 +496,92 @@ function renderSummary(){
 }
 
 function renderPub(){
+  // 적용된 조건 바: 검색으로 고른 도서·검색어, 출판사
   const box = $('#pub-filter');
-  box.hidden = !state.pub;
-  if (!state.pub) return;
-  const mine = ALL.filter(it => it.publisher === state.pub && inPeriod(it));
-  const dist = STORES.map(s => [s, mine.filter(it => it.store === s.key).length]).filter(([, n]) => n);
-  box.innerHTML = `출판사 <span class="name">${esc(state.pub)}</span>
-    <span class="dist">${dist.map(([s, n]) => `<span><span class="dot" style="background:var(--${s.key})"></span>${s.name} ${n}건</span>`).join('')}</span>
-    <button class="x" id="pub-clear">출판사 필터 해제 ×</button>`;
+  box.hidden = !state.pub && !state.q;
+  if (box.hidden) return;
+  const parts = [];
+  if (state.q) parts.push(`검색 <span class="name">‘${esc(state.q)}’</span><button class="x" data-clear="q" aria-label="검색 조건 해제">×</button>`);
+  if (state.pub){
+    const mine = ALL.filter(it => it.publisher === state.pub && inPeriod(it));
+    const dist = STORES.map(s => [s, mine.filter(it => it.store === s.key).length]).filter(([, n]) => n);
+    parts.push(`출판사 <span class="name">${esc(state.pub)}</span>
+      <span class="dist">${dist.map(([s, n]) => `<span><span class="dot" style="background:var(--${s.key})"></span>${s.name} ${n}건</span>`).join('')}</span>
+      <button class="x" data-clear="pub" aria-label="출판사 조건 해제">×</button>`);
+  }
+  box.innerHTML = parts.join('<span style="color:var(--line)">|</span>') + `<button class="x all" data-clear="all">조건 모두 해제</button>`;
+}
+
+/* ---------- 검색 미리보기 ----------
+   입력할 때마다 목록 전체를 다시 그리지 않고, 결과 미리보기만 띄움 (빠름).
+   항목을 누르면 아래 목록에 조건을 걸어 보여줌 */
+const normS = v => (v || '').toLowerCase().replace(/\s+/g, '');
+let SR = [], srIdx = -1;
+const STATUS_SHORT = {'진행중':'진행 중', '마감임박':'마감임박', '오픈예정':'오픈예정', '종료':'종료'};
+function hl(text, q){
+  const t = esc(text), i = text.toLowerCase().indexOf(q.toLowerCase());
+  if (!q || i < 0) return t;
+  return esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' + esc(text.slice(i + q.length));
+}
+function storeLines(list){
+  return list.slice(0, 3).map(it => `<span class="${VIEWS.live(it.status) ? 'live' : ''}"><span class="dot" style="background:var(--${it.store})"></span>${SNAME[it.store]} ${STATUS_SHORT[it.status] || ''}</span>`).join('');
+}
+function onSearch(raw){
+  const q = raw.trim(), box = $('#search-results');
+  $('#search-clear').hidden = !q;
+  srIdx = -1;
+  if (!q){ box.classList.remove('on'); box.innerHTML = ''; SR = []; return; }
+  const nq = normS(q);
+  const books = new Map(), pubs = new Map();
+  for (const it of ALL){
+    if (normS(it.title).includes(nq)){
+      const k = normS(it.title);
+      if (!books.has(k)) books.set(k, []);
+      books.get(k).push(it);
+    }
+    if (it.publisher && normS(it.publisher).includes(nq)){
+      if (!pubs.has(it.publisher)) pubs.set(it.publisher, []);
+      pubs.get(it.publisher).push(it);
+    }
+  }
+  const order = l => l.sort((a, b) => (VIEWS.live(b.status) - VIEWS.live(a.status)) || reg(b).localeCompare(reg(a)));
+  const bookList = [...books.values()].map(order).sort((a, b) => (VIEWS.live(b[0].status) - VIEWS.live(a[0].status)) || reg(b[0]).localeCompare(reg(a[0]))).slice(0, 8);
+  const pubList = [...pubs.entries()].sort((a, b) => b[1].length - a[1].length).slice(0, 4);
+  SR = [...bookList.map(l => ({kind:'book', value:l[0].title})), ...pubList.map(([p]) => ({kind:'pub', value:p})), {kind:'all', value:q}];
+  let i = 0, html = '';
+  if (bookList.length){
+    html += `<div class="sr-group">도서 ${books.size > 8 ? '8+ ' : ''}</div>`;
+    html += bookList.map(l => {
+      const it = l[0];
+      const meta = [it.publisher, it.category, perk(it) && '혜택 ' + perk(it)].filter(Boolean).join(' · ');
+      return `<div class="sr-item" role="option" data-i="${i++}"><div class="sr-info"><div class="sr-title">${hl(it.title || '', q)}</div><div class="sr-meta">${esc(meta)}</div></div><div class="sr-stores">${storeLines(l)}</div></div>`;
+    }).join('');
+  }
+  if (pubList.length){
+    html += `<div class="sr-group">출판사</div>`;
+    html += pubList.map(([p, l]) => {
+      const dist = STORES.map(s => [s, l.filter(it => it.store === s.key).length]).filter(([, n]) => n);
+      return `<div class="sr-item" role="option" data-i="${i++}"><div class="sr-info"><div class="sr-title">${hl(p, q)}</div><div class="sr-meta">펀딩 ${l.length}건 · 진행 중 ${l.filter(it => VIEWS.live(it.status)).length}건</div></div><div class="sr-stores">${dist.map(([s, n]) => `<span><span class="dot" style="background:var(--${s.key})"></span>${s.name} ${n}</span>`).join('')}</div></div>`;
+    }).join('');
+  }
+  if (!bookList.length && !pubList.length) html += '<div class="sr-empty">검색 결과가 없습니다</div>';
+  else html += `<div class="sr-all" role="option" data-i="${i++}">‘${esc(q)}’ 포함된 펀딩 모두 보기 ↵</div>`;
+  box.innerHTML = html;
+  box.classList.add('on');
+}
+function closeSearch(clear){
+  $('#search-results').classList.remove('on');
+  if (clear){ $('#q').value = ''; $('#search-clear').hidden = true; }
+}
+function applySearch(sel){
+  if (!sel) return;
+  // 고른 항목이 빠짐없이 보이도록 다른 조건은 넓힘
+  Object.assign(state, {view:'all', period:'all', store:'', cat:'', q:'', pub:''});
+  if (sel.kind === 'pub') state.pub = sel.value; else state.q = sel.value;
+  $('#period').value = 'all'; $('#period-custom').hidden = true;
+  closeSearch(true);
+  render();
+  window.scrollTo({top: $('#pub-filter').offsetTop - 90, behavior: 'smooth'});
 }
 
 /* ---------- 렌더 ---------- */
@@ -543,7 +658,7 @@ function syncUrl(){
 function loadUrl(){
   const p = new URLSearchParams(location.search);
   URL_KEYS.forEach(k => { if (p.has(k)) state[k] = p.get(k); });
-  $('#q').value = state.q; $('#sort').value = state.sort; $('#view').value = state.view; $('#period').value = state.period;
+  $('#sort').value = state.sort; $('#view').value = state.view; $('#period').value = state.period;
   $('#period-custom').hidden = state.period !== 'custom';
   $('#p-from').value = state.from; $('#p-to').value = state.to;
 }
@@ -671,14 +786,40 @@ function bind(){
   });
   $('#p-from').addEventListener('change', e => { state.from = e.target.value; render(); });
   $('#p-to').addEventListener('change', e => { state.to = e.target.value; render(); });
-  $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
+  $('#q').addEventListener('input', e => onSearch(e.target.value));
+  $('#q').addEventListener('focus', e => onSearch(e.target.value));
+  $('#q').addEventListener('keydown', e => {
+    const box = $('#search-results'), items = [...box.querySelectorAll('[data-i]')];
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+      if (!items.length) return;
+      e.preventDefault();
+      srIdx = (srIdx + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+      items.forEach((el, k) => el.classList.toggle('act', k === srIdx));
+      items[srIdx].scrollIntoView({block:'nearest'});
+    } else if (e.key === 'Enter'){
+      e.preventDefault();
+      const q = e.target.value.trim();
+      if (srIdx >= 0) applySearch(SR[srIdx]); else if (q) applySearch({kind:'all', value:q});
+    } else if (e.key === 'Escape') closeSearch(false);
+  });
+  $('#search-results').addEventListener('mousedown', e => {
+    const el = e.target.closest('[data-i]'); if (!el) return;
+    e.preventDefault(); applySearch(SR[+el.dataset.i]);
+  });
+  $('#search-clear').addEventListener('click', () => { closeSearch(true); $('#q').focus(); });
+  document.addEventListener('click', e => { if (!e.target.closest('.search-wrap')) closeSearch(false); });
   $('#xlsx').addEventListener('click', exportXlsx);
   $('#rows').addEventListener('click', e => {
     const pb = e.target.closest('.pub-link');
-    if (pb){ state.pub = pb.dataset.pub; render(); window.scrollTo({top: $('#pub-filter').offsetTop - 80, behavior: 'smooth'}); return; }
+    if (pb){ applySearch({kind:'pub', value:pb.dataset.pub}); return; }
     const tr = e.target.closest('tr'); if (tr) openModal(tr.dataset.k);
   });
-  $('#pub-filter').addEventListener('click', e => { if (e.target.id === 'pub-clear'){ state.pub = ''; render(); } });
+  $('#pub-filter').addEventListener('click', e => {
+    const c = e.target.closest('[data-clear]'); if (!c) return;
+    if (c.dataset.clear !== 'pub') state.q = '';
+    if (c.dataset.clear !== 'q') state.pub = '';
+    render();
+  });
   $('#share').addEventListener('click', async () => {
     const btn = $('#share');
     try { await navigator.clipboard.writeText(location.href); btn.textContent = '✓ 복사됨'; }

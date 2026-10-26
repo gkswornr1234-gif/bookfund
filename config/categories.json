@@ -1,7 +1,7 @@
 {
   "_설명": "서점별 분류 경로(category_raw)에 keywords 중 하나가 들어 있으면 그 분야로 묶음. 위에서부터 먼저 맞는 것 적용. owner에 담당 MD 이름을 넣으면 신규 알림에 '담당 OOO'으로 함께 표시됨.",
   "alert": {
-    "_설명": "categories에 적은 분야만 신규 펀딩 알림을 보냄. 비워두면([]) 전체 분야. 분야 이름은 rules의 category와 똑같이. channels에 '분야: Secret 이름'을 적으면 그 분야는 다른 팀즈 채널로 감 (예: \"유아\": \"TEAMS_WEBHOOK_KIDS\"). 적지 않은 분야는 TEAMS_WEBHOOK_URL 채널로.",
+    "_설명": "categories에 적은 분야만 신규 펀딩 알림을 보냄. 비워두면([]) 전체 분야. 분야 이름은 rules의 category와 똑같이. channels에 '분야: Secret 이름'을 적으면 그 분야는 다른 팀즈 채널로 감 (예: \"유아\": \"TEAMS_WEBHOOK_KIDS\"). 적지 않은 분야는 TEAMS_WEBHOOK_URL 채널로. 새 Secret 이름을 쓰면 crawl.yml의 env에도 한 줄 추가해야 함.",
     "categories": [
       "사회·정치",
       "역사·문화"
