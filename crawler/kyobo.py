@@ -45,6 +45,17 @@ def _md(text: str | None) -> list[tuple[int, int]]:
     return [(int(m), int(d)) for m, d in re.findall(r"(\d{1,2})\s*월\s*(\d{1,2})\s*일", text or "")]
 
 
+BOOK_ROOTS = ("국내도서", "외국도서", "eBook", "e북", "전자책")
+
+
+def is_goods(it: dict) -> bool:
+    """핫트랙스·교보Only 같은 굿즈 펀딩인지. 분류가 없으면 페이지의 상품 유형(Book/Product)으로 판단."""
+    cat = (it.get("category_raw") or "").strip()
+    if cat:
+        return not cat.startswith(BOOK_ROOTS)
+    return it.get("kind") == "goods"
+
+
 def parse_detail(html: str, it: dict) -> dict | None:
     soup = soup_of(html)
     badge = soup.select_one(".prod_price_wrap .badge_list_box .text")
@@ -57,6 +68,7 @@ def parse_detail(html: str, it: dict) -> dict | None:
 
     it["status"] = STATUS.get(badge.get_text(strip=True), badge.get_text(strip=True))
     it["headline"] = head.get_text(strip=True)
+    it["kind"] = "goods" if ld.get("@type") == "Product" else "book"
     it["title"] = (ld.get("name") if ld.get("@type") == "Book" else None) or it["headline"]
     pub = (ld.get("publisher") or {}).get("name") or (ld.get("brand") or {}).get("name") or ""
     it["publisher"] = pub.strip() or None  # 굿즈는 브랜드명
@@ -128,7 +140,8 @@ def crawl(known: dict) -> list[dict]:
             d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
             it = parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n))) if d else None
             if it:
-                out.append(it)
+                if not is_goods(it):  # 예스24·알라딘과 맞춰 도서 펀딩만
+                    out.append(it)
                 misses_ahead = 0
             elif n > top:
                 misses_ahead += 1
@@ -152,7 +165,8 @@ def backfill(known: dict, since: str) -> list[dict]:
             d = fetch(DETAIL_URL.format(n), debug_name=f"kyobo_{n}.html")
             it = parse_detail(d, new_item("kyobo", n, DETAIL_URL.format(n))) if d else None
             if it and (ref_date(it) or "9999") >= since:
-                out.append(it)
+                if not is_goods(it):
+                    out.append(it)
                 misses = 0
             else:
                 misses += 1

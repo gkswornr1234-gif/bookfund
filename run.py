@@ -255,6 +255,10 @@ def main():
         v["category"], _ = map_category(v.get("category_raw"), cfg)
         fix_dates(v)
 
+    # 교보 굿즈 펀딩은 제외 (예스24·알라딘은 도서만 모으므로 기준을 맞춤)
+    for k in [k for k, v in items.items() if v["store"] == "kyobo" and kyobo.is_goods(v)]:
+        del items[k]
+
     # 기준일 이전 펀딩이 이미 저장돼 있으면 정리
     for k in [k for k, v in items.items() if (ref_date(v) or "9999") < SINCE]:
         del items[k]
