@@ -1,22 +1,22 @@
 {
- "updated_at": "2026-10-27T07:33+09:00",
+ "updated_at": "2026-10-27T16:30+09:00",
  "runs": {
   "aladin": {
-   "at": "2026-10-27T07:31+09:00",
+   "at": "2026-10-27T16:19+09:00",
    "ok": true,
    "count": 60,
    "error": null
   },
   "yes24": {
-   "at": "2026-10-27T07:32+09:00",
+   "at": "2026-10-27T16:21+09:00",
    "ok": true,
-   "count": 24,
+   "count": 25,
    "error": null
   },
   "kyobo": {
-   "at": "2026-10-27T07:33+09:00",
+   "at": "2026-10-27T16:29+09:00",
    "ok": true,
-   "count": 17,
+   "count": 16,
    "error": null
   }
  },
@@ -404,9 +404,9 @@
    "release_date": "2026-11-09",
    "price": 19800,
    "goal": 500000,
-   "amount": 3425400,
-   "count": 173,
-   "rate": 685,
+   "amount": 3821400,
+   "count": 193,
+   "rate": 764,
    "benefits": [
     "19,800원 펀딩",
     "<웹소설 오늘부터 씁니다> 도서 1부",
@@ -442,9 +442,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3425400,
-     "count": 173,
-     "rate": 685
+     "amount": 3821400,
+     "count": 193,
+     "rate": 764
     }
    ],
    "last_seen": "2026-10-27",
@@ -527,9 +527,9 @@
    "release_date": "2026-11-04",
    "price": 17820,
    "goal": 1000000,
-   "amount": 2940300,
-   "count": 165,
-   "rate": 294,
+   "amount": 2975940,
+   "count": 167,
+   "rate": 298,
    "benefits": [
     "17,820원 펀딩",
     "<피폭된 조선> 도서 1부",
@@ -566,9 +566,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 2940300,
-     "count": 165,
-     "rate": 294
+     "amount": 2975940,
+     "count": 167,
+     "rate": 298
     }
    ],
    "last_seen": "2026-10-27",
@@ -589,9 +589,9 @@
    "release_date": "2026-12-01",
    "price": 22500,
    "goal": 1000000,
-   "amount": 1507500,
-   "count": 67,
-   "rate": 151,
+   "amount": 1530000,
+   "count": 68,
+   "rate": 153,
    "benefits": [
     "22,500원 펀딩",
     "<새로운 질서> 도서 1부",
@@ -628,9 +628,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1507500,
-     "count": 67,
-     "rate": 151
+     "amount": 1530000,
+     "count": 68,
+     "rate": 153
     }
    ],
    "last_seen": "2026-10-27",
@@ -713,9 +713,9 @@
    "release_date": "2026-10-31",
    "price": 36000,
    "goal": 2000000,
-   "amount": 8244000,
-   "count": 229,
-   "rate": 412,
+   "amount": 8388000,
+   "count": 233,
+   "rate": 419,
    "benefits": [
     "36,000원 펀딩",
     "<이토 도요 관찰기> 1권",
@@ -752,9 +752,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 8244000,
-     "count": 229,
-     "rate": 412
+     "amount": 8388000,
+     "count": 233,
+     "rate": 419
     }
    ],
    "last_seen": "2026-10-27",
@@ -775,9 +775,9 @@
    "release_date": "2026-11-10",
    "price": 18000,
    "goal": 2000000,
-   "amount": 4050000,
-   "count": 225,
-   "rate": 202,
+   "amount": 4158000,
+   "count": 231,
+   "rate": 208,
    "benefits": [
     "18,000원 펀딩",
     "<우리는 투명노동자입니다> 도서 1부",
@@ -814,9 +814,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 4050000,
-     "count": 225,
-     "rate": 202
+     "amount": 4158000,
+     "count": 231,
+     "rate": 208
     }
    ],
    "last_seen": "2026-10-27",
@@ -837,9 +837,9 @@
    "release_date": "2026-11-12",
    "price": 16200,
    "goal": 500000,
-   "amount": 729000,
-   "count": 45,
-   "rate": 146,
+   "amount": 745200,
+   "count": 46,
+   "rate": 149,
    "benefits": [
     "16,200원 펀딩",
     "<노마드 랜드의 선생님> 도서 1부",
@@ -876,9 +876,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 729000,
-     "count": 45,
-     "rate": 146
+     "amount": 745200,
+     "count": 46,
+     "rate": 149
     }
    ],
    "last_seen": "2026-10-27",
@@ -899,9 +899,9 @@
    "release_date": "2026-11-05",
    "price": 26100,
    "goal": 1000000,
-   "amount": 9670100,
-   "count": 361,
-   "rate": 967,
+   "amount": 9723300,
+   "count": 363,
+   "rate": 972,
    "benefits": [
     "26,100원 펀딩",
     "<관객의 꿈: 테레사 학경 차 1951~1982> 도서 1부",
@@ -938,9 +938,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 9670100,
-     "count": 361,
-     "rate": 967
+     "amount": 9723300,
+     "count": 363,
+     "rate": 972
     }
    ],
    "last_seen": "2026-10-27",
@@ -961,9 +961,9 @@
    "release_date": "2026-11-19",
    "price": 41400,
    "goal": 1000000,
-   "amount": 3352200,
-   "count": 95,
-   "rate": 335,
+   "amount": 3538600,
+   "count": 100,
+   "rate": 354,
    "benefits": [
     "27,000원 펀딩",
     "<백석 평전> 도서 1부",
@@ -1000,9 +1000,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3352200,
-     "count": 95,
-     "rate": 335
+     "amount": 3538600,
+     "count": 100,
+     "rate": 354
     }
    ],
    "last_seen": "2026-10-27",
@@ -1023,9 +1023,9 @@
    "release_date": "2026-11-20",
    "price": 22500,
    "goal": 1000000,
-   "amount": 18045000,
-   "count": 802,
-   "rate": 1805,
+   "amount": 18157500,
+   "count": 807,
+   "rate": 1816,
    "benefits": [
     "22,500원 펀딩",
     "<암살 공작 1974> 도서 1부",
@@ -1062,9 +1062,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 18045000,
-     "count": 802,
-     "rate": 1805
+     "amount": 18157500,
+     "count": 807,
+     "rate": 1816
     }
    ],
    "last_seen": "2026-10-27",
@@ -2955,9 +2955,9 @@
    "release_date": "2026-10-29",
    "price": 15120,
    "goal": 1000000,
-   "amount": 3008880,
-   "count": 199,
-   "rate": 301,
+   "amount": 3039120,
+   "count": 201,
+   "rate": 304,
    "benefits": [
     "15,120원: 『나로 걷는 길, 고요하게 단단하게』 1부",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -2991,9 +2991,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3008880,
-     "count": 199,
-     "rate": 301
+     "amount": 3039120,
+     "count": 201,
+     "rate": 304
     }
    ],
    "last_seen": "2026-10-27",
@@ -3077,9 +3077,9 @@
    "release_date": "2026-11-04",
    "price": 18000,
    "goal": 1000000,
-   "amount": 888000,
-   "count": 46,
-   "rate": 89,
+   "amount": 906000,
+   "count": 47,
+   "rate": 91,
    "benefits": [
     "18,000원: 『우리들의 오줌권』 1부",
     "20,000원: 『우리들의 오줌권』 1부＋키링",
@@ -3115,9 +3115,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 888000,
-     "count": 46,
-     "rate": 89
+     "amount": 906000,
+     "count": 47,
+     "rate": 91
     }
    ],
    "last_seen": "2026-10-27",
@@ -3260,9 +3260,9 @@
    "release_date": "2026-11-02",
    "price": 15300,
    "goal": 1000000,
-   "amount": 688500,
-   "count": 45,
-   "rate": 69,
+   "amount": 887400,
+   "count": 58,
+   "rate": 89,
    "benefits": [
     "15,300원: 도서 1부, 엽서 3종 세트 (책과 랩핑), 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3296,9 +3296,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 688500,
-     "count": 45,
-     "rate": 69
+     "amount": 887400,
+     "count": 58,
+     "rate": 89
     }
    ],
    "last_seen": "2026-10-27",
@@ -3319,9 +3319,9 @@
    "release_date": "2026-11-06",
    "price": 17820,
    "goal": 1000000,
-   "amount": 1015740,
-   "count": 57,
-   "rate": 102,
+   "amount": 1051380,
+   "count": 59,
+   "rate": 105,
    "benefits": [
     "17,820원: 도서 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3355,9 +3355,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1015740,
-     "count": 57,
-     "rate": 102
+     "amount": 1051380,
+     "count": 59,
+     "rate": 105
     }
    ],
    "last_seen": "2026-10-27",
@@ -3378,9 +3378,9 @@
    "release_date": "2026-11-05",
    "price": 15120,
    "goal": 1000000,
-   "amount": 2857680,
-   "count": 189,
-   "rate": 286,
+   "amount": 2948400,
+   "count": 195,
+   "rate": 295,
    "benefits": [
     "15,120원: 『봄 내음보다 너를』 (김나영 작가 친필 사인본) 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3414,9 +3414,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 2857680,
-     "count": 189,
-     "rate": 286
+     "amount": 2948400,
+     "count": 195,
+     "rate": 295
     }
    ],
    "last_seen": "2026-10-27",
@@ -3437,9 +3437,9 @@
    "release_date": "2026-10-28",
    "price": 15120,
    "goal": 1000000,
-   "amount": 1481160,
-   "count": 93,
-   "rate": 148,
+   "amount": 1532520,
+   "count": 96,
+   "rate": 153,
    "benefits": [
     "15,120원: 『2026-2027 자문자답 나의 1년』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "18,120원: 『2026-2027 자문자답 나의 1년』 1부＋온라인 코칭 워크숍 초대권, 펀딩 목표액별 추가 한줄평 리워드 지급",
@@ -3474,9 +3474,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1481160,
-     "count": 93,
-     "rate": 148
+     "amount": 1532520,
+     "count": 96,
+     "rate": 153
     }
    ],
    "last_seen": "2026-10-27",
@@ -3497,9 +3497,9 @@
    "release_date": "2026-10-29",
    "price": 21600,
    "goal": 1000000,
-   "amount": 2095200,
-   "count": 97,
-   "rate": 210,
+   "amount": 2203200,
+   "count": 102,
+   "rate": 220,
    "benefits": [
     "21,600원: 『감각창조자들』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -3533,9 +3533,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 2095200,
-     "count": 97,
-     "rate": 210
+     "amount": 2203200,
+     "count": 102,
+     "rate": 220
     }
    ],
    "last_seen": "2026-10-27",
@@ -3556,9 +3556,9 @@
    "release_date": "2026-11-09",
    "price": 18000,
    "goal": 1000000,
-   "amount": 3821000,
-   "count": 205,
-   "rate": 382,
+   "amount": 3934000,
+   "count": 211,
+   "rate": 393,
    "benefits": [
     "18,000원: 『영어 명문장 필사 노트 2』 1부",
     "19,000원: 『영어 명문장 필사 노트 2』 1부&북밴딩 펜홀더(랜덤,펜미포함)",
@@ -3593,9 +3593,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3821000,
-     "count": 205,
-     "rate": 382
+     "amount": 3934000,
+     "count": 211,
+     "rate": 393
     }
    ],
    "last_seen": "2026-10-27",
@@ -3943,9 +3943,15 @@
      "amount": 4140000,
      "count": 184,
      "rate": 207
+    },
+    {
+     "d": "2026-10-27",
+     "amount": 4140000,
+     "count": 184,
+     "rate": 207
     }
    ],
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-27",
    "category": "역사·문화",
    "goods_id": "197715493",
    "reg_date": "2026-10-08"
@@ -4004,9 +4010,9 @@
    "release_date": "2026-10-29",
    "price": 19800,
    "goal": 1000000,
-   "amount": 11984000,
-   "count": 595,
-   "rate": 1198,
+   "amount": 13009300,
+   "count": 646,
+   "rate": 1301,
    "benefits": [
     "19,800원: 『초등 3년 Q&A 다이어리』 1부(친필 인쇄 사인본)",
     "20,300원: 『초등 3년 Q&A 다이어리』 1부(친필 인쇄 사인본) , 저자 손글씨 각인 연필 & 지우개 세트",
@@ -4035,9 +4041,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 11984000,
-     "count": 595,
-     "rate": 1198
+     "amount": 13009300,
+     "count": 646,
+     "rate": 1301
     }
    ],
    "last_seen": "2026-10-27",
@@ -4756,9 +4762,9 @@
    "release_date": "2026-10-29",
    "price": 17820,
    "goal": 500000,
-   "amount": 6878520,
+   "amount": 6931980,
    "count": null,
-   "rate": 1375,
+   "rate": 1386,
    "benefits": [
     "혜택1 (컨디션 리셋)"
    ],
@@ -4793,14 +4799,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 6878520,
-     "count": 386,
-     "rate": 1375
+     "amount": 6931980,
+     "count": 389,
+     "rate": 1386
     }
    ],
    "last_seen": "2026-10-27",
    "category": "가정·건강·취미",
-   "count_est": 386,
+   "count_est": 389,
    "reg_date": "2026-10-01",
    "kind": "book"
   },
@@ -4817,9 +4823,9 @@
    "release_date": "2026-10-28",
    "price": 19800,
    "goal": 500000,
-   "amount": 594000,
+   "amount": 673200,
    "count": null,
-   "rate": 118,
+   "rate": 134,
    "benefits": [
     "혜택1 (지역에서 부산스럽게 출판하기)"
    ],
@@ -4854,14 +4860,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 594000,
-     "count": 30,
-     "rate": 118
+     "amount": 673200,
+     "count": 34,
+     "rate": 134
     }
    ],
    "last_seen": "2026-10-27",
    "category": "사회·정치",
-   "count_est": 30,
+   "count_est": 34,
    "reg_date": "2026-10-02",
    "kind": "book"
   },
@@ -4952,9 +4958,9 @@
    "release_date": "2026-11-11",
    "price": 46800,
    "goal": 1500000,
-   "amount": 4942200,
+   "amount": 5037800,
    "count": null,
-   "rate": 329,
+   "rate": 335,
    "benefits": [
     "혜택1 (노벨문학상 수상 강연집)",
     "혜택2 (노벨문학상 수상 강연집+한강 노벨상 강연 미니북)"
@@ -4990,14 +4996,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 4942200,
-     "count": 106,
-     "rate": 329
+     "amount": 5037800,
+     "count": 108,
+     "rate": 335
     }
    ],
    "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 106,
+   "count_est": 108,
    "reg_date": "2026-10-08",
    "kind": "book"
   },
@@ -5112,9 +5118,9 @@
    "release_date": "2026-10-29",
    "price": 16200,
    "goal": 1000000,
-   "amount": 5103600,
+   "amount": 5497400,
    "count": null,
-   "rate": 510,
+   "rate": 549,
    "benefits": [
     "혜택1 (스스로 해내는 아이의 감정 회복력 + 부모 특강 vod)",
     "혜택2 (스스로 해내는 아이의 감정 회복력 + 부모 특강 vod + 북토크 티켓)"
@@ -5150,14 +5156,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 5103600,
-     "count": 315,
-     "rate": 510
+     "amount": 5497400,
+     "count": 339,
+     "rate": 549
     }
    ],
    "last_seen": "2026-10-27",
    "category": "가정·건강·취미",
-   "count_est": 315,
+   "count_est": 339,
    "reg_date": "2026-10-13",
    "kind": "book"
   },
@@ -5174,9 +5180,9 @@
    "release_date": "2026-11-13",
    "price": 23850,
    "goal": 1500000,
-   "amount": 4642050,
+   "amount": 4781300,
    "count": null,
-   "rate": 309,
+   "rate": 318,
    "benefits": [
     "혜택1 (다음 계절엔 홋카이도)",
     "혜택2 (다음 계절엔 홋카이도+홋카이도 지도 NFC 키링)"
@@ -5212,14 +5218,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 4642050,
-     "count": 195,
-     "rate": 309
+     "amount": 4781300,
+     "count": 200,
+     "rate": 318
     }
    ],
    "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 195,
+   "count_est": 200,
    "reg_date": "2026-10-15",
    "kind": "book"
   },
@@ -5360,9 +5366,9 @@
    "release_date": "2026-11-05",
    "price": 12870,
    "goal": 500000,
-   "amount": 889330,
+   "amount": 927940,
    "count": null,
-   "rate": 177,
+   "rate": 185,
    "benefits": [
     "혜택1 (방울방울 추억 컬러링북)",
     "혜택2 (방울방울 추억 컬러링북 + 스테들러 색연필36색)"
@@ -5398,14 +5404,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 889330,
-     "count": 69,
-     "rate": 177
+     "amount": 927940,
+     "count": 72,
+     "rate": 185
     }
    ],
    "last_seen": "2026-10-27",
    "category": "예술",
-   "count_est": 69,
+   "count_est": 72,
    "reg_date": "2026-10-16",
    "kind": "book"
   },
@@ -5422,9 +5428,9 @@
    "release_date": "2026-11-04",
    "price": 18000,
    "goal": 500000,
-   "amount": 3104000,
+   "amount": 3177000,
    "count": null,
-   "rate": 620,
+   "rate": 635,
    "benefits": [
     "혜택1 (이승조의 첫 주식투자 교과서)",
     "혜택2 (이승조의 첫 주식투자 교과서 + 저자 강연회 티켓)"
@@ -5460,14 +5466,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3104000,
-     "count": 172,
-     "rate": 620
+     "amount": 3177000,
+     "count": 176,
+     "rate": 635
     }
    ],
    "last_seen": "2026-10-27",
    "category": "경제·경영",
-   "count_est": 172,
+   "count_est": 176,
    "reg_date": "2026-10-19",
    "kind": "book"
   },
@@ -5484,9 +5490,9 @@
    "release_date": "2026-11-04",
    "price": 15120,
    "goal": 1500000,
-   "amount": 5592600,
+   "amount": 5718560,
    "count": null,
-   "rate": 372,
+   "rate": 381,
    "benefits": [
     "혜택1 (나뭇잎 프레디 이야기)",
     "혜택2 (나뭇잎 프레디 이야기+엽서 세트)",
@@ -5523,14 +5529,14 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 5592600,
-     "count": 370,
-     "rate": 372
+     "amount": 5718560,
+     "count": 378,
+     "rate": 381
     }
    ],
    "last_seen": "2026-10-27",
    "category": "시·에세이",
-   "count_est": 370,
+   "count_est": 378,
    "reg_date": "2026-10-21",
    "kind": "book"
   },
@@ -5547,9 +5553,9 @@
    "release_date": "2026-11-10",
    "price": 15120,
    "goal": 500000,
-   "amount": 1594000,
-   "count": 101,
-   "rate": 319,
+   "amount": 1689120,
+   "count": 107,
+   "rate": 338,
    "benefits": [
     "15,120원 펀딩",
     "<집, 집, 집, 곰 아주머니 집> 초판 도서 1부",
@@ -5580,9 +5586,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1594000,
-     "count": 101,
-     "rate": 319
+     "amount": 1689120,
+     "count": 107,
+     "rate": 338
     }
    ],
    "last_seen": "2026-10-27",
@@ -18998,9 +19004,9 @@
    "release_date": "2026-11-06",
    "price": 16650,
    "goal": 1000000,
-   "amount": 599400,
-   "count": 36,
-   "rate": 60,
+   "amount": 616050,
+   "count": 37,
+   "rate": 62,
    "benefits": [
     "16,650원: 『나는 더 이상 살을 빼지 않기로 했다』 1부",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -19029,9 +19035,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 599400,
-     "count": 36,
-     "rate": 60
+     "amount": 616050,
+     "count": 37,
+     "rate": 62
     }
    ],
    "last_seen": "2026-10-27",
@@ -19051,9 +19057,9 @@
    "release_date": "2026-11-03",
    "price": 15300,
    "goal": 500000,
-   "amount": 1088000,
-   "count": 64,
-   "rate": 218,
+   "amount": 1412700,
+   "count": 83,
+   "rate": 283,
    "benefits": [
     "15,300원 펀딩",
     "<충분해 귤귤> 도서 1부",
@@ -19085,9 +19091,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1088000,
-     "count": 64,
-     "rate": 218
+     "amount": 1412700,
+     "count": 83,
+     "rate": 283
     }
    ],
    "last_seen": "2026-10-27",
@@ -19108,9 +19114,9 @@
    "release_date": "2026-11-11",
    "price": 31500,
    "goal": 1000000,
-   "amount": 2803500,
-   "count": 89,
-   "rate": 280,
+   "amount": 3181500,
+   "count": 101,
+   "rate": 318,
    "benefits": [
     "31,500원 펀딩",
     "<새소식> 도서 1부",
@@ -19141,9 +19147,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 2803500,
-     "count": 89,
-     "rate": 280
+     "amount": 3181500,
+     "count": 101,
+     "rate": 318
     }
    ],
    "last_seen": "2026-10-27",
@@ -19200,9 +19206,9 @@
    "release_date": "2026-11-02",
    "price": 18000,
    "goal": 1000000,
-   "amount": 610000,
-   "count": 33,
-   "rate": 61,
+   "amount": 630000,
+   "count": 34,
+   "rate": 63,
    "benefits": [
     "18,000원: 『물음표의 책』 1부",
     "20,000원: 『물음표의 책』 1부 , 상상력 마우스 패드",
@@ -19226,9 +19232,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 610000,
-     "count": 33,
-     "rate": 61
+     "amount": 630000,
+     "count": 34,
+     "rate": 63
     }
    ],
    "last_seen": "2026-10-27",
@@ -19248,9 +19254,9 @@
    "release_date": "2026-10-28",
    "price": 20700,
    "goal": 1000000,
-   "amount": 6334200,
-   "count": 306,
-   "rate": 633,
+   "amount": 6417000,
+   "count": 310,
+   "rate": 642,
    "benefits": [
     "20,700원: 『이 월배당 ETF는 꼭 사십시오!』 1부＋커버드콜&월배당 ETF 리스트 부록, 펀딩 목표액별 추가 한줄평 리워드 지급",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -19279,9 +19285,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 6334200,
-     "count": 306,
-     "rate": 633
+     "amount": 6417000,
+     "count": 310,
+     "rate": 642
     }
    ],
    "last_seen": "2026-10-27",
@@ -28969,9 +28975,9 @@
    "release_date": "2026-11-11",
    "price": 16920,
    "goal": 1000000,
-   "amount": 3485520,
-   "count": 206,
-   "rate": 349,
+   "amount": 3908520,
+   "count": 231,
+   "rate": 391,
    "benefits": [
     "16,920원 펀딩",
     "<옥희와 상열> 도서 1부",
@@ -28997,9 +29003,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 3485520,
-     "count": 206,
-     "rate": 349
+     "amount": 3908520,
+     "count": 231,
+     "rate": 391
     }
    ],
    "last_seen": "2026-10-27",
@@ -29019,9 +29025,9 @@
    "release_date": "2026-11-12",
    "price": 13500,
    "goal": 500000,
-   "amount": 499500,
-   "count": 34,
-   "rate": 100,
+   "amount": 594000,
+   "count": 41,
+   "rate": 119,
    "benefits": [
     "13,500원 펀딩",
     "<무료인 줄 알았는데 저작권에 걸린다고? > 도서 1부",
@@ -29046,14 +29052,15 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 499500,
-     "count": 34,
-     "rate": 100
+     "amount": 594000,
+     "count": 41,
+     "rate": 119
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-25",
-   "category": "어린이"
+   "category": "어린이",
+   "achieved_date": "2026-10-27"
   },
   "aladin:3050": {
    "store": "aladin",
@@ -29118,9 +29125,9 @@
    "release_date": "2026-11-09",
    "price": 15300,
    "goal": 1000000,
-   "amount": 1422900,
-   "count": 93,
-   "rate": 142,
+   "amount": 1484100,
+   "count": 97,
+   "rate": 148,
    "benefits": [
     "15,300원: 『와귤와귤』 1부, 2027 캘린더 포스터(책과 랩핑)",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -29143,9 +29150,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1422900,
-     "count": 93,
-     "rate": 142
+     "amount": 1484100,
+     "count": 97,
+     "rate": 148
     }
    ],
    "last_seen": "2026-10-27",
@@ -29165,9 +29172,9 @@
    "release_date": "2026-11-10",
    "price": 16650,
    "goal": 1000000,
-   "amount": 1565100,
-   "count": 94,
-   "rate": 157,
+   "amount": 1581750,
+   "count": 95,
+   "rate": 158,
    "benefits": [
     "16,650원: 『진짜 산타가 되는 법』 1부(작가 친필 사인본)",
     "달성 단계별 한줄평 적립 최대 5%"
@@ -29190,9 +29197,9 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 1565100,
-     "count": 94,
-     "rate": 157
+     "amount": 1581750,
+     "count": 95,
+     "rate": 158
     }
    ],
    "last_seen": "2026-10-27",
@@ -29260,9 +29267,9 @@
    "release_date": "2026-11-24",
    "price": 26100,
    "goal": 500000,
-   "amount": 965700,
+   "amount": 1044000,
    "count": null,
-   "rate": 193,
+   "rate": 208,
    "benefits": [
     "혜택1 (먹기들)"
    ],
@@ -29285,15 +29292,15 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 965700,
-     "count": 37,
-     "rate": 193
+     "amount": 1044000,
+     "count": 40,
+     "rate": 208
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-22",
    "category": "인문",
-   "count_est": 37,
+   "count_est": 40,
    "kind": "book"
   },
   "kyobo:687": {
@@ -29309,9 +29316,9 @@
    "release_date": "2026-11-16",
    "price": 15120,
    "goal": 500000,
-   "amount": 845400,
+   "amount": 907080,
    "count": null,
-   "rate": 169,
+   "rate": 181,
    "benefits": [
     "혜택1 (돈의 대모험 2)",
     "혜택2 (돈의 대모험 2 + 카드포켓)",
@@ -29337,15 +29344,15 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 845400,
-     "count": 56,
-     "rate": 169
+     "amount": 907080,
+     "count": 60,
+     "rate": 181
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "어린이",
-   "count_est": 56,
+   "count_est": 60,
    "kind": "book"
   },
   "kyobo:688": {
@@ -29361,9 +29368,9 @@
    "release_date": "2026-11-11",
    "price": 20700,
    "goal": 500000,
-   "amount": 862000,
+   "amount": 1179800,
    "count": null,
-   "rate": 172,
+   "rate": 235,
    "benefits": [
     "혜택1 (우리들의 첫모험)",
     "혜택2 (우리들의 첫모험 + 첫모험단 어린이단원 생태수첩)"
@@ -29387,15 +29394,15 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 862000,
-     "count": 42,
-     "rate": 172
+     "amount": 1179800,
+     "count": 57,
+     "rate": 235
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "어린이",
-   "count_est": 42,
+   "count_est": 57,
    "kind": "book"
   },
   "kyobo:689": {
@@ -29411,9 +29418,9 @@
    "release_date": "2026-11-11",
    "price": 17550,
    "goal": 500000,
-   "amount": 72200,
+   "amount": 107300,
    "count": null,
-   "rate": 14,
+   "rate": 21,
    "benefits": [
     "혜택1 (오뒷세이아, 어른의 바다를 쓰다)",
     "혜택2 (오뒷세이아, 어른의 바다를 쓰다 + 윤슬 & 구름메모지)"
@@ -29437,16 +29444,16 @@
     },
     {
      "d": "2026-10-27",
-     "amount": 72200,
-     "count": 4,
-     "rate": 14
+     "amount": 107300,
+     "count": 6,
+     "rate": 21
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-23",
    "category": "인문",
    "kind": "book",
-   "count_est": 4
+   "count_est": 6
   },
   "aladin:3047": {
    "store": "aladin",
@@ -29461,9 +29468,9 @@
    "release_date": "2026-11-12",
    "price": 24120,
    "goal": 1000000,
-   "amount": 873460,
-   "count": 33,
-   "rate": 87,
+   "amount": 1291880,
+   "count": 49,
+   "rate": 129,
    "benefits": [
     "24,120원 펀딩",
     "<유물력> 도서 1부",
@@ -29475,14 +29482,15 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 873460,
-     "count": 33,
-     "rate": 87
+     "amount": 1291880,
+     "count": 49,
+     "rate": 129
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-27",
-   "category": "예술"
+   "category": "예술",
+   "achieved_date": "2026-10-27"
   },
   "aladin:3048": {
    "store": "aladin",
@@ -29497,9 +29505,9 @@
    "release_date": "2026-11-27",
    "price": 57000,
    "goal": 1000000,
-   "amount": 570000,
-   "count": 10,
-   "rate": 57,
+   "amount": 798000,
+   "count": 14,
+   "rate": 80,
    "benefits": [
     "57,000원 펀딩",
     "<재즈 앨범 인덱스> 도서 1부",
@@ -29512,9 +29520,9 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 570000,
-     "count": 10,
-     "rate": 57
+     "amount": 798000,
+     "count": 14,
+     "rate": 80
     }
    ],
    "last_seen": "2026-10-27",
@@ -29534,13 +29542,13 @@
    "release_date": "2026-11-16",
    "price": 99000,
    "goal": 1000000,
-   "amount": 693000,
-   "count": 7,
-   "rate": 69,
+   "amount": 5346000,
+   "count": 54,
+   "rate": 535,
    "benefits": [
     "99,000원 펀딩",
     "<2026 세계문학 어드벤트 캘린더> 1개",
-    "달성 단계별 추가 마일리지 최대 4%"
+    "달성 단계별 추가 마일리지 최대 3%"
    ],
    "image": "https://image.aladin.co.kr/img/banner/mobile/2026/04/bookfund3052_sum.jpg",
    "isbn": "K772131728",
@@ -29548,14 +29556,15 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 693000,
-     "count": 7,
-     "rate": 69
+     "amount": 5346000,
+     "count": 54,
+     "rate": 535
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-27",
-   "category": "소설"
+   "category": "소설",
+   "achieved_date": "2026-10-27"
   },
   "yes24:277637": {
    "store": "yes24",
@@ -29570,9 +29579,9 @@
    "release_date": "2026-11-17",
    "price": 63000,
    "goal": 1000000,
-   "amount": 191000,
-   "count": 3,
-   "rate": 19,
+   "amount": 319000,
+   "count": 5,
+   "rate": 32,
    "benefits": [
     "63,000원: 『보리 의성어 의태어 사전』 1부",
     "65,000원: 『보리 의성어 의태어 사전』 1부 , 에코백",
@@ -29584,9 +29593,9 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 191000,
-     "count": 3,
-     "rate": 19
+     "amount": 319000,
+     "count": 5,
+     "rate": 32
     }
    ],
    "last_seen": "2026-10-27",
@@ -29606,9 +29615,9 @@
    "release_date": "2026-11-16",
    "price": 21600,
    "goal": 1000000,
-   "amount": 1782000,
-   "count": 80,
-   "rate": 178,
+   "amount": 2613200,
+   "count": 117,
+   "rate": 261,
    "benefits": [
     "21,600원: 『찬실이는 복도 많지』 1부＋김초희&윤가은 무삭제 대화집, 펀딩 달성 단계 별 추가 포인트 적립",
     "22,600원: 『찬실이는 복도 많지』 1부＋김초희&윤가은 무삭제 대화집＋포스터, 펀딩 달성 단계 별 추가 포인트 적립",
@@ -29620,9 +29629,9 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 1782000,
-     "count": 80,
-     "rate": 178
+     "amount": 2613200,
+     "count": 117,
+     "rate": 261
     }
    ],
    "last_seen": "2026-10-27",
@@ -29642,9 +29651,9 @@
    "release_date": "2026-11-11",
    "price": 15120,
    "goal": 1500000,
-   "amount": 0,
+   "amount": 30116160,
    "count": null,
-   "rate": 0,
+   "rate": 2007,
    "benefits": [
     "혜택1 (말하는동물원 뿌빠TV 1: 우당탕탕 루이&후이 영상툰 판다월드에 놀러 오세요!)",
     "혜택2 (말하는동물원 뿌빠TV 1: 우당탕탕 루이&후이 영상툰 판다월드에 놀러 오세요! + 루이후이 북파우치)"
@@ -29657,14 +29666,15 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 0,
-     "count": null,
-     "rate": 0
+     "amount": 30116160,
+     "count": 1992,
+     "rate": 2007
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-27",
-   "category": "어린이"
+   "category": "어린이",
+   "count_est": 1992
   },
   "kyobo:691": {
    "store": "kyobo",
@@ -29679,9 +29689,9 @@
    "release_date": "2026-11-18",
    "price": 17820,
    "goal": 1500000,
-   "amount": 935180,
+   "amount": 1273940,
    "count": null,
-   "rate": 62,
+   "rate": 84,
    "benefits": [
     "혜택1 (그림자 사건)",
     "혜택2 (그림자 사건+비밀술집 암구호 카드)"
@@ -29694,15 +29704,1710 @@
    "history": [
     {
      "d": "2026-10-27",
-     "amount": 935180,
-     "count": 52,
-     "rate": 62
+     "amount": 1273940,
+     "count": 71,
+     "rate": 84
     }
    ],
    "last_seen": "2026-10-27",
    "reg_date": "2026-10-26",
    "category": "소설",
-   "count_est": 52
+   "count_est": 71
+  },
+  "aladin:3051": {
+   "store": "aladin",
+   "id": "3051",
+   "url": "https://www.aladin.co.kr/m/bookfund/view.aspx?pid=3051",
+   "title": "마리아 칼라스",
+   "publisher": "을유문화사",
+   "category_raw": "국내도서 > 예술 > 음악 > 서양음악",
+   "status": "진행중",
+   "start_date": null,
+   "end_date": "2026-11-15",
+   "release_date": "2026-11-25",
+   "price": 34200,
+   "goal": 1000000,
+   "amount": 34200,
+   "count": 1,
+   "rate": 3,
+   "benefits": [
+    "34,200원 펀딩",
+    "<마리아 칼라스: 라 디비나> 도서 1부",
+    "후원자 명단 엽서 삽지",
+    "달성 단계별 추가 마일리지 최대 4%"
+   ],
+   "image": "https://image.aladin.co.kr/img/banner/mobile/2026/04/bookfund3051_sum.jpg",
+   "isbn": "K442131513",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 34200,
+     "count": 1,
+     "rate": 3
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "예술"
+  },
+  "yes24:277681": {
+   "store": "yes24",
+   "id": "277681",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=277681",
+   "title": "대셔 : 소원을 들어 줄게",
+   "publisher": "제이픽",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 다른나라 그림책",
+   "status": "진행중",
+   "start_date": "2026-10-27",
+   "end_date": "2026-11-08",
+   "release_date": "2026-11-09",
+   "price": 16200,
+   "goal": 1000000,
+   "amount": 181400,
+   "count": 7,
+   "rate": 18,
+   "benefits": [
+    "16,200원: 『대셔 : 소원을 들어 줄게』 1부",
+    "33,200원: 『대셔 : 소원을 들어 줄게』 1부, 대셔 에코백",
+    "65,600원: 대셔 1~3권 세트, 대셔 에코백",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/1027Dsr/Img_760x580.jpg",
+   "goods_id": "199463613",
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 181400,
+     "count": 7,
+     "rate": 18
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-10-27",
+   "category": "유아"
+  },
+  "yes24:266987": {
+   "store": "yes24",
+   "id": "266987",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266987",
+   "title": "한번 시작하면 잠들 수 없는 클래식",
+   "publisher": "빅피시",
+   "category_raw": "국내도서 > 예술 > 음악 > 클래식/오페라",
+   "status": "종료",
+   "start_date": "2026-02-03",
+   "end_date": "2026-02-23",
+   "release_date": "2026-02-25",
+   "price": 17820,
+   "goal": 1000000,
+   "amount": 3824460,
+   "count": 203,
+   "rate": 382,
+   "benefits": [
+    "17,820원: 한번 시작하면 잠들 수 없는 클래식 1부",
+    "20,820원: 한번 시작하면 잠들 수 없는 클래식 1부, 아크릴 카라비너 1개",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0203YesFunding/bn_760x580.jpg",
+   "goods_id": "176539324",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 3824460,
+     "count": 203,
+     "rate": 382
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-02-03",
+   "category": "예술"
+  },
+  "yes24:266907": {
+   "store": "yes24",
+   "id": "266907",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266907",
+   "title": "그래제본소 : 사실은 불안하기 때문이야",
+   "publisher": "특별한서재",
+   "category_raw": "국내도서 > 청소년 > 청소년 문학",
+   "status": "종료",
+   "start_date": "2026-01-30",
+   "end_date": "2026-02-19",
+   "release_date": "2026-02-20",
+   "price": 13050,
+   "goal": 1000000,
+   "amount": 2540500,
+   "count": 170,
+   "rate": 254,
+   "benefits": [
+    "13,050원: 『사실은 불안하기 때문이야』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,050원: 『사실은 불안하기 때문이야』 1부＋아크릴 키링, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "16,050원: 『사실은 불안하기 때문이야』 1부＋아크릴 키링 책갈피, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0126YesFunding_b/bn_760x580.jpg",
+   "goods_id": "176553475",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2540500,
+     "count": 170,
+     "rate": 254
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-30",
+   "category": "청소년"
+  },
+  "yes24:266900": {
+   "store": "yes24",
+   "id": "266900",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266900",
+   "title": "내가 돈을 벌고 있다는 착각",
+   "publisher": "스틸당(STEALDANG)",
+   "category_raw": "국내도서 > 경제 경영 > 투자/재테크 > 재무/자산관리 > 투자가이드/자산관리",
+   "status": "종료",
+   "start_date": "2026-01-30",
+   "end_date": "2026-02-20",
+   "release_date": "2026-02-23",
+   "price": 17820,
+   "goal": 1000000,
+   "amount": 4651020,
+   "count": 261,
+   "rate": 465,
+   "benefits": [
+    "17,820원: 『내가 돈을 벌고 있다는 착각』 1부＋실전 Q&A 미니북 PDF 파일, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0130YesFunding/bn_760x580.jpg",
+   "goods_id": "176338718",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 4651020,
+     "count": 261,
+     "rate": 465
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-30",
+   "category": "경제·경영"
+  },
+  "yes24:266751": {
+   "store": "yes24",
+   "id": "266751",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266751",
+   "title": "그래제본소 : 한 컷 한국지리",
+   "publisher": "해냄에듀",
+   "category_raw": "국내도서 > 청소년 > 청소년 인문/사회/경제",
+   "status": "종료",
+   "start_date": "2026-01-26",
+   "end_date": "2026-02-22",
+   "release_date": "2026-02-23",
+   "price": 18900,
+   "goal": 1000000,
+   "amount": 1833300,
+   "count": 97,
+   "rate": 183,
+   "benefits": [
+    "18,900원: 『한 컷 한국지리』 도서 1부",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0126YesFunding_a/bn_760x580.jpg",
+   "goods_id": "175912540",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1833300,
+     "count": 97,
+     "rate": 183
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-26",
+   "category": "청소년"
+  },
+  "yes24:266749": {
+   "store": "yes24",
+   "id": "266749",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266749",
+   "title": "초등 공부 습관 만들기",
+   "publisher": "서사원주니어",
+   "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 학습 > 1-2학년 학습일반",
+   "status": "종료",
+   "start_date": "2026-01-26",
+   "end_date": "2026-02-18",
+   "release_date": "2026-02-23",
+   "price": 16020,
+   "goal": 1000000,
+   "amount": 17095540,
+   "count": 981,
+   "rate": 1710,
+   "benefits": [
+    "16,020원: 『초등 공부 습관 만들기』 1부(저자 친필 사인본), 챌린지 포스터(책에 삽지), 펀딩 달성 단계 별 추가 포인트 적립",
+    "17,900원: 『초등 공부 습관 만들기』 1부(저자 친필 사인본), 챌린지 포스터(책에 삽지) , 스탠딩 투 두 리스트(색상 랜덤 1종), 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0126YesFunding/bn_760x580.jpg",
+   "goods_id": "175895373",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 17095540,
+     "count": 981,
+     "rate": 1710
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-26",
+   "category": "어린이"
+  },
+  "yes24:266645": {
+   "store": "yes24",
+   "id": "266645",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266645",
+   "title": "파도가 자유롭게 헤엄칠 수 있게",
+   "publisher": "주니어태학",
+   "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 학습 > 1-2학년 과학/환경",
+   "status": "종료",
+   "start_date": "2026-01-22",
+   "end_date": "2026-02-18",
+   "release_date": "2026-02-22",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 1121760,
+   "count": 73,
+   "rate": 112,
+   "benefits": [
+    "15,120원: 『파도가 자유롭게 헤엄칠 수 있게』 1부, 펀딩 달성 단계 별 추가 포인트 적립",
+    "16,120원: 『파도가 자유롭게 헤엄칠 수 있게』 1부,  포스터 2종(A4 사이즈), 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0121Fhm/Img_760x580.jpg",
+   "goods_id": "175149271",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1121760,
+     "count": 73,
+     "rate": 112
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-22",
+   "category": "어린이"
+  },
+  "yes24:266634": {
+   "store": "yes24",
+   "id": "266634",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266634",
+   "title": "방울벌레 이야기",
+   "publisher": "틈새의시간",
+   "category_raw": "국내도서 > 소설/시/희곡 > 장르소설 > 추리/미스터리",
+   "status": "종료",
+   "start_date": "2026-01-21",
+   "end_date": "2026-02-06",
+   "release_date": "2026-02-25",
+   "price": 18900,
+   "goal": 1000000,
+   "amount": 3705200,
+   "count": 188,
+   "rate": 371,
+   "benefits": [
+    "18,900원: 『방울벌레 이야기』 한정판 양장본 1부 ＋ 후원자명 엽서, 펀딩 달성 단계 별 추가 포인트 적립",
+    "20,900원: 『방울벌레 이야기』 한정판 양장본 1부 ＋ 후원자명 엽서 ＋ 책갈피 2종 세트, 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0120YesFunding2/bn_760x580.jpg",
+   "goods_id": "175175472",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 3705200,
+     "count": 188,
+     "rate": 371
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-21",
+   "category": "소설"
+  },
+  "yes24:266583": {
+   "store": "yes24",
+   "id": "266583",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266583",
+   "title": "나를 보고 단것에 미쳤다고 하든 말든",
+   "publisher": "서유재",
+   "category_raw": "국내도서 > 소설/시/희곡 > 시/희곡 > 한시/옛시",
+   "status": "종료",
+   "start_date": "2026-01-20",
+   "end_date": "2026-02-08",
+   "release_date": "2026-02-09",
+   "price": 21600,
+   "goal": 1000000,
+   "amount": 2639600,
+   "count": 116,
+   "rate": 264,
+   "benefits": [
+    "21,600원: 『나를 보고 단것에 미쳤다고 하든 말든』 1부 ＋ 문장 필사 엽서, 펀딩 달성 단계 별 추가 포인트 적립",
+    "23,600원: 『나를 보고 단것에 미쳤다고 하든 말든』 1부 ＋ 문장 필사 엽서 ＋ 원목 나무 책갈피 (디자인 랜덤), 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0120YesFunding/bn_760x580.jpg",
+   "goods_id": "174901163",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2639600,
+     "count": 116,
+     "rate": 264
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-20",
+   "category": "소설"
+  },
+  "yes24:266541": {
+   "store": "yes24",
+   "id": "266541",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266541",
+   "title": "과연",
+   "publisher": "반달(킨더랜드)",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 우리나라 그림책",
+   "status": "종료",
+   "start_date": "2026-01-19",
+   "end_date": "2026-02-05",
+   "release_date": "2026-02-10",
+   "price": 13500,
+   "goal": 1000000,
+   "amount": 2076500,
+   "count": 139,
+   "rate": 208,
+   "benefits": [
+    "13,500원: 도서 1부(작가 친필 사인본), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,500원: 도서 1부(작가 친필 사인본)   기필이와 결단이 키링, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0116YesFunding2/bn_760x580.jpg",
+   "goods_id": "174748236",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2076500,
+     "count": 139,
+     "rate": 208
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-19",
+   "category": "유아"
+  },
+  "yes24:266537": {
+   "store": "yes24",
+   "id": "266537",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266537",
+   "title": "영화관에서 듣는 클래식",
+   "publisher": "클로브",
+   "category_raw": "국내도서 > 예술 > 음악 > 클래식/오페라",
+   "status": "종료",
+   "start_date": "2026-01-19",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-06",
+   "price": 16650,
+   "goal": 1000000,
+   "amount": 2125950,
+   "count": 123,
+   "rate": 213,
+   "benefits": [
+    "16,650원: 영화관에서 듣는 클래식 1부",
+    "17,650원: 영화관에서 듣는 클래식 1부, 악기 책갈피(18K 도금)",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0113YesFunding/bn_760x580.jpg",
+   "goods_id": "173734813",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2125950,
+     "count": 123,
+     "rate": 213
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-19",
+   "category": "예술"
+  },
+  "yes24:266511": {
+   "store": "yes24",
+   "id": "266511",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266511",
+   "title": "월든 (각양장 에디션)",
+   "publisher": "클로츠",
+   "category_raw": "국내도서 > 에세이 > 외국 에세이",
+   "status": "종료",
+   "start_date": "2026-01-19",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-03",
+   "price": 18000,
+   "goal": 1000000,
+   "amount": 1638000,
+   "count": 91,
+   "rate": 164,
+   "benefits": [
+    "18,000원: 『월든』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0115yesFunding/bn_760x580.jpg",
+   "goods_id": "174280442",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1638000,
+     "count": 91,
+     "rate": 164
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-19",
+   "category": "시·에세이"
+  },
+  "yes24:266487": {
+   "store": "yes24",
+   "id": "266487",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266487",
+   "title": "잠이 달아나는 이야기",
+   "publisher": "거북이북스",
+   "category_raw": "국내도서 > 유아 > 0-3세 > 1-3세 우리나라 그림책",
+   "status": "종료",
+   "start_date": "2026-01-16",
+   "end_date": "2026-02-02",
+   "release_date": "2026-02-06",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 1556400,
+   "count": 100,
+   "rate": 156,
+   "benefits": [
+    "15,120원: 도서 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "16,320원: 도서 1부, 수아의 빨간 양말, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0116YesFunding/bn_760x580.jpg",
+   "goods_id": "174324229",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1556400,
+     "count": 100,
+     "rate": 156
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-16",
+   "category": "유아"
+  },
+  "yes24:266484": {
+   "store": "yes24",
+   "id": "266484",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266484",
+   "title": "미리 알았더라면 좋았을 초등 공부 전략",
+   "publisher": "상상아카데미",
+   "category_raw": "국내도서 > 가정 살림 > 자녀교육 > 학습법일반",
+   "status": "종료",
+   "start_date": "2026-01-16",
+   "end_date": "2026-01-29",
+   "release_date": "2026-01-30",
+   "price": 16650,
+   "goal": 1000000,
+   "amount": 1103600,
+   "count": 66,
+   "rate": 110,
+   "benefits": [
+    "16,650원: 도서 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "16,750원: 도서 1부, 우리 가족 약속 포스터, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0115YesFunding2/bn_760x580.jpg",
+   "goods_id": "174321657",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1103600,
+     "count": 66,
+     "rate": 110
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-16",
+   "category": "가정·건강·취미"
+  },
+  "yes24:266418": {
+   "store": "yes24",
+   "id": "266418",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266418",
+   "title": "바이러스 헌터",
+   "publisher": "제제의숲",
+   "category_raw": "국내도서 > 어린이 > 3-4학년 > 3-4학년 학습 > 3-4학년 과학/환경",
+   "status": "종료",
+   "start_date": "2026-01-14",
+   "end_date": "2026-02-04",
+   "release_date": "2026-02-05",
+   "price": 13500,
+   "goal": 500000,
+   "amount": 522000,
+   "count": 36,
+   "rate": 104,
+   "benefits": [
+    "13,500원: 『바이러스 헌터』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,000원: 『바이러스 헌터』 1부, 바이러스 캐릭터 스티커 & 물티슈, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0112YesFunding3/bn_760x580.jpg",
+   "goods_id": "174061988",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 522000,
+     "count": 36,
+     "rate": 104
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-14",
+   "category": "어린이"
+  },
+  "yes24:266403": {
+   "store": "yes24",
+   "id": "266403",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266403",
+   "title": "일본어 명대사 필사집",
+   "publisher": "동양북스(동양books)",
+   "category_raw": "국내도서 > 국어 외국어 사전 > 일본어 > 일본어 독해/문법/작문/번역",
+   "status": "종료",
+   "start_date": "2026-01-19",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-02",
+   "price": 17820,
+   "goal": 1000000,
+   "amount": 15055880,
+   "count": 834,
+   "rate": 1506,
+   "benefits": [
+    "17,820원: 『일본어 명대사 필사집』 1부",
+    "18,820원: [한정수량 소진완료] 『일본어 명대사 필사집』 1부 & 프릭션 볼펜 (한정)",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0113YesFunding2/bn_760x580.jpg",
+   "goods_id": "173943169",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 15055880,
+     "count": 834,
+     "rate": 1506
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-19",
+   "category": "외국어"
+  },
+  "yes24:266400": {
+   "store": "yes24",
+   "id": "266400",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266400",
+   "title": "저절로 외워지는 영어퀴즈 일력 365",
+   "publisher": "Cake",
+   "category_raw": "국내도서 > 국어 외국어 사전 > 영어 > 영어회화/생활영어",
+   "status": "종료",
+   "start_date": "2026-01-19",
+   "end_date": "2026-01-25",
+   "release_date": "2026-01-26",
+   "price": 24750,
+   "goal": 1000000,
+   "amount": 1460250,
+   "count": 59,
+   "rate": 146,
+   "benefits": [
+    "24,750원: 『저절로 외워지는 영어퀴즈 일력 365』 1부",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0114YesFunding2/bn_760x580.jpg",
+   "goods_id": "173943391",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1460250,
+     "count": 59,
+     "rate": 146
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-19",
+   "category": "외국어"
+  },
+  "yes24:266384": {
+   "store": "yes24",
+   "id": "266384",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266384",
+   "title": "유한계급론 아카데미판",
+   "publisher": "우물이있는집",
+   "category_raw": "국내도서 > 사회 정치 > 사회학 > 사회사상(사)",
+   "status": "종료",
+   "start_date": "2026-01-14",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-04",
+   "price": 16200,
+   "goal": 1000000,
+   "amount": 1620000,
+   "count": 100,
+   "rate": 162,
+   "benefits": [
+    "16,200원: 『유한계급론』 1부",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0112YesFunding/bn_760x580.jpg",
+   "goods_id": "174029424",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1620000,
+     "count": 100,
+     "rate": 162
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-14",
+   "category": "사회·정치"
+  },
+  "yes24:266377": {
+   "store": "yes24",
+   "id": "266377",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266377",
+   "title": "향수 수집가의 향조 노트",
+   "publisher": "파이퍼프레스",
+   "category_raw": "국내도서 > 건강 취미 > 다이어트/미용 > 뷰티/메이크업",
+   "status": "종료",
+   "start_date": "2026-01-14",
+   "end_date": "2026-02-03",
+   "release_date": "2026-02-05",
+   "price": 19800,
+   "goal": 1000000,
+   "amount": 2930400,
+   "count": 148,
+   "rate": 293,
+   "benefits": [
+    "19,800원: 향수 수집가의 향조 노트 1부",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0112YesFunding2/bn_760x580.jpg",
+   "goods_id": "173684055",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2930400,
+     "count": 148,
+     "rate": 293
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-14",
+   "category": "가정·건강·취미"
+  },
+  "yes24:266278": {
+   "store": "yes24",
+   "id": "266278",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266278",
+   "title": "콘텐츠 설계자",
+   "publisher": "윌북(willbook)",
+   "category_raw": "국내도서 > 경제 경영 > 마케팅/세일즈 > 마케팅/브랜드",
+   "status": "종료",
+   "start_date": "2026-01-09",
+   "end_date": "2026-01-27",
+   "release_date": "2026-01-28",
+   "price": 19620,
+   "goal": 1000000,
+   "amount": 18515900,
+   "count": 895,
+   "rate": 1852,
+   "benefits": [
+    "19,620원: 『콘텐츠 설계자』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "21,620원: 『콘텐츠 설계자』 1부＋설계자 필사노트, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0109YesFunding/bn_760x580.jpg",
+   "goods_id": "173238798",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 18515900,
+     "count": 895,
+     "rate": 1852
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-09",
+   "category": "경제·경영"
+  },
+  "yes24:266257": {
+   "store": "yes24",
+   "id": "266257",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266257",
+   "title": "절대수익 우량주 매매법",
+   "publisher": "이레미디어",
+   "category_raw": "국내도서 > 경제 경영 > 투자/재테크 > 주식/ETF > 국내주식",
+   "status": "종료",
+   "start_date": "2026-01-09",
+   "end_date": "2026-01-30",
+   "release_date": "2026-02-05",
+   "price": 35100,
+   "goal": 1000000,
+   "amount": 32327100,
+   "count": 921,
+   "rate": 3233,
+   "benefits": [
+    "35,100원: 『절대수익 우량주 매매법』 1부 (친필 사인 인쇄본), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0107YesFunding/bn_760x580.jpg",
+   "goods_id": "173036409",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 32327100,
+     "count": 921,
+     "rate": 3233
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-09",
+   "category": "경제·경영"
+  },
+  "yes24:266258": {
+   "store": "yes24",
+   "id": "266258",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266258",
+   "title": "나는야 감정사우르스",
+   "publisher": "푸른숲주니어",
+   "category_raw": "국내도서 > 어린이 > 예비 초등학생",
+   "status": "종료",
+   "start_date": "2026-01-09",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-02",
+   "price": 13500,
+   "goal": 1000000,
+   "amount": 1122000,
+   "count": 77,
+   "rate": 112,
+   "benefits": [
+    "13,500원: 『나는야 감정사우르스』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,000원: 『나는야 감정사우르스』 1부, 감정 스티커, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0108YesFunding2/bn_760x580.jpg",
+   "goods_id": "173155500",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1122000,
+     "count": 77,
+     "rate": 112
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-09",
+   "category": "어린이"
+  },
+  "yes24:266239": {
+   "store": "yes24",
+   "id": "266239",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266239",
+   "title": "갑작스러운 이별로 가족들이 떠맡을 당신의 잡동사니를 미리 정리하는 기술",
+   "publisher": "봄름",
+   "category_raw": "국내도서 > 자기계발 > 처세술/삶의 자세",
+   "status": "종료",
+   "start_date": "2026-01-08",
+   "end_date": "2026-01-23",
+   "release_date": "2026-01-26",
+   "price": 14850,
+   "goal": 1000000,
+   "amount": 2071350,
+   "count": 131,
+   "rate": 207,
+   "benefits": [
+    "14,850원: 『갑작스러운 이별로 가족들이 떠맡을 당신의 잡동사니를 미리 정리하는 기술』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "16,850원: 『갑작스러운 이별로 가족들이 떠맡을 당신의 잡동사니를 미리 정리하는 기술』 1부＋북 에코백, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0106YesFunding_a/bn_760x580.jpg",
+   "goods_id": "172983287",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2071350,
+     "count": 131,
+     "rate": 207
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-08",
+   "category": "자기계발"
+  },
+  "yes24:266232": {
+   "store": "yes24",
+   "id": "266232",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266232",
+   "title": "기분의 모양",
+   "publisher": "페이퍼독",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 우리나라 그림책",
+   "status": "종료",
+   "start_date": "2026-01-07",
+   "end_date": "2026-01-25",
+   "release_date": "2026-01-26",
+   "price": 15300,
+   "goal": 1000000,
+   "amount": 1943100,
+   "count": 127,
+   "rate": 194,
+   "benefits": [
+    "15,300원: 도서 1부(작가 친필 사인본), 포스터터, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0106YesFunding2/bn_760x580.jpg",
+   "goods_id": "172908521",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1943100,
+     "count": 127,
+     "rate": 194
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-07",
+   "category": "유아"
+  },
+  "yes24:266227": {
+   "store": "yes24",
+   "id": "266227",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266227",
+   "title": "피트 아우돌프 작품집",
+   "publisher": "목수책방",
+   "category_raw": "국내도서 > 예술 > 미술 > 디자인",
+   "status": "종료",
+   "start_date": "2026-01-08",
+   "end_date": "2026-02-01",
+   "release_date": "2026-02-03",
+   "price": 72000,
+   "goal": 1000000,
+   "amount": 8294800,
+   "count": 96,
+   "rate": 829,
+   "benefits": [
+    "72,000원: 피트 아우돌프 작품집 1권",
+    "76,400원: 피트 아우돌프 작품집 1권, 후스아우돌프울산가든 도면 데스크 매트",
+    "78,000원: 피트 아우돌프 작품집 1권, 후스아우돌프울산가든 도면 식물 목록 지도",
+    "95,000원: 피트 아우돌프 작품집 1권, 후스아우돌프울산가든 도면 식물 목록 지도, 드로잉북",
+    "99,400원: 피트 아우돌프 작품집 1권, 후스아우돌프울산가든 도면 식물 목록 지도, 드로잉북, 후스아우돌프울산가든 도면 데스크 매트",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2026/0108YesFunding/bn_760x580.jpg",
+   "goods_id": "172575657",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 8294800,
+     "count": 96,
+     "rate": 829
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-08",
+   "category": "예술"
+  },
+  "yes24:266224": {
+   "store": "yes24",
+   "id": "266224",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266224",
+   "title": "여우의 혼례 잔치를 부탁해!",
+   "publisher": "토끼섬",
+   "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 그림/동화책 > 1-2학년 창작동화",
+   "status": "종료",
+   "start_date": "2026-01-07",
+   "end_date": "2026-01-21",
+   "release_date": "2026-01-22",
+   "price": 12150,
+   "goal": 1000000,
+   "amount": 2472750,
+   "count": 181,
+   "rate": 247,
+   "benefits": [
+    "12,150원: 『여우의 혼례 잔치를 부탁해!』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,000원: 『여우의 혼례 잔치를 부탁해!』 1부 , 복주머니 & 공기놀이 세트(색상랜덤), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0106YesFunding/bn_760x580.jpg",
+   "goods_id": "172778248",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2472750,
+     "count": 181,
+     "rate": 247
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-07",
+   "category": "어린이"
+  },
+  "yes24:266218": {
+   "store": "yes24",
+   "id": "266218",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266218",
+   "title": "1학년이 된 너에게",
+   "publisher": "노는날",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 우리나라 그림책",
+   "status": "종료",
+   "start_date": "2026-01-07",
+   "end_date": "2026-01-20",
+   "release_date": "2026-01-22",
+   "price": 16200,
+   "goal": 1000000,
+   "amount": 5135400,
+   "count": 317,
+   "rate": 514,
+   "benefits": [
+    "16,200원: 도서 1부, 2026 캘린더 포스터(책과 랩핑), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "http://image.yes24.com/images/00_Event/2026/0102YesFunding/bn_760x580.jpg",
+   "goods_id": "172738600",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 5135400,
+     "count": 317,
+     "rate": 514
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-07",
+   "category": "유아"
+  },
+  "yes24:266192": {
+   "store": "yes24",
+   "id": "266192",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266192",
+   "title": "절대 실패 없는 달러 투자",
+   "publisher": "경향비피",
+   "category_raw": "국내도서 > 경제 경영 > 투자/재테크 > 재무/자산관리 > 재테크일반",
+   "status": "종료",
+   "start_date": "2026-01-07",
+   "end_date": "2026-01-28",
+   "release_date": "2026-01-30",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 3764880,
+   "count": 249,
+   "rate": 376,
+   "benefits": [
+    "15,120원: 『절대 실패 없는 달러 투자』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/0106YesFunding/bn_760x580.jpg",
+   "goods_id": "172736982",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 3764880,
+     "count": 249,
+     "rate": 376
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-07",
+   "category": "경제·경영"
+  },
+  "yes24:266166": {
+   "store": "yes24",
+   "id": "266166",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266166",
+   "title": "찹찹",
+   "publisher": "밝은미래",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 우리나라 그림책",
+   "status": "종료",
+   "start_date": "2026-01-05",
+   "end_date": "2026-01-25",
+   "release_date": "2026-01-27",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 3743920,
+   "count": 241,
+   "rate": 374,
+   "benefits": [
+    "15,120원: 도서 1부(작가 친필 사인본), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "16,120원: 도서 1부(작가 친필 사인본), 찹찹 스티커 2종 세트, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/0102YesFunding_b/bn_760x580.jpg",
+   "goods_id": "172572085",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 3743920,
+     "count": 241,
+     "rate": 374
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-05",
+   "category": "유아"
+  },
+  "yes24:266136": {
+   "store": "yes24",
+   "id": "266136",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266136",
+   "title": "모든 요일의 기록 & 모든 요일의 여행 (10주년 개정증보판)",
+   "publisher": "위즈덤하우스",
+   "category_raw": "국내도서 > 에세이 > 한국 에세이",
+   "status": "종료",
+   "start_date": "2026-01-05",
+   "end_date": "2026-01-18",
+   "release_date": "2026-01-21",
+   "price": 18000,
+   "goal": 1000000,
+   "amount": 2898000,
+   "count": 83,
+   "rate": 290,
+   "benefits": [
+    "18,000원: 『모든 요일의 기록』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "18,000원: 『모든 요일의 여행』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "36,000원: 『모든 요일의 기록』 1부＋『모든 요일의 여행』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "38,000원: 『모든 요일의 기록』 1부＋『모든 요일의 여행』 1부＋엽서형 달력, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1229YesFunding_a/bn_760x580.jpg",
+   "goods_id": "172515286",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2898000,
+     "count": 83,
+     "rate": 290
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2026-01-05",
+   "category": "시·에세이"
+  },
+  "yes24:266083": {
+   "store": "yes24",
+   "id": "266083",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266083",
+   "title": "절약왕 정약용의 목돈심서",
+   "publisher": "진서원",
+   "category_raw": "국내도서 > 경제 경영 > 투자/재테크 > 재무/자산관리 > 투자가이드/자산관리",
+   "status": "종료",
+   "start_date": "2025-12-31",
+   "end_date": "2026-01-30",
+   "release_date": "2026-02-12",
+   "price": 18000,
+   "goal": 1000000,
+   "amount": 7092000,
+   "count": 394,
+   "rate": 709,
+   "benefits": [
+    "18,000원: 『절약왕 정약용의 목돈심서』 1부＋<왕초보 경매 바이블> 소책자, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1231YesFunding/bn_760x580.jpg",
+   "goods_id": "171688174",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 7092000,
+     "count": 394,
+     "rate": 709
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-31",
+   "category": "경제·경영"
+  },
+  "yes24:266058": {
+   "store": "yes24",
+   "id": "266058",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266058",
+   "title": "이토록 아름다운 세 살",
+   "publisher": "문학세계사",
+   "category_raw": "국내도서 > 소설/시/희곡 > 프랑스소설",
+   "status": "종료",
+   "start_date": "2025-12-30",
+   "end_date": "2026-01-11",
+   "release_date": "2026-01-12",
+   "price": 13320,
+   "goal": 1000000,
+   "amount": 1532600,
+   "count": 105,
+   "rate": 153,
+   "benefits": [
+    "13,320원: 『이토록 아름다운 세 살』 1부 ＋  작가 친필 인쇄 엽서, 펀딩 달성 단계 별 추가 포인트 적립",
+    "15,320원: 『이토록 아름다운 세 살』 1부 ＋  작가 친필 인쇄 엽서 ＋캘린터 포스터 ＋ 오리지널 포스터, 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1230YesFunding/bn_760x580.jpg",
+   "goods_id": "171568237",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1532600,
+     "count": 105,
+     "rate": 153
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-30",
+   "category": "소설"
+  },
+  "yes24:266053": {
+   "store": "yes24",
+   "id": "266053",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266053",
+   "title": "직물을 잇고 조각을 수선합니다",
+   "publisher": "포르체",
+   "category_raw": "국내도서 > 건강 취미 > 공예 > 뜨개/자수/비즈",
+   "status": "종료",
+   "start_date": "2025-12-30",
+   "end_date": "2026-01-18",
+   "release_date": "2026-01-20",
+   "price": 20700,
+   "goal": 1000000,
+   "amount": 1408800,
+   "count": 64,
+   "rate": 141,
+   "benefits": [
+    "20,700원: 직물을 잇고 조각을 수선합니다 1부",
+    "22,700원: 직물을 잇고 조각을 수선합니다 1부, 직물 액자(A5)",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1229YesFunding/bn_760x580.jpg",
+   "goods_id": "171351782",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1408800,
+     "count": 64,
+     "rate": 141
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-30",
+   "category": "가정·건강·취미"
+  },
+  "yes24:266012": {
+   "store": "yes24",
+   "id": "266012",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=266012",
+   "title": "오늘부터 말을 잘하게 됩니다",
+   "publisher": "현익출판",
+   "category_raw": "국내도서 > 자기계발 > 성공학/경력관리",
+   "status": "종료",
+   "start_date": "2025-12-29",
+   "end_date": "2026-01-12",
+   "release_date": "2026-01-19",
+   "price": 18900,
+   "goal": 1000000,
+   "amount": 2948400,
+   "count": 156,
+   "rate": 295,
+   "benefits": [
+    "18,900원: 『오늘부터 말을 잘하게 됩니다』 1부 (친필 사인 인쇄본)＋부적 카드 3종, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1226YesFunding/bn_760x580.jpg",
+   "goods_id": "171356156",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 2948400,
+     "count": 156,
+     "rate": 295
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-29",
+   "category": "자기계발"
+  },
+  "yes24:265916": {
+   "store": "yes24",
+   "id": "265916",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265916",
+   "title": "마음에 힘이 되는 하루 한 문장 영시 필사",
+   "publisher": "센시오",
+   "category_raw": "국내도서 > 국어 외국어 사전 > 영어 > 영어 독해/문법/작문/번역 > 영어독해/번역",
+   "status": "종료",
+   "start_date": "2025-12-29",
+   "end_date": "2026-01-11",
+   "release_date": "2026-01-12",
+   "price": 19800,
+   "goal": 1000000,
+   "amount": 1468100,
+   "count": 72,
+   "rate": 147,
+   "benefits": [
+    "19,800원: 『마음에 힘이 되는 하루 한 문장 영시 필사』 1부",
+    "21,500원: 『마음에 힘이 되는 하루 한 문장 영시 필사』 1부 인덱스 롱 하이라이터",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1222Nbs/Img_760x580.jpg",
+   "goods_id": "170524856",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1468100,
+     "count": 72,
+     "rate": 147
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-29",
+   "category": "외국어"
+  },
+  "yes24:265919": {
+   "store": "yes24",
+   "id": "265919",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265919",
+   "title": "환상 공화국의 카퍼레이드",
+   "publisher": "마르코폴로",
+   "category_raw": "국내도서 > 역사 > 한국사/한국문화 > 정부수립이후",
+   "status": "종료",
+   "start_date": "2025-12-23",
+   "end_date": "2026-01-18",
+   "release_date": "2026-01-22",
+   "price": 15030,
+   "goal": 1000000,
+   "amount": 1127250,
+   "count": 75,
+   "rate": 113,
+   "benefits": [
+    "15,030원: 환상 공화국의 카퍼레이드 1부",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1222YesFunding_b/bn_760x580.jpg",
+   "goods_id": "169809944",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1127250,
+     "count": 75,
+     "rate": 113
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-23",
+   "category": "역사·문화"
+  },
+  "yes24:265853": {
+   "store": "yes24",
+   "id": "265853",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265853",
+   "title": "연애소설이 나에게 & 모닝헬스가 나에게",
+   "publisher": "몽스북",
+   "category_raw": "국내도서 > 에세이 > 한국 에세이",
+   "status": "종료",
+   "start_date": "2025-12-22",
+   "end_date": "2026-01-05",
+   "release_date": "2026-01-05",
+   "price": 9900,
+   "goal": 1000000,
+   "amount": 1282400,
+   "count": 119,
+   "rate": 128,
+   "benefits": [
+    "9,900원: 『연애 소설이 나에게』 1부",
+    "9,900원: 『모닝 헬스가 나에게』 1부",
+    "10,900원: 『연애 소설이 나에게』 1부 ＋ 자수 책갈피",
+    "10,900원: 『모닝 헬스가 나에게』 1부 ＋ 자수 책갈피",
+    "19,800원: 『연애 소설이 나에게』 1부 ＋ 『모닝 헬스가 나에게』 1부",
+    "20,800원: 『연애 소설이 나에게』 1부 ＋ 『모닝 헬스가 나에게』 1부＋ 자수책갈피",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1222YesFunding/bn_760x580.jpg",
+   "goods_id": "170375183",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1282400,
+     "count": 119,
+     "rate": 128
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-22",
+   "category": "시·에세이"
+  },
+  "yes24:265845": {
+   "store": "yes24",
+   "id": "265845",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265845",
+   "title": "규칙파괴자",
+   "publisher": "국일증권경제연구소",
+   "category_raw": "국내도서 > 경제 경영 > 투자/재테크 > 주식/ETF > 해외주식",
+   "status": "종료",
+   "start_date": "2025-12-22",
+   "end_date": "2026-01-05",
+   "release_date": "2026-01-07",
+   "price": 22500,
+   "goal": 1000000,
+   "amount": 6220000,
+   "count": 272,
+   "rate": 622,
+   "benefits": [
+    "22,500원: 『규칙파괴자』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "23,500원: 『규칙파괴자』 1부＋자석 북마크＋엽서 (선착순 마감), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1222YesFunding_a/bn_760x580.jpg",
+   "goods_id": "170340904",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 6220000,
+     "count": 272,
+     "rate": 622
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-22",
+   "category": "경제·경영"
+  },
+  "yes24:265790": {
+   "store": "yes24",
+   "id": "265790",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265790",
+   "title": "일의 기본기",
+   "publisher": "좋은습관연구소",
+   "category_raw": "국내도서 > 자기계발 > 성공학/경력관리",
+   "status": "종료",
+   "start_date": "2025-12-19",
+   "end_date": "2026-01-09",
+   "release_date": "2026-01-12",
+   "price": 16650,
+   "goal": 1000000,
+   "amount": 3729600,
+   "count": 224,
+   "rate": 373,
+   "benefits": [
+    "16,650원: 『일의 기본기』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1218YesFunding_a/bn_760x580.jpg",
+   "goods_id": "169506685",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 3729600,
+     "count": 224,
+     "rate": 373
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-19",
+   "category": "자기계발"
+  },
+  "yes24:265746": {
+   "store": "yes24",
+   "id": "265746",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265746",
+   "title": "나의 사주명리 양장 합본 세트",
+   "publisher": "날",
+   "category_raw": "국내도서 > 인문 > 동양철학 > 동양철학의 이해/동양철학사",
+   "status": "종료",
+   "start_date": "2025-12-18",
+   "end_date": "2026-01-11",
+   "release_date": "2026-01-15",
+   "price": 45000,
+   "goal": 1000000,
+   "amount": 6480000,
+   "count": 144,
+   "rate": 648,
+   "benefits": [
+    "45,000원: 나의 사주명리 세트",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1218YesFunding/bn_760x580.jpg",
+   "goods_id": "169649233",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 6480000,
+     "count": 144,
+     "rate": 648
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-18",
+   "category": "인문"
+  },
+  "yes24:265738": {
+   "store": "yes24",
+   "id": "265738",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265738",
+   "title": "인구전쟁",
+   "publisher": "다니비앤비(DANI B&B)",
+   "category_raw": "국내도서 > 소설/시/희곡 > 장르소설 > SF",
+   "status": "종료",
+   "start_date": "2025-12-18",
+   "end_date": "2026-01-04",
+   "release_date": "2026-01-12",
+   "price": 16200,
+   "goal": 1000000,
+   "amount": 1636200,
+   "count": 101,
+   "rate": 164,
+   "benefits": [
+    "16,200원: 『인구전쟁』 1부, 펀딩 달성 단계 별 추가 포인트 적립",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1217YesFunding/bn_760x580.jpg",
+   "goods_id": "169662877",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1636200,
+     "count": 101,
+     "rate": 164
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-18",
+   "category": "소설"
+  },
+  "yes24:265726": {
+   "store": "yes24",
+   "id": "265726",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265726",
+   "title": "혼자서도 잘하는 두뇌 놀이책 : 공룡편",
+   "publisher": "어스본코리아",
+   "category_raw": "국내도서 > 유아 > 정가제 Free > 정가제 Free",
+   "status": "종료",
+   "start_date": "2025-12-17",
+   "end_date": "2026-01-11",
+   "release_date": "2026-01-12",
+   "price": 9100,
+   "goal": 500000,
+   "amount": 634800,
+   "count": 48,
+   "rate": 127,
+   "benefits": [
+    "9,100원: 혼자서도 잘하는 두뇌 놀이책 : 공룡편, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,100원: 혼자서도 잘하는 두뇌 놀이책 : 공룡편, 우리 아이 첫 스티커북 곤충 세트(무료 배송), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1216YesFunding/bn_760x580.jpg",
+   "goods_id": "169631573",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 634800,
+     "count": 48,
+     "rate": 127
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-17",
+   "category": "유아"
+  },
+  "yes24:265641": {
+   "store": "yes24",
+   "id": "265641",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265641",
+   "title": "선택을 심어요",
+   "publisher": "기탄출판",
+   "category_raw": "국내도서 > 유아 > 4-6세 > 4-6세 다른나라 그림책",
+   "status": "종료",
+   "start_date": "2025-12-15",
+   "end_date": "2026-01-05",
+   "release_date": "2026-01-06",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 1723680,
+   "count": 114,
+   "rate": 172,
+   "benefits": [
+    "15,120원: 도서, 사인 엽서 2종 세트, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1215YesFunding/bn_760x580.jpg",
+   "goods_id": "169197131",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 1723680,
+     "count": 114,
+     "rate": 172
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-15",
+   "category": "유아"
+  },
+  "yes24:265611": {
+   "store": "yes24",
+   "id": "265611",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265611",
+   "title": "최소한의 과학 상식 100",
+   "publisher": "삼성출판사",
+   "category_raw": "국내도서 > 어린이 > 1-2학년 > 1-2학년 학습 > 1-2학년 과학/환경",
+   "status": "종료",
+   "start_date": "2025-12-15",
+   "end_date": "2026-01-06",
+   "release_date": "2026-01-08",
+   "price": 15120,
+   "goal": 1000000,
+   "amount": 4258320,
+   "count": 271,
+   "rate": 426,
+   "benefits": [
+    "15,120원: 『최소한의 과학 상식 100』 1부, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,920원: 『최소한의 과학 상식 100』 1부, 관찰 일기 노트(랜덤 1종), 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1211YesFunding/bn_760x580.jpg",
+   "goods_id": "169090195",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 4258320,
+     "count": 271,
+     "rate": 426
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-15",
+   "category": "어린이"
+  },
+  "yes24:265439": {
+   "store": "yes24",
+   "id": "265439",
+   "url": "https://www.yes24.com/campaign/01_Book/yesFunding/yesFundingBook.aspx?EventNo=265439",
+   "title": "방콕의 외계인",
+   "publisher": "amstory",
+   "category_raw": "국내도서 > 어린이 > 5-6학년 > 5-6학년 그림/동화책 > 5-6학년 창작동화",
+   "status": "종료",
+   "start_date": "2025-12-08",
+   "end_date": "2026-01-04",
+   "release_date": "2026-01-12",
+   "price": 12600,
+   "goal": 500000,
+   "amount": 565200,
+   "count": 42,
+   "rate": 113,
+   "benefits": [
+    "12,600원: 『방콕의 외계인』 1부(작가 친필 사인본) ,후원자명 엽서, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "15,000원: 『방콕의 외계인』 1부(작가 친필 사인본) ,후원자명 엽서, 스티커 2종, 펀딩 목표액별 추가 한줄평 리워드 지급",
+    "달성 단계별 한줄평 적립 최대 5%"
+   ],
+   "image": "https://image.yes24.com/images/00_Event/2025/1202YesFunding/bn_760x580.jpg",
+   "goods_id": "167806684",
+   "backfilled": true,
+   "first_seen": "2026-10-27",
+   "history": [
+    {
+     "d": "2026-10-27",
+     "amount": 565200,
+     "count": 42,
+     "rate": 113
+    }
+   ],
+   "last_seen": "2026-10-27",
+   "reg_date": "2025-12-08",
+   "category": "어린이"
   }
  }
 }
