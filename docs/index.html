@@ -236,6 +236,29 @@
     .bk-stats div:nth-child(n+3){border-top:1px solid var(--line-2)}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  .notice-modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .notice-card{background:#fff;border-radius:16px;max-width:440px;width:100%;padding:26px 26px 18px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-height:86vh;overflow-y:auto}
+  .notice-title{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px}
+  .notice-meta{font-size:12px;color:var(--ink-3);margin-bottom:14px;font-family:'Roboto',sans-serif;font-weight:500}
+  .notice-body{font-size:14px;line-height:1.65;color:#333}
+  .notice-body p{margin:8px 0}
+  .notice-body ul{list-style:none;margin:8px 0;padding-left:4px}
+  .notice-body li{position:relative;padding-left:16px;margin:6px 0}
+  .notice-body li::before{content:"•";color:var(--green);font-weight:700;position:absolute;left:2px;top:-1px}
+  .notice-body b{color:var(--ink)}
+  .notice-form-btn{display:block;text-align:center;margin-top:18px;padding:12px;border-radius:10px;background:var(--green);color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:filter .12s}
+  .notice-form-btn:hover{filter:brightness(0.95)}
+  .notice-actions{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:10px}
+  .notice-links{list-style:none;margin:12px 0;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .notice-links li{display:flex;align-items:center;gap:10px;padding:10px 12px;margin:0;border-top:1px solid var(--line)}
+  .notice-links li:first-child{border-top:none;background:var(--green-bg,rgba(77,172,39,.08))}
+  .notice-links li::before{content:none!important}
+  .notice-links span{flex:0 0 64px;font-size:12.5px;font-weight:700;color:var(--ink-2)}
+  .notice-links a{font-family:'Roboto',sans-serif;font-size:13.5px;font-weight:500;color:var(--blue);word-break:break-all}
+  .notice-sub{font-size:12.5px;color:var(--ink-3)}
+  .notice-hide{background:none;border:none;color:var(--ink-3);font-size:13px;cursor:pointer;font-family:inherit;padding:6px 2px}
+  .notice-hide:hover{color:var(--ink-2)}
+  .notice-close{background:var(--ink);color:#fff;border:none;border-radius:9px;padding:9px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
 </head>
@@ -346,6 +369,19 @@
     <div class="bk-sec"><h3>펀딩 정보</h3><dl class="bk-info" id="m-info"></dl></div>
     <div class="bk-sec"><h3>혜택</h3><ul class="bk-benefits" id="m-benefits"></ul></div>
     <div class="bk-links" id="m-links"></div>
+  </div>
+</div>
+
+<div id="notice-modal" class="notice-modal" style="display:none" onclick="if(event.target===this)closeNotice()">
+  <div class="notice-card">
+    <div class="notice-title" id="notice-title"></div>
+    <div class="notice-meta" id="notice-meta"></div>
+    <div class="notice-body" id="notice-body"></div>
+    <a id="notice-form" class="notice-form-btn" href="#" target="_blank" rel="noopener noreferrer" style="display:none">💬 의견 보내기 →</a>
+    <div class="notice-actions">
+      <button class="notice-hide" onclick="dismissNoticeToday()">오늘 하루 안 보기</button>
+      <button class="notice-close" onclick="closeNotice()">닫기</button>
+    </div>
   </div>
 </div>
 
@@ -853,6 +889,49 @@ async function init(){
   render();
 }
 init();
+
+/* ===== 사내 서버 이전 안내 팝업 ===== */
+const NOTICE = {
+  id: "2026-11-26-move",
+  date: "2026.11.26",
+  ver: "",
+  title: "📢 사내 서버 이전 안내",
+  html: `
+    <p>베스트셀러·북펀딩 대시보드가 <b>사내 서버로 이전</b>되었습니다.<br>
+    이 페이지는 곧 운영이 종료되니, 앞으로는 아래 새 주소에서 이용해 주세요.</p>
+    <ul class="notice-links">
+      <li><span>북펀딩</span><a href="https://inkmd.kyobobook.co.kr/bookfund/">inkmd.kyobobook.co.kr/bookfund/</a></li>
+      <li><span>베스트셀러</span><a href="https://inkmd.kyobobook.co.kr/bookbest/">inkmd.kyobobook.co.kr/bookbest/</a></li>
+    </ul>
+    <p class="notice-sub">※ 새 주소는 사내망에서 접속할 수 있습니다.<br>※ 즐겨찾기와 공유하신 링크도 새 주소로 바꿔주세요.</p>
+  `,
+  formUrl: "https://inkmd.kyobobook.co.kr/bookfund/",
+  formText: "새 주소로 이동 →"
+};
+
+function _todayStr(){
+  const d=new Date();
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function _noticeKey(){ return NOTICE.id + "|" + _todayStr(); }
+function maybeShowNotice(){
+  try{ if(localStorage.getItem("notice_seen") === _noticeKey()) return; }catch(e){}
+  const t=document.getElementById("notice-title"),
+        mt=document.getElementById("notice-meta"),
+        b=document.getElementById("notice-body"),
+        f=document.getElementById("notice-form");
+  if(t) t.textContent = NOTICE.title;
+  if(mt) mt.textContent = [NOTICE.date, NOTICE.ver ? ("ver "+NOTICE.ver) : ""].filter(Boolean).join("  ·  ");
+  if(b) b.innerHTML = NOTICE.html;
+  if(f){ if(NOTICE.formUrl){ f.href=NOTICE.formUrl; if(NOTICE.formText) f.textContent=NOTICE.formText; f.style.display="block"; } else { f.style.display="none"; } }
+  document.getElementById("notice-modal").style.display="flex";
+}
+function closeNotice(){ document.getElementById("notice-modal").style.display="none"; }
+function dismissNoticeToday(){
+  try{ localStorage.setItem("notice_seen", _noticeKey()); }catch(e){}
+  closeNotice();
+}
+maybeShowNotice();
 </script>
 </body>
 </html>
